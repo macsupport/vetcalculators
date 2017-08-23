@@ -1,0 +1,575 @@
+ <div class="navbar">
+<div class="navbar-inner">
+<div class="left"><a href="#" class="back link color-white"> <i class="icon icon-back"></i></a></div>
+ <div class="center sliding color-white">Lab values</div>
+<div class="right"><a href="#" data-popover=".popover-links" class="link open-popover color-white"><i class="icon icon-bars"></i></a></div>
+</div>
+</div>
+
+
+
+<div data-page="lab" class="page theme-bluegray">
+
+<div class="popover popover-links">
+    <div class="popover-angle"></div>
+    <div class="popover-inner">
+      <div class="list-block">
+        <ul>
+        <li><a href="index.html" class="list-button item-link">Home</a></li>
+          <li><a href="emergency.html" class="list-button item-link">Emergency</a></li>
+          <li><a href="anesthetic.html" class="list-button item-link">Anesthetic</a></li>
+          <li><a href="fluids.html" class="list-button item-link">Fluids</a></li>
+          <li><a href="cri.html" class="list-button item-link">CRI</a></li>
+          <li><a href="chocolate.html" class="list-button item-link">Chocolate</a></li>
+          <li><a href="misc.html" class="list-button item-link">Conversion</a></li>
+          <li><a href="lab.html" class="list-button item-link">Lab</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+<div class="page-content hide-bars-on-scroll">
+
+<div class="col-25">
+<p class="buttons-row">
+       <button  data-rel="drug" class="no-fastclick printme button button-raised button-fill color-pink ripple-blue"><i class="fa fa-print fa-lg"></i> Print</button>
+       <button  data-popup=".popup-cri" class="open-popup no-fastclick printme button button-raised button-fill color-pink ripple-blue">About CRI's</button>
+
+</p>
+</div>
+
+<!-- Separate collapsibles - omit "accordion-list" class-->
+<div class="list-block">
+  <ul>
+    <li class="accordion-item accordion-item-expanded"><a href="#" class="item-content item-link">
+        <div class="item-inner">
+          <div class="item-title">Hematology</div>
+        </div></a>
+      <div class="accordion-item-content">
+        <div class="content-block">
+ 
+  <table align="center" class="table-sm table table-bordered" data-filtering="true">
+        <tbody>
+          <tr>
+            <td><b>Test</b></td>
+            <td><b>Units</b></td>
+            <td><b>Canine</b></td>
+            <td><b>Feline</b></td>
+          </tr>
+          <tr>
+            <td colspan="8">Red Blood Cells</td>
+          </tr>
+          <tr>
+            <td><b>HCT*</b></td>
+            <td>%</td>
+            <td>41 - 58</td>
+            <td>31 - 48</td>
+          </tr>
+          <tr>
+            <td><b>RBC*</b></td>
+            <td>x10<sup>6</sup>/µL</td>
+            <td>5.7 - 8.5</td>
+            <td>6.9 - 10.1</td>
+          </tr>
+          <tr>
+            <td><b>Hgb*</b></td>
+            <td>g/dl</td>
+            <td>14.1 - 20.1</td>
+            <td>10.9 - 15.7</td>
+          </tr>
+          <tr>
+            <td><b>MCV*</b></td>
+            <td>fL</td>
+            <td>64 - 76</td>
+            <td>40 - 52</td>
+          </tr>
+          <tr>
+            <td><b>MCH*</b></td>
+            <td>pg</td>
+            <td>21 - 26</td>
+            <td>13 - 17</td>
+          </tr>
+          <tr>
+            <td><b>MCHC*</b></td>
+            <td>g/dL</td>
+            <td>33-36</td>
+            <td>32 - 35</td>
+          </tr>
+          <tr>
+            <td><b>RDW*</b></td>
+            <td>%</td>
+            <td>10.6 - 14.3</td>
+            <td>13.2 - 17.5</td>
+          </tr>
+          <tr>
+            <td><b>NRBC</b></td>
+            <td>/100 WBC</td>
+            <td>0-1</td>
+            <td>0-1</td>
+          </tr>
+          <tr>
+            <td><b>Retic*</b></td>
+            <td>%</td>
+            <td>0.2 - 1.5</td>
+            <td>0.1 - 0.7</td>
+          </tr>
+          <tr>
+            <td><b>Retic</b><b>*</b></td>
+            <td>x 10<sup>9</sup>/L</td>
+            <td>11 - 92</td>
+            <td>9-61</td>
+          </tr>
+          <tr>
+            <td colspan="8">White Blood Cells</td>
+          </tr>
+          <tr>
+            <td><b>WBC*</b></td>
+            <td>x10<sup>3</sup>/µL</td>
+            <td>5.7 - 14.2</td>
+            <td>5.1 - 16.2</td>
+          </tr>
+          <tr>
+            <td><b>Neuts</b></td>
+            <td>x10<sup>3</sup>/µL</td>
+            <td>2.7 - 9.4</td>
+            <td>2.3 - 11.6</td>
+          </tr>
+          <tr>
+            <td><b>Bands</b></td>
+            <td>x10<sup>3</sup>/µL</td>
+            <td>0 - 0.1</td>
+            <td>0 - 0.1</td>
+          </tr>
+          <tr>
+            <td><b>Lymphs</b></td>
+            <td>x10<sup>3</sup>/µL</td>
+            <td>0.9 - 4.7</td>
+            <td>0.9 - 6</td>
+          </tr>
+          <tr>
+            <td><b>Monos</b></td>
+            <td>x10<sup>3</sup>/µL</td>
+            <td>0.1 - 1.3</td>
+            <td>0 - 0.7</td>
+          </tr>
+          <tr>
+            <td><b>Eos</b></td>
+            <td>x10<sup>3</sup>/µL</td>
+            <td>0.1 - 2.1</td>
+            <td>0.1 - 1.8</td>
+          </tr>
+          <tr>
+            <td><b>Basos</b></td>
+            <td>x10<sup>3</sup>/µL</td>
+            <td>0 - 0.1</td>
+            <td>0 - 0.2</td>
+          </tr>
+          <tr>
+            <td colspan="8">Platelets</td>
+          </tr>
+          <tr>
+            <td><b>PLT</b><b>*</b></td>
+            <td>x10<sup>3</sup>/µL</td>
+            <td>186 - 545</td>
+            <td>195 - 624</td>
+          </tr>
+          <tr>
+            <td><b>MPV*</b></td>
+            <td>fL</td>
+            <td>8.4 - 14.1</td>
+            <td>9.1 - 24.3</td>
+          </tr>
+          <tr>
+            <td><b>TP-Ref.</b></td>
+            <td>g/dL</td>
+            <td>5.9 - 7.8</td>
+            <td>5.9 - 7.5</td>
+          </tr>
+        </tbody>
+      </table>
+ 
+
+
+
+        
+        </div>
+      </div>
+    </li>
+    <li class="accordion-item"><a href="#" class="item-content item-link">
+        <div class="item-inner">
+          <div class="item-title">Chemistry</div>
+        </div></a>
+      <div class="accordion-item-content">
+        <div class="content-block">
+          <table align="center" class="table-sm table table-bordered" data-filtering="true" >
+        <tbody>
+          <tr>
+            <td> Test </td>
+            <td> Units </td>
+            <td> Canine </td>
+            <td> Feline </td>
+          </tr>
+          <tr>
+            <td> Sodium </td>
+            <td> mEq/L </td>
+            <td> 145-153 </td>
+            <td> 151-158 </td>
+          </tr>
+          <tr>
+            <td> Potassium </td>
+            <td> mEq/L </td>
+            <td> 4.1-5.6 </td>
+            <td> 4.0 - 5.9 </td>
+          </tr>
+          <tr>
+            <td> Chloride </td>
+            <td> mEq/L </td>
+            <td> 105-116 </td>
+            <td> 113-123 </td>
+          </tr>
+          <tr>
+            <td> Bicarbonate </td>
+            <td> mEq/L </td>
+            <td> 15-25 </td>
+            <td> 15-24 </td>
+          </tr>
+          <tr>
+            <td> Anion Gap </td>
+            <td> mEq/L </td>
+            <td> 17-27 </td>
+            <td> 18-25 </td>
+          </tr>
+          <tr>
+            <td> Glucose </td>
+            <td> mg/dL </td>
+            <td> 63-118 </td>
+            <td> 64-144 </td>
+          </tr>
+          <tr>
+            <td> BUN </td>
+            <td> mg/dL </td>
+            <td> 10-32 </td>
+            <td> 16-36 </td>
+          </tr>
+          <tr>
+            <td> Creatinine </td>
+            <td> mg/dL </td>
+            <td> 0.6-1.4 </td>
+            <td> 0.6-2.0 </td>
+          </tr>
+          <tr>
+            <td> Uric Acid </td>
+            <td> mg/dL </td>
+            <td> 0.1-0.3 </td>
+            <td> 0-0.5 </td>
+          </tr>
+          <tr>
+            <td> Total Bilirubin </td>
+            <td> mg/dL </td>
+            <td> 0-0.2 </td>
+            <td> 0-0.2 </td>
+          </tr>
+          <tr>
+            <td> Direct Bilirubin </td>
+            <td> mg/dL </td>
+            <td> 0-0.1 </td>
+            <td> 0-0.1 </td>
+          </tr>
+          <tr>
+            <td> Indirect Bilirubin </td>
+            <td> mg/dL </td>
+            <td> 0-0.2 </td>
+            <td> 0-0.2 </td>
+          </tr>
+          <tr>
+            <td> Alk Phos </td>
+            <td> U/L </td>
+            <td> 17-111 </td>
+            <td> 13-83 </td>
+          </tr>
+          <tr>
+            <td> gamma GT </td>
+            <td> U/L </td>
+            <td> 0-6 </td>
+            <td> 0-2 </td>
+          </tr>
+          <tr>
+            <td> ALT/ P5P </td>
+            <td> U/L </td>
+            <td> 20-98 </td>
+            <td> 35-176</td>
+          </tr>
+          <tr>
+            <td> AST/ P5P </td>
+            <td> U/L </td>
+            <td> 14-51</td>
+            <td> 15-44</td>
+          </tr>
+          <tr>
+            <td> SDH </td>
+            <td> U/L </td>
+            <td> 0-8 </td>
+            <td> 0-10 </td>
+          </tr>
+          <tr>
+            <td> GLDH</td>
+            <td>U/L</td>
+            <td>2-11</td>
+            <td>0-4</td>
+          </tr>
+          <tr>
+            <td> CK </td>
+            <td> U/L </td>
+            <td> 48-261 </td>
+            <td> 73-388 </td>
+          </tr>
+          <tr>
+            <td> LDH </td>
+            <td> U/L </td>
+            <td> 30-236 </td>
+            <td> 57-451 </td>
+          </tr>
+          <tr>
+            <td> Total Protein </td>
+            <td> g/dL </td>
+            <td> 5.3-7.0 </td>
+            <td> 6.3-8.3 </td>
+          </tr>
+          <tr>
+            <td> Albumin </td>
+            <td> g/dL </td>
+            <td> 3.1-4.2 </td>
+            <td> 2.8-4.2 </td>
+          </tr>
+          <tr>
+            <td> Globulin </td>
+            <td> g/dL </td>
+            <td> 1.9-3.6 </td>
+            <td> 2.7-4.9 </td>
+          </tr>
+          <tr>
+            <td> A/G </td>
+            <td><font color="#FFFFFF">-</font></td>
+            <td> 0.9-2.1 </td>
+            <td> 0.6-1.6 </td>
+          </tr>
+          <tr>
+            <td> Calcium </td>
+            <td> mg/dL </td>
+            <td> 9.3-11.4 </td>
+            <td> 9.1-10.9 </td>
+          </tr>
+          <tr>
+            <td> Phosphate </td>
+            <td> mg/dL </td>
+            <td> 2.9-5.2 </td>
+            <td> 2.7-6.2 </td>
+          </tr>
+          <tr>
+            <td> Magnesium </td>
+            <td> mg/dL </td>
+            <td> 1.4-2.2 </td>
+            <td> 1.6-2.3 </td>
+          </tr>
+          <tr>
+            <td> Cholesterol </td>
+            <td> mg/dL </td>
+            <td> 138-332 </td>
+            <td> 66-317 </td>
+          </tr>
+          <tr>
+            <td> Triglycerides </td>
+            <td> mg/dL </td>
+            <td> 22-125 </td>
+            <td> 25-133 </td>
+          </tr>
+          <tr>
+            <td> Amylase </td>
+            <td> U/L </td>
+            <td> 377-1220 </td>
+            <td> 532-2008 </td>
+          </tr>
+          <tr>
+            <td> Lipase-DCL </td>
+            <td> U/L </td>
+            <td> 78-765 </td>
+            <td> 5-222 </td>
+          </tr>
+          <tr>
+            <td> Iron </td>
+            <td> µg/dL </td>
+            <td> 78-214 </td>
+            <td> 53-145 </td>
+          </tr>
+          <tr>
+            <td> TIBC </td>
+            <td> µg/dL </td>
+            <td> 270-496 </td>
+            <td> 226-432 </td>
+          </tr>
+          <tr>
+            <td> Saturation </td>
+            <td> % </td>
+            <td> 23-61 </td>
+            <td> 15-49 </td>
+          </tr>
+          <tr>
+            <td> Bile Acids (fast/random) </td>
+            <td> µmol/L </td>
+            <td> 0-13 </td>
+            <td> 0-13 </td>
+          </tr>
+          <tr>
+            <td> Bile Acids (postprandial) </td>
+            <td> µmol/L </td>
+            <td> 0-30 </td>
+            <td> 0-25 </td>
+          </tr>
+          <tr>
+            <td>Cholinesterase</td>
+            <td>U/L</td>
+            <td>1895-5240</td>
+            <td>736-3016</td>
+          </tr>
+          <tr>
+            <td> BHB</td>
+            <td>mg/dL</td>
+            <td>0-1</td>
+            <td>0-2</td>
+          </tr>
+          <tr>
+            <td> NEFA</td>
+            <td>mEq/L</td>
+            <td>0.1-1.2</td>
+            <td>0.13-1.32</td>
+          </tr>
+          <tr>
+            <td> Fructosamine</td>
+            <td>Umol/L</td>
+            <td>222-348</td>
+            <td>174-294</td>
+          </tr>
+        </tbody>
+      </table>
+        </div>
+      </div>
+    </li>
+  <li class="accordion-item"><a href="#" class="item-content item-link">
+        <div class="item-inner">
+          <div class="item-title">Blood Gases</div>
+        </div></a>
+      <div class="accordion-item-content">
+        <div class="content-block">
+          <table  align="center" class="table-sm table table-bordered" data-filtering="true">
+        <tbody>
+          <tr>
+            <td width="145"><b>Test </b></td>
+            <td width="72"><b>Canine </b></td>
+            <td width="71"><b>Feline </b></td>
+          </tr>
+          <tr>
+            <td> pH* </td>
+            <td> 7.31 - 7.46 </td>
+            <td> 7.21 - 7.41 </td>
+          </tr>
+          <tr>
+            <td> pCO<sub>2</sub>* </td>
+            <td> 27 - 50 </td>
+            <td> 28 - 50 </td>
+          </tr>
+          <tr>
+            <td> pO<sub>2</sub>** </td>
+            <td> - </td>
+            <td> - </td>
+          </tr>
+          <tr>
+            <td> HCO<sub>3</sub></td>
+            <td> 17 - 28 </td>
+            <td> 16 - 23 </td>
+          </tr>
+          <tr>
+            <td> TCO<sub>2</sub></td>
+            <td> 18 - 29 </td>
+            <td> 17 - 24 </td>
+          </tr>
+          <tr>
+            <td> SBE </td>
+            <td> -7 to 2.9 </td>
+            <td> -8.5 to -1.5 </td>
+          </tr>
+          <tr>
+            <td> Na </td>
+            <td> 145 - 151 </td>
+            <td> 149 - 157 </td>
+          </tr>
+          <tr>
+            <td> K </td>
+            <td> 3.9 - 5.1 </td>
+            <td> 3.3 - 4.5 </td>
+          </tr>
+          <tr>
+            <td> Cl </td>
+            <td> 110 - 119 </td>
+            <td> 117 - 127 </td>
+          </tr>
+          <tr>
+            <td> AG </td>
+            <td> 11 - 20 </td>
+            <td> 13 - 20 </td>
+          </tr>
+          <tr>
+            <td> Ionized Calcium </td>
+            <td> 1.16 - 1.40 </td>
+            <td> 1.11 - 1.38 </td>
+          </tr>
+        </tbody>
+      </table>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="popup popup-cri">
+    <div class="content-block">
+      <p>About CRI's</p>
+      <p><a href="#" class="close-popup">Close popup</a></p>
+      A constant rate infusion/manually controlled infusion (CRI/MCI) of analgesic drugs is a simple and effective means of improving patient comfort. Various formulations can be used as a constant rate infusion; the protocol chosen depends on the patient and the degree of pain experienced or anticipated. Some of the commonly used drugs include the following:
+        <p>KETAMINE -- NMDA (N-methyl-D-aspartate) receptors are present in the dorsal horn of the spinal cord and certain areas within the brain. Intense and/or chronic noxious input to the dorsal horn cells (mediated principally by C-fibers) results in the removal of magnesium from the NMDA receptors and their activation by glutamate. This causes prolonged depolarization of spinal neurons (an increase in the magnitude and duration of neuron firing), which leads to an “amplification” of the pain response. This is a significant part of the process of central sensitization (an increase in the excitability of spinal neurons) and may result in hyperalgesia (an excessive response to a painful stimulus) and allodynia (a painful response to a normally non-painful stimulus).
+          
+          It is readily apparent that blocking (antagonizing) the NMDA receptors will help to minimize excessively painful responses. Additionally, studies suggest that antagonizing these receptors improves opioid receptor sensitivity, reduces opioid tolerance and minimizes the development of rebound hyperalgesia (the phenomenon of markedly increased pain when opioids are withdrawn).
+          
+          Ketamine is the most commonly used antagonist of NMDA receptors in veterinary medicine. While its effects as a dissociative anesthetic at standard doses are well known, a new realm of activity occurs when it is delivered at sub-anesthetic doses. At constant rate infusion doses, ketamine blocks receptor activity without causing any dissociative or other adverse effects.
+          
+          It should be noted that a microdose ketamine CRI should not be used as a sole means of analgesia. It is intended to augment other pain relievers, and should always be used in conjunction with opioids or other analgesics.</p>
+        <p>Opioids -- When combined with ketamine in a constant rate infusion, significant analgesia is achieved. The steady-state levels of opioids help to avoid some of the “peak and valley” effects seen with prn administration of opioids. Additionally, its use intraoperatively (as a “piggyback” onto anesthetic maintenance fluids) serves to reduce the amount of anesthetic gas required, which can be useful in decreasing the risk of hypotension. </p>
+        <p>LIDOCAINE -- The addition of lidocaine has several benefits. For intractable/very severe pain, it adds to the analgesia and sedation. Lidocaine is reported to have some cytoprotective effects, such as weak calcium channel inhibition (which may be helpful in preventing reperfusion injury), and reduced neutrophil chemotaxis and platelet aggregation (which could help significantly in cases with the potential for DIC or SIRS, including GDV’s and splenectomies). Also, lidocaine has some activity in preventing ileus (potentially useful for abdominal procedures).
+          
+          Various dosage rates of lidocaine have been advocated. Rates as low as 10 ug/kg/minute (0.6 mg/kg/hour) may provide analgesia, though it may take up to 50 ug/kg/minute (3 mg/kg/hour) for the full cytoprotective and anti-ileus effects. For feline patients, high dose rate CRIs should be limited to 2 hours duration after which dose rates should be reduced to between 10 to 25 ug/kg/min (0.6 to 1.5 mg/kg/hour) for up to an additional 4 hours duration.</p>
+        <p>CRIs can be delivered through the IV fluid bag route or directly through a syringe pump. The IV fluid bag route is attractive because it allows for precise delivery rates using equipment already available at most practices. The simplest method involves a single fluid bag providing both the drug delivery as well as the patient’s fluid needs. The downside to this method is the inability to adjust the fluid rate without changing the drug delivery rate. To maximize the flexibility of this method you generally need to pick a midrange dose rate so that adjustments in patient fluid need don’t take you outside of the preferred drug dose rates.</p>
+        You can expand your flexibility by running two separate fluid lines through two different IV fluid pumps. In the two-pump model, the CRI drugs would be delivered at a very low rate (ex. 1 ml/kg/hr) while the patient’s additional fluid needs are separately managed through the second line. This allows for total flexibility of drug and fluid delivery but requires two pumps and double IV access. 
+    </div>
+  </div>  
+
+
+
+
+            </div>
+           
+          </div>
+       
+        
+

@@ -1,0 +1,192 @@
+ <div class="navbar">
+<div class="navbar-inner">
+<div class="left"><a href="#" class="back link color-white"> <i class="icon icon-back"></i></a></div>
+ <div class="center sliding color-white">Conversion</div>
+<div class="right"><a href="#" data-popover=".popover-links" class="link open-popover color-white"><i class="icon icon-bars"></i></a></div>
+</div>
+</div>
+
+
+<div data-page="misc" class="page theme-bluegray">
+<div class="page-content hide-bars-on-scroll">
+
+
+<div class="popover popover-links">
+    <div class="popover-angle"></div>
+    <div class="popover-inner">
+      <div class="list-block">
+        <ul>
+        <li><a href="index.html" class="list-button item-link">Home</a></li>
+          <li><a href="emergency.html" class="list-button item-link">Emergency</a></li>
+          <li><a href="anesthetic.html" class="list-button item-link">Anesthetic</a></li>
+          <li><a href="fluids.html" class="list-button item-link">Fluids</a></li>
+          <li><a href="cri.html" class="list-button item-link">CRI</a></li>
+          <li><a href="chocolate.html" class="list-button item-link">Chocolate</a></li>
+          <li><a href="misc.html" class="list-button item-link">Conversion</a></li>
+          <li><a href="lab.html" class="list-button item-link">Lab</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+<div class="col-25">
+<p class="buttons-row">
+      <button class="no-fastclick resetme button button-raised button-fill color-bluegrey ripple-green"><i class="fa fa-refresh fa-lg"></i> Reset</button>
+       <button  data-rel="drug" class="no-fastclick printme button button-raised button-fill color-bluegrey ripple-blue"><i class="fa fa-print fa-lg"></i> Print</button>
+</p>
+</div>
+
+
+
+         
+        <div class="list-block">
+  <ul>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Pounds</div>
+          <div class="item-input">
+              <input id="inputPounds" class="form-control" type="tel" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Kilograms</div>
+          <div class="item-input">
+             <input id="inputKilograms" class="form-control" type="tel" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>  
+
+<div class="content-block-title">Body Surface Area Calculator</div>
+ <div class="list-block">
+  <ul>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Feline BSA</div>
+          <div class="item-input">
+              <input type="tel" class="form-control drug" id="bsaCat" name="bsaCat"  disabled>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Canine BSA</div>
+          <div class="item-input">
+             <input type="tel" class="form-control drug" id="bsaDog" name="bsaDog"  disabled>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>  
+
+<div class="content-block-title">Temperature Conversion</div>
+ <div class="list-block">
+  <ul>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Temp ℉</div>
+          <div class="item-input">
+              <input type="tel" class="form-control" id="tempF" placeholder="Enter Temp ℉" oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Temp ℃</div>
+          <div class="item-input">
+          <input type="tel" class="form-control" id="tempC" placeholder="Enter Temp ℃" oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>  
+ <!-- Inset content block -->
+    
+
+<div class="content-block-title">Convert mg and mcg</div>
+ <div class="list-block">
+  <ul>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">mg</div>
+          <div class="item-input">
+             <input type="tel" class="form-control" id="mg"  placeholder="Enter mg" oninput="ugmgConverter(this.id,this.value)" onchange="ugmgConverter(this.id,this.value)">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">ug</div>
+          <div class="item-input">
+          <input type="tel" class="form-control" id="ug"  placeholder="Enter mcg" oninput="ugmgConverter(this.id,this.value)" onchange="ugmgConverter(this.id,this.value)">
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>  
+
+<div class="card data-table data-table-collapsible data-table-init">
+      <div class="card-header">
+        <div class="data-table-title"><h4>Drug Dose Calculator</h4> </div>
+        <div class="data-table-actions"><a class="link icon-only"><i class="icon f7-icons">sort</i></a><a class="link icon-only"><i class="icon f7-icons">more_vertical_round</i></a></div>
+      </div>
+      <div class="card-content">
+<table data-toggle-column="first" id="dosechart" class="table-sm table table-bordered">
+ <thead class="thead-default">
+          <tr class="printThis">
+            <th data-tablesaw-priority="persist" >Drug</th>
+            <th data-tablesaw-priority="2">Drug mg/ml</th>
+            <th data-tablesaw-priority="2">Set Dose</th>
+            <th data-tablesaw-priority="persist">Total Dose</th>
+            <th data-tablesaw-priority="persist">Volume</th>
+          </tr>
+        </thead>
+<tbody>
+<tr>
+            <td><input class="form-control" id="thedrug" type="text" placeholder="Drug Name">
+</td>
+            </td>
+            <td><div class="input-group mb-2 mr-sm-2 mb-sm-0">
+    <input class="form-control form-control-sm drug" id="themg" name="themg" type="tel" placeholder="Enter Drug mg/ml" data-min="0" data-max="1000" data-step="0.1" data-postfix="mg/ml" data-decimal="3" value="1" > 
+  </div></td>
+             <td><div class="col-md-10">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#drugDoseMg" data-ml="#drugDoseMl" name="drugDose" type="tel" data-conc="1" data-min="0" data-max="1000" data-step="0.1" data-postfix="mg/kg" data-decimal="3" value="1">
+              </div></td>
+            <td class="dosage"><span class="rx1 chip"><span id="drugDoseMg" class="chip-label label-primary  number"></span></span></td>
+            <td class="vol"><span class="rx2 chip"><span id="drugDoseMl" class="chip-label label-success number"></span></span></td>
+          </tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+
+
+
+            </div>
+           
+          </div>
+    
+        
+

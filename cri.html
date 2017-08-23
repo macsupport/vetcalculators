@@ -1,0 +1,450 @@
+ <div class="navbar">
+<div class="navbar-inner">
+<div class="left"><a href="#" class="back link color-white"> <i class="icon icon-back"></i></a></div>
+ <div class="center sliding color-white">CRI</div>
+<div class="right"><a href="#" data-popover=".popover-links" class="link open-popover color-white"><i class="icon icon-bars"></i></a></div>
+</div>
+</div>
+
+
+<div data-page="cri" class="page theme-bluegray">
+
+<div class="popover popover-links">
+    <div class="popover-angle"></div>
+    <div class="popover-inner">
+      <div class="list-block">
+        <ul>
+        <li><a href="index.html" class="list-button item-link">Home</a></li>
+          <li><a href="emergency.html" class="list-button item-link">Emergency</a></li>
+          <li><a href="anesthetic.html" class="list-button item-link">Anesthetic</a></li>
+          <li><a href="fluids.html" class="list-button item-link">Fluids</a></li>
+          <li><a href="cri.html" class="list-button item-link">CRI</a></li>
+          <li><a href="chocolate.html" class="list-button item-link">Chocolate</a></li>
+          <li><a href="misc.html" class="list-button item-link">Conversion</a></li>
+          <li><a href="lab.html" class="list-button item-link">Lab</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="page-content hide-bars-on-scroll">
+
+<div class="content-block-title">Constant Rate Infusion</div>
+
+<div class="col-25">
+<p class="buttons-row">
+      <button class="no-fastclick resetme button button-raised button-fill color-orange ripple-green"><i class="fa fa-refresh fa-lg"></i> Reset</button>
+       <button  data-rel="drug" class="no-fastclick printme button button-raised button-fill color-pink ripple-blue"><i class="fa fa-print fa-lg"></i> Print</button>
+       <button  data-popup=".popup-cri" class="open-popup no-fastclick printme button button-raised button-fill color-pink ripple-blue">About CRI's</button>
+
+</p>
+</div>
+
+
+        <div class="list-block">
+  <ul>
+    <li>
+      <div class="item-content">
+       
+        <div class="item-inner">
+          <div class="item-title label">Pounds</div>
+          <div class="item-input">
+              <input id="inputPounds" class="form-control" type="tel" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="item-content">
+        
+        <div class="item-inner">
+          <div class="item-title label">Kilograms</div>
+          <div class="item-input">
+             <input id="inputKilograms" class="form-control" type="tel" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>  
+
+<form id="cri-form" class="list-block store-data">
+ <ul>
+<li>
+<div class="item-content">
+<div class="item-inner">
+<div class="item-title label"><i class="fa fa-bars  fa-lg"></i> Fluids</div>
+<div class="item-input">
+<select id="fluidVol" class="form-control custom-select span1 selectpicker show-tick">
+        <option value="1000">1000 ml</option>
+        <option value="500">500 ml</option>
+        <option value="250">250 ml</option>
+      </select>
+</div>
+</div>
+</div>
+</li>
+<li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label"><i class="fa fa-tint  fa-lg"></i> ml/kg/hr</div>
+          <div class="item-input">
+             <input id="mlkghr" class="form-control drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#mlkCRIMG" data-ml="#mlkCRIML" name="mlkghr" type="tel" data-conc="1" data-min="0.1" data-max="20" data-step="0.1" data-postfix="ml/kg/hr" data-prefix="CRI Rate"  data-decimal="2" value="1">
+          </div>
+        </div>
+      </div>
+    </li>
+</ul> 
+
+
+
+
+</form>
+
+<div class="content-block-title">CRI Calculators</div>
+<div class="list-block accordion-list">
+  <ul>
+    <li class="accordion-item  accordion-item-expanded"><a href="#" class="item-content item-link">
+        <div class="item-inner">
+          <div class="item-title color-bluegray">Morphine-Lidocaine-Ketamine CRI</div>
+        </div></a>
+      <div class="accordion-item-content">
+        <div class="content-block">
+         
+      <table  class="table table-sm table-bordered tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+                <thead>
+                  <tr>
+                    <th>Drug</th>
+                    <th  data-breakpoints="xs" class="usage">Dose Range</th>
+                    <th>Drug Dose (mg/ml)</th>
+                    <th>Volume</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td><b>Fluid Rate to Administer MLK cc/hr <i class="fa fa-circle-arrow-right"></i></b></td>
+                    <td><h4> <span class="chip bg-lightblue"><span id="mlkfluids" class="mlkfluids chip-chip-label chip-label-info number"></span></span></span></h4></td>
+                  </tr>
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Dose/kg of body weight">
+                    <td> Morphine   15mg/ml 
+                      </td>
+                      <td><b>0.12 to 0.36 mg/kg/hr (2 to 6 ug/kg/min)</b></td>
+                    <td><div class="col-md-12">
+                        <input class="morphV form-control form-control-sm drug"  name="morphV" type="tel"  data-min="0.1" data-max="0.4" data-step="0.01" data-postfix="mg/kg" data-decimal="2" value="0.12">
+                      </div></td>
+                    <td><span class="chip"><span id="mlkMorph" class="chip-label  number"></span></span></td>
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Volume in ml to give of each drug">
+                    <td>Lidocaine 20mg/ml
+                      </td>
+                      <td><b>0.6 to 3.0 mg/kg/hr (10 to 50 ug/kg/minute)*</b></td>
+                    <td><div class="col-md-12">
+                      <input  class="lidoV form-control form-control-sm drug"  name="lidoV" type="tel"  data-min="0.6" data-max="3.0" data-step="0.1" data-postfix="mg/kg" data-decimal="2" value="1.5"></div></td>
+                    <td><span class="chip"><span id="mlkLido" class="mlkLido chip-label  number"></span></span></span></td>
+                  </tr>
+                    </tr>
+                  
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Volume in ml to give of each drug">
+                    <td>Ketamine 100mg/ml
+                      </td>
+                      <td><b>0.12 to 1.2 mg/kg/hr (2 to 20 ug/kg/minute)</b></td>
+                    <td><div class="col-md-12">
+                        <input id="ketV" class="form-control form-control-sm drug"  name="ketV" type="tel"  data-min="0.1" data-max="1.5" data-step="0.01" data-postfix="mg/kg" data-decimal="2" value="0.6">
+                      </div></td>
+                    <td><span class="chip"><span id="mlkKet" class="mlkKet chip-label  number"></span></span></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td><span class="pull-right">Volume of fluid to remove from bag</span></td>
+                    <td><span class="chip bg-red"><span id="mlktotal" class="chip-label chip-label-danger number"></span></span></td>
+                  </tr>
+                </tbody>
+              </table>
+      
+        </div>
+      </div>
+    </li>
+    <li class="accordion-item"><a href="#" class="item-content item-link">
+        <div class="item-inner">
+          <div class="item-title color-bluegray">Hydromorphone-Lidocaine-Ketamine CRI</div>
+        </div></a>
+      <div class="accordion-item-content">
+        <div class="content-block">
+      
+       <table  class="table table-condensed table-bordered tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+                <thead>
+                  <tr>
+                    <th>Drug</th>
+                     <th  data-breakpoints="xs" class="usage">Dose Range</th>
+                    <th>Drug Dose (mg/ml)</th>
+                    <th>Volume</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td><b>Fluid Rate to Administer HLK cc/hr <i class="fa fa-circle-arrow-right"></i></b></td>
+                    <td><span class="chip bg-lightblue"><span  class="hydrofluids chip-chip-label chip-label-info number"></span></span></span></td>
+                  </tr>
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Dose/kg of body weight">
+                    <td> Hydromorphone   2mg/ml 
+                      </td>
+                      <td><b>0.024 to 0.072 mg/kg/hr (0.4 to 1.2 ug/kg/min)</b></td>
+                      <td><div class="col-md-12">
+                        <input class="hydroV form-control form-control-sm drug"  name="hydroV" type="tel"  data-min="0.001" data-max="0.075" data-step="0.005" data-postfix="mg/kg" data-decimal="3" value="0.025">
+                      </div></td>
+                    <td><span class="chip"><span id="mlkHydro" class="chip-label  number"></span></span></td>
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Volume in ml to give of each drug">
+                     <td>Lidocaine 20mg/ml
+                      </td>
+                      <td><b>0.6 to 3.0 mg/kg/hr (10 to 50 ug/kg/minute)*</b></td>
+                    <td><div class="col-md-12">
+                      <input id="lidoV2"  class="lidoV2 form-control form-control-sm drug"  name="lidoV2" type="tel"  data-min="0.6" data-max="3.0" data-step="0.1" data-postfix="mg/kg" data-decimal="2" value="1.5"></div></td>
+                    <td><span class="chip"><span id="mlkLido2" class="mlkLido2 chip-label  number"></span></span></td>
+                  </tr>
+                    </tr>
+                  
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Volume in ml to give of each drug">
+                    <td>Ketamine 100mg/ml
+                      </td>
+                      <td><b>0.12 to 1.2 mg/kg/hr (2 to 20 ug/kg/minute)</b></td>
+                   <td><div class="col-md-12">
+                        <input id="ketV2" class="form-control form-control-sm drug"  name="ketV2" type="tel"  data-min="0.1" data-max="1.5" data-step="0.01" data-postfix="mg/kg" data-decimal="2" value="0.6">
+                      </div></td>
+                    <td><span class="chip"><span id="mlkKet2" class="mlkKet2 chip-label  number"></span></span></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td><span class="pull-right">Volume of fluid to remove from bag</span></td>
+                    <td><span class="chip bg-red"><span id="hlktotal" class="hlktotal chip-label chip-label-danger number"></span></span></td>
+                  </tr>
+                </tbody>
+              </table>
+      
+        </div>
+      </div>
+    </li>
+<li class="accordion-item"><a href="#" class="item-content item-link">
+        <div class="item-inner">
+          <div class="item-title color-bluegray">Buprenorphine-Lidocaine-Ketamine CRI</div>
+        </div></a>
+      <div class="accordion-item-content">
+        <div class="content-block">
+           <table class="table table-condensed table-bordered tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+                <thead>
+                  <tr>
+                    <th>Drug</th>
+                     <th  data-breakpoints="xs" class="usage">Dose Range</th>
+                    <th>Drug Dose (mg/ml)</th>
+                    <th>Volume</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td><b>Fluid Rate to Administer BupLK cc/hr <i class="fa fa-circle-arrow-right"></i></b></td>
+                    <td><span class="chip bg-lightblue"><span  class="buprenfluids chip-chip-label chip-label-info number"></span></span></span></td>
+                  </tr>
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Dose/kg of body weight">
+                    <td> Buprenorphine   (0.3 mg/ml) 
+                      </td>
+                      <td><b>0.00245 to 0.0075 mg/kg/hr (0.042 to 0.125 ug/kg/min)</b></td>
+                    <td><div class="col-md-12">
+                    <input class="buprenV form-control form-control-sm drug"  name="buprenV" type="tel"  data-min="0.001" data-max="0.008" data-step="0.0005" data-postfix="mg/kg" data-decimal="4" value="0.003">
+                      </div></td>
+                    <td><span class="chip"><span id="mlkBupren" class="chip-label  number"></span></span></td>
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Volume in ml to give of each drug">
+                    <td>Lidocaine 20mg/ml
+                      </td>
+                      <td><b>0.6 to 3.0 mg/kg/hr (10 to 50 ug/kg/minute)*</b></td>
+                    <td><div class="col-md-12">
+                      <input id="lidoV3"  class="lidoV3 form-control form-control-sm drug"  name="lidoV3" type="tel"  data-min="0.6" data-max="3.0" data-step="0.1" data-postfix="mg/kg" data-decimal="2" value="1.5"></div></td>
+                    <td><span class="chip"><span id="mlkLido3" class="mlkLido3 chip-label  number"></span></span></td>
+                  </tr>
+                    </tr>
+                  
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Volume in ml to give of each drug">
+                    <td>Ketamine 100mg/ml
+                      </td>
+                      <td><b>0.12 to 1.2 mg/kg/hr (2 to 20 ug/kg/minute)</b></td>
+                    <td><div class="col-md-12">
+                        <input id="ketV3" class="form-control form-control-sm drug"  name="ketV3" type="tel"  data-min="0.1" data-max="1.5" data-step="0.01" data-postfix="mg/kg" data-decimal="2" value="0.6">
+                      </div></td>
+                    <td><span class="chip"><span id="mlkKet3" class="mlkKet3 chip-label  number"></span></span></td>
+                  </tr>
+                    </tr>
+                  
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td><span class="pull-right">Volume of fluid to remove from bag</span></td>
+                    <td><span class="chip bg-red"><span id="buptotal" class=" chip-label chip-label-danger number"></span></span></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>
+    </li>
+    <li class="accordion-item"><a href="#" class="item-content item-link">
+        <div class="item-inner">
+          <div class="item-title color-bluegray">Butorphanol-Lidocaine-Ketamine CRI</div>
+        </div></a>
+      <div class="accordion-item-content">
+        <div class="content-block">
+          
+       <table class="table table-condensed table-bordered tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+                <thead>
+                  <tr>
+                    <th>Drug</th>
+                     <th  data-breakpoints="xs" class="usage">Dose Range</th>
+                    <th>Drug Dose (mg/ml)</th>
+                    <th>Volume</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td><b>Fluid Rate to Administer ButLK cc/hr <i class="fa fa-circle-arrow-right"></i></b></td>
+                    <td><span class="chip bg-lightblue"><span  class="butorphfluids chip-chip-label chip-label-info number"></span></span></span></td>
+                  </tr>
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Dose/kg of body weight">
+                    <td> Butorphanol   10 mg/ml
+                    </td>
+                      <td>  <b>0.012 to 0.072 mg/kg/hr (0.2 to 1.20 ug/kg/min)</b></td>
+                    <td><div class="col-md-12">
+                    <input class="butorphV form-control form-control-sm drug"  name="butorphV" type="tel"  data-min="0.01" data-max="0.08" data-step="0.005" data-postfix="mg/kg" data-decimal="3" value="0.02">
+                      </div></td>
+                    <td><span class="chip"><span id="mlkButorph" class="chip-label  number"></span></span></td>
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Volume in ml to give of each drug">
+                    <td>Lidocaine 20mg/ml
+                      </td>
+                      <td><b>0.6 to 3.0 mg/kg/hr (10 to 50 ug/kg/minute)*</b></td>
+                    <td><div class="col-md-12">
+                      <input id="lidoV4"  class="lidoV4 form-control form-control-sm drug"  name="lidoV4" type="tel"  data-min="0.6" data-max="3.0" data-step="0.1" data-postfix="mg/kg" data-decimal="2" value="1.5"></div></td>
+                    <td><span class="chip"><span id="mlkLido4" class="mlkLido4 chip-label  number"></span></span></td>
+                  </tr>
+                    </tr>
+                  
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Volume in ml to give of each drug">
+                    <td>Ketamine 100mg/ml
+                      </td>
+                      <td><b>0.12 to 1.2 mg/kg/hr (2 to 20 ug/kg/minute)</b></td>
+                  <td><div class="col-md-12">
+                        <input id="ketV4" class="form-control form-control-sm drug"  name="ketV4" type="tel"  data-min="0.1" data-max="1.5" data-step="0.01" data-postfix="mg/kg" data-decimal="2" value="0.6">
+                      </div></td>
+                    <td><span class="chip"><span id="mlkKet4" class="mlkKet4 chip-label  number"></span></span></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td><span class="pull-right">Volume of fluid to remove from bag</span></td>
+                    <td><span class="chip bg-red"><span id="buttotal" class=" chip-label chip-label-danger number"></span></span></td>
+                  </tr>
+                </tbody>
+              </table>
+      
+        </div>
+      </div>
+    </li>
+<li class="accordion-item"><a href="#" class="item-content item-link">
+        <div class="item-inner">
+          <div class="item-title color-bluegray">Fentanyl-Lidocaine-Ketamine CRI</div>
+        </div></a>
+      <div class="accordion-item-content">
+        <div class="content-block">
+         
+        <table class="table table-condensed table-bordered tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+                <thead>
+                  <tr>
+                    <th>Drug</th>
+                     <th  data-breakpoints="xs" class="usage">Dose Range</th>
+                    <th>Drug Dose (mg/ml)</th>
+                    <th>Volume</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td><b>Fluid Rate to Administer ButLK cc/hr <i class="fa fa-circle-arrow-right"></i></b></td>
+                    <td><span class="chip bg-lightblue"><span  class="fentfluids chip-chip-label chip-label-info number"></span></span></span></td>
+                  </tr>
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Dose/kg of body weight">
+                    <td> Fentanyl   0.05 mg/ml
+                      </td>
+                      <td><b>0.012 to 0.072 mg/kg/hr (0.2 to 1.20 ug/kg/min)</b></td>
+                    <td><div class="col-md-12">
+                    <input class="fentV form-control form-control-sm drug"  name="fentV" type="tel"  data-min="0.001" data-max="0.008" data-step="0.0005" data-postfix="mg/kg" data-decimal="4" value="0.0025">
+                      </div></td>
+                    <td><span class="chip"><span id="mlkFent" class="chip-label  number"></span></span></td>
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Volume in ml to give of each drug">
+                    <td>Lidocaine 20mg/ml
+                      </td>
+                      <td><b>0.6 to 3.0 mg/kg/hr (10 to 50 ug/kg/minute)*</b></td>
+                   <td><div class="col-md-12">
+                      <input id="lidoV5"  class="lidoV5 form-control form-control-sm drug"  name="lidoV5" type="tel"  data-min="0.6" data-max="3.0" data-step="0.1" data-postfix="mg/kg" data-decimal="2" value="1.5"></div></td>
+                    <td><span class="chip"><span id="mlkLido5" class="mlkLido5 chip-label  number"></span></span></td>
+                  </tr>
+                    </tr>
+                  
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Volume in ml to give of each drug">
+                    <td>Ketamine 100mg/ml
+                      </td>
+                      <td><b>0.12 to 1.2 mg/kg/hr (2 to 20 ug/kg/minute)</b></td>
+                    <td><div class="col-md-12">
+                        <input id="ketV5" class="form-control form-control-sm drug"  name="ketV5" type="tel"  data-min="0.1" data-max="1.5" data-step="0.01" data-postfix="mg/kg" data-decimal="2" value="0.6">
+                      </div></td>
+                    <td><span class="chip"><span id="mlkKet5" class="mlkKet5 chip-label  number"></span></span></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td><span class="pull-right">Volume of fluid to remove from bag</span></td>
+                    <td><span class="chip bg-red"><span id="fenttotal" class=" chip-label chip-label-danger number"></span></span></td>
+                  </tr>
+                </tbody>
+              </table>
+      
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+  <div class="popup popup-cri">
+    <div class="content-block">
+      <p>About CRI's</p>
+      <p><a href="#" class="close-popup">Close popup</a></p>
+      A constant rate infusion/manually controlled infusion (CRI/MCI) of analgesic drugs is a simple and effective means of improving patient comfort. Various formulations can be used as a constant rate infusion; the protocol chosen depends on the patient and the degree of pain experienced or anticipated. Some of the commonly used drugs include the following:
+        <p>KETAMINE -- NMDA (N-methyl-D-aspartate) receptors are present in the dorsal horn of the spinal cord and certain areas within the brain. Intense and/or chronic noxious input to the dorsal horn cells (mediated principally by C-fibers) results in the removal of magnesium from the NMDA receptors and their activation by glutamate. This causes prolonged depolarization of spinal neurons (an increase in the magnitude and duration of neuron firing), which leads to an “amplification” of the pain response. This is a significant part of the process of central sensitization (an increase in the excitability of spinal neurons) and may result in hyperalgesia (an excessive response to a painful stimulus) and allodynia (a painful response to a normally non-painful stimulus).
+          
+          It is readily apparent that blocking (antagonizing) the NMDA receptors will help to minimize excessively painful responses. Additionally, studies suggest that antagonizing these receptors improves opioid receptor sensitivity, reduces opioid tolerance and minimizes the development of rebound hyperalgesia (the phenomenon of markedly increased pain when opioids are withdrawn).
+          
+          Ketamine is the most commonly used antagonist of NMDA receptors in veterinary medicine. While its effects as a dissociative anesthetic at standard doses are well known, a new realm of activity occurs when it is delivered at sub-anesthetic doses. At constant rate infusion doses, ketamine blocks receptor activity without causing any dissociative or other adverse effects.
+          
+          It should be noted that a microdose ketamine CRI should not be used as a sole means of analgesia. It is intended to augment other pain relievers, and should always be used in conjunction with opioids or other analgesics.</p>
+        <p>Opioids -- When combined with ketamine in a constant rate infusion, significant analgesia is achieved. The steady-state levels of opioids help to avoid some of the “peak and valley” effects seen with prn administration of opioids. Additionally, its use intraoperatively (as a “piggyback” onto anesthetic maintenance fluids) serves to reduce the amount of anesthetic gas required, which can be useful in decreasing the risk of hypotension. </p>
+        <p>LIDOCAINE -- The addition of lidocaine has several benefits. For intractable/very severe pain, it adds to the analgesia and sedation. Lidocaine is reported to have some cytoprotective effects, such as weak calcium channel inhibition (which may be helpful in preventing reperfusion injury), and reduced neutrophil chemotaxis and platelet aggregation (which could help significantly in cases with the potential for DIC or SIRS, including GDV’s and splenectomies). Also, lidocaine has some activity in preventing ileus (potentially useful for abdominal procedures).
+          
+          Various dosage rates of lidocaine have been advocated. Rates as low as 10 ug/kg/minute (0.6 mg/kg/hour) may provide analgesia, though it may take up to 50 ug/kg/minute (3 mg/kg/hour) for the full cytoprotective and anti-ileus effects. For feline patients, high dose rate CRIs should be limited to 2 hours duration after which dose rates should be reduced to between 10 to 25 ug/kg/min (0.6 to 1.5 mg/kg/hour) for up to an additional 4 hours duration.</p>
+        <p>CRIs can be delivered through the IV fluid bag route or directly through a syringe pump. The IV fluid bag route is attractive because it allows for precise delivery rates using equipment already available at most practices. The simplest method involves a single fluid bag providing both the drug delivery as well as the patient’s fluid needs. The downside to this method is the inability to adjust the fluid rate without changing the drug delivery rate. To maximize the flexibility of this method you generally need to pick a midrange dose rate so that adjustments in patient fluid need don’t take you outside of the preferred drug dose rates.</p>
+        You can expand your flexibility by running two separate fluid lines through two different IV fluid pumps. In the two-pump model, the CRI drugs would be delivered at a very low rate (ex. 1 ml/kg/hr) while the patient’s additional fluid needs are separately managed through the second line. This allows for total flexibility of drug and fluid delivery but requires two pumps and double IV access. 
+    </div>
+  </div>  
+
+
+
+
+            </div>
+           
+          </div>
+       
+        
+

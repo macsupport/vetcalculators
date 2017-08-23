@@ -1,0 +1,138 @@
+ <div class="navbar">
+<div class="navbar-inner">
+<div class="left"><a href="#" class="back link color-white"> <i class="icon icon-back"></i></a></div>
+ <div class="center sliding color-white">Chocolate</div>
+<div class="right"><a href="#" data-popover=".popover-links" class="link open-popover color-white"><i class="icon icon-bars"></i></a></div>
+</div>
+</div>
+
+
+
+<div data-page="chocolate" class="page theme-bluegray">
+<div class="page-content hide-bars-on-scroll">
+
+<div class="popover popover-links">
+    <div class="popover-angle"></div>
+    <div class="popover-inner">
+      <div class="list-block">
+        <ul>
+        <li><a href="index.html" class="list-button item-link">Home</a></li>
+          <li><a href="emergency.html" class="list-button item-link">Emergency</a></li>
+          <li><a href="anesthetic.html" class="list-button item-link">Anesthetic</a></li>
+          <li><a href="fluids.html" class="list-button item-link">Fluids</a></li>
+          <li><a href="cri.html" class="list-button item-link">CRI</a></li>
+          <li><a href="chocolate.html" class="list-button item-link">Chocolate</a></li>
+          <li><a href="misc.html" class="list-button item-link">Conversion</a></li>
+          <li><a href="lab.html" class="list-button item-link">Lab</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+         
+        <div class="list-block">
+  <ul>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Pounds</div>
+          <div class="item-input">
+              <input id="inputPounds" class="form-control" type="tel" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Kilograms</div>
+          <div class="item-input">
+             <input id="inputKilograms" class="form-control" type="tel" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>  
+
+<div class="card">
+  <div class="card-header bg-brown color-white"> Chocolate Calculator
+  <div class="right">
+ <a class="link icon-only resetme color-white"><i class="fa fa-refresh fa-2x"></i></a>
+      <a class="link icon-only printme2 color-white"><i class="fa fa-print fa-2x"></i></a></div>
+  </div>
+  <div class="card-content">
+    <div class="card-content-inner">
+<div class="list-block">
+<ul>
+<li>
+<div class="item-content">
+<div class="item-inner">
+<div class="item-title label"><i class="fa fa-bars  fa-lg"></i> Set Chocolate Type</div>
+<div class="item-input">
+<select id="chocolate" title="Select Chocolate Type" selected class="form-control selectpicker bs-select-hidden show-tick show-menu-arrow"  data-width="auto" data-size="11">
+              <option value="0.25" data-value="0.85">White Chocolate</option>
+              <option value="58" selected data-value="6">Milk Chocolate</option>
+              <option value="130" data-value="20">Dark, Sweet Chocolate</option>
+              <option value="138" data-value="22">Semi-sweet Chocolate Chips</option>
+              <option value="393" data-value="47">Baker’s (unsweetened) Chocolate</option>
+              <option value="737" data-value="70">Dry Cocoa Powder</option>
+              <option value="136" data-value="15">Instant Cocoa Powder</option>
+              <option value="600" data-value="0">Cocoa Beans</option>
+              <option value="0" data-value="600">Coffee Beans or Grounds</option>
+              <option value="255" data-value="0">Cocoa Bean Hulls (e.g. mulch)</option>
+            </select>
+</div>
+</div>
+</div>
+</li>
+<li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label"><i class="fa fa-balance-scale  fa-lg"></i> Ounces Injested</div>
+          <div class="item-input">
+             <input id="ounce" class="form-control form-control drug" data-appendDose=" mg/kg Theobromine" data-appendVol=" mg/kg Caffeine" name="ounce" type="tel" data-mg="#chocTheo" data-ml="#chocCaf" data-conc="1" value="1" data-min="0.25" data-max="50" data-step="0.25" data-postfix="oz" data-decimal="2" >
+          </div>
+        </div>
+      </div>
+    </li>
+</ul>
+</div>
+    </div>
+  </div>
+  <div class="card-footer"> 
+   <h3 class="card-title">Results</h3>
+  <h4>
+  <span class="chip"><span id="toxic" class="chip-label label-default number"></span></span> <span class="plus"> </span>
+<span class="chip"><span id="toxic2" class="chip-label label-default number"></span></span>   <span class="equal"> </span>
+<span class="chip"><span id="toxicTotal" class="chip-label label-info number"></span></span> 
+<span id="toxicTotal2" style="display:none;"></span></h4>
+
+</div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+    <div class="card-content-inner"><h4 class="center"> 
+          <span class="chip bg-red red" style="display:none;"><span class="chip-label bg-red"><i class="fa fa-ambulance"></i>  Emergency Treatment Advised</span></span>
+            <span class="chip bg-red red2" style="display:none;"><span class="chip-label bg-red"><i class="fa fa-ambulance"></i>  Death Possible</span></span>
+            <span class="chip bg-green green" style="display:none;"><span class="chip-label bg-green" style=""><i class="fa fa-check"></i> No Treatment Necessary</span></span>
+            <span class="chip bg-yellow yellow" style="display:none;"><span class="chip-label bg-yellow"><i class="fa fa-exclamation-triangle"></i> Emergency Treatment Advised</span></span></h4></div>
+  </div>
+</div>
+ <!-- Inset content block -->
+    
+
+
+
+
+            </div>
+           
+          </div>
+        </div>
+        
+
