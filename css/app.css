@@ -14,7 +14,7 @@ height: auto
     }
 
 .footable .form-control.drug{width:100%;}
-
+.navbar a.link {color:#ffffff !important;}
 
 
 .theme-bluegray .button:not(.button-fill) {
