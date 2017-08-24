@@ -1,9 +1,4 @@
 
-
-
-
-
-
 var myApp = new Framework7();
 var $$ = Dom7;
 var mainView = myApp.addView('.view-main', {
@@ -13,15 +8,6 @@ var mainView = myApp.addView('.view-main', {
 });
 
 
-
-
-
-//myApp.onPageInit('about', function(page) {
-//    $$('.create-page').on('click', function() {
-//        createContentPage();
-//    });
-//});
-
 myApp.onPageInit('cri', function (page) {
   $('table').footable();
   MLK2();
@@ -30,12 +16,10 @@ myApp.onPageInit('cri', function (page) {
    MLK();
   $(document).on('keyup touchend','#inputKilograms', function() {
   MLK();
-  feedCups();
   setdrug();
-  calcChocTotal();
-calcChoc();  
 });
  });
+
 myApp.onPageInit('misc', function (page) {
   $('table').footable();
   MLK2();
@@ -44,18 +28,19 @@ myApp.onPageInit('misc', function (page) {
    MLK();
   $(document).on('keyup touchend','#inputKilograms', function() {
   MLK();
-  feedCups();
   setdrug();
-  calcChocTotal();
-calcChoc();  
 });
  }); 
+
+
+
 
 myApp.onPageInit('emergency', function (page) {
 $('table').footable();
   setdrug();
   setspin();
    MLK();
+    MLK2();
    $('.printme').on('click touchstart',function() {
     $('#dosechart3').printThis();
      return false;
@@ -67,10 +52,7 @@ $('table').footable();
      
 $(document).on('keyup touchend','#inputKilograms', function() {
   MLK();
-  feedCups();
   setdrug();
-  calcChocTotal();
-calcChoc();  
 });
       });
 myApp.onPageInit('anesthetic', function (page) {
@@ -78,6 +60,7 @@ myApp.onPageInit('anesthetic', function (page) {
   setdrug();
        setspin();
      MLK();
+       MLK2();
      $('.resetme').on("click touchstart",function() { 
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
   $('td span.chip').text(" ");
@@ -92,11 +75,10 @@ myApp.onPageInit('anesthetic', function (page) {
   });   
       $(document).on('keyup touchend','#inputKilograms', function() {
   MLK();
-  feedCups();
   setdrug();
-  calcChocTotal();
-calcChoc();  
 });
+
+
       });
 myApp.onPageInit('misc', function (page) {
   $('table').footable();
@@ -117,14 +99,18 @@ myApp.onPageInit('misc', function (page) {
   setspin();
   $(document).on('keyup touchend','#inputKilograms', function() {
   MLK();
-  feedCups();
   setdrug();
-  calcChocTotal();
-calcChoc();  
 });
       });
+
+
 myApp.onPageInit('fluids', function (page) {
+
   $('table').footable();
+  setdrug();
+       setspin();
+     MLK();
+       MLK2();
   $('.resetme').on("click touchstart",function() { 
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
   $('td span.chip').text(" ");
@@ -138,8 +124,7 @@ myApp.onPageInit('fluids', function (page) {
     window.print();
   return false;
   }); 
-  setdrug();
-  setspin();
+ 
   $(document).on('keyup touchend','#inputKilograms', function() {
   MLK();
   feedCups();
@@ -148,6 +133,8 @@ myApp.onPageInit('fluids', function (page) {
 calcChoc();  
 });
       });
+
+
 myApp.onPageInit('chocolate', function (page) {
   $('.resetme').on("click touchstart",function() { 
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
@@ -164,7 +151,6 @@ myApp.onPageInit('chocolate', function (page) {
   }); 
 $("#inputKilograms").on('keyup touchend',function() {
   MLK();
-  feedCups();
   setdrug();
   calcChocTotal();
 calcChoc();  
@@ -385,8 +371,7 @@ $("select.pickDose").on("change", function() {
 
 
 function setdrug() {
-   var kg =  parseFloat($('#inputKilograms').val());
-   
+   var kg =  parseFloat($('#inputKilograms').val());  
     $('input.fluid').each(function(index) {
     var drug = parseFloat($(this).val()).toFixed(3);
      var drugml = $(this).attr('data-ml'); 
@@ -800,4 +785,5 @@ MLK();
 });
 }
 MLK2();
+setspin();
 setdrug();
