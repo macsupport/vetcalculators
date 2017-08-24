@@ -1,4 +1,3 @@
-
 var myApp = new Framework7();
 var $$ = Dom7;
 var mainView = myApp.addView('.view-main', {
@@ -223,13 +222,13 @@ setTimeout(function(){
     $('input.drug').each(function(index) {
       var inputName = $(this).attr("name"),
         drugValue =   $('input[name="'+inputName+'"]'),
-        //minDose = parseFloat($(this).attr('data-min')),
-       // maxDose = parseFloat($(this).attr('data-max')),
-       // step = parseFloat($(this).attr('data-step')),
-       // decimal = parseFloat($(this).attr('data-decimal')),
-       // initval = parseFloat($(this).attr('value')),
-       // postfix = $(this).attr('data-postfix');
-       // prefix = $(this).attr('data-prefix');
+        minDose = parseFloat($(this).attr('data-min')),
+        maxDose = parseFloat($(this).attr('data-max')),
+        step = parseFloat($(this).attr('data-step')),
+        decimal = parseFloat($(this).attr('data-decimal')),
+        initval = parseFloat($(this).attr('value')),
+        postfix = $(this).attr('data-postfix');
+        prefix = $(this).attr('data-prefix');
         var inputValue = parseFloat($(drugValue).val());       
     $(document).on('keyup touchend', 'input[name="'+ inputName +'"]', function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
 console.log(inputName)
@@ -248,7 +247,7 @@ console.log(inputName)
 //  });
   
 //});
-
+setspin();
 
 function weightConverter(source,valNum) {
   valNum = parseFloat(valNum);
