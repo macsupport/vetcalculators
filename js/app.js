@@ -1,3 +1,4 @@
+
 var myApp = new Framework7();
 var $$ = Dom7;
 var mainView = myApp.addView('.view-main', {
@@ -19,7 +20,17 @@ myApp.onPageInit('cri', function (page) {
 });
  });
 
-
+myApp.onPageInit('misc', function (page) {
+  $('table').footable();
+  setdrug();
+  setspin();
+   MLK();
+    MLK2();
+  $(document).on('keyup touchend','#inputKilograms', function() {
+  MLK();
+  setdrug();
+});
+ }); 
 
 
 
@@ -74,8 +85,6 @@ myApp.onPageInit('anesthetic', function (page) {
 
 myApp.onPageInit('misc', function (page) {
   $('table').footable();
-    setdrug();
-  setspin();
   $(document).on("click touchstart",'.resetme',function() { 
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
   $('td span.chip').text(" ");
@@ -122,6 +131,8 @@ myApp.onPageInit('fluids', function (page) {
   setspin();
    MLK();
     MLK2();
+  calcChocTotal();
+calcChoc();  
 });
       });
 
@@ -182,13 +193,20 @@ $('.printmeModal').on('click touchstart',function() {
   });       
 
 
- 
+$('.printme').on('click touchstart',function() {
+    //$('#drug').printThis({     
+      //importCSS: true,          
+    // loadCSS: "css/print.css"
+  //});
+    window.print();
+  return false;
+  });       
 var today = new Date();
 $('.time').html(today.getHours() + ':' + today.getMinutes());
 $('.weekday').html(today.toDateString().substring(0, 3));
 $('.date').html(today.toDateString());
    
-$(document).on("click touchstart",'.resetme',function() { 
+$('.resetme').on("click touchstart",function() { 
  $('#inputKilograms,#inputPounds').val(' ');
   $('td span.chip-label').text(" ");
 
@@ -247,6 +265,7 @@ function weightConverter(source,valNum) {
      $("label[for='inputPounds']").addClass('active'); 
   }
   MLK();
+    feedCups();
   calcChocTotal();
 calcChoc();  
     setdrug();
@@ -279,6 +298,7 @@ valNum = parseFloat(valNum);
   
 $(document).on('keyup touchend','#inputKilograms', function() {
   MLK();
+  feedCups();
   setdrug();
   calcChocTotal();
 calcChoc();  
@@ -717,7 +737,6 @@ setdrug();
 MLK();
 });
 }
-MLK();
 MLK2();
 setspin();
 setdrug();
