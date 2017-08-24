@@ -10,10 +10,10 @@ var mainView = myApp.addView('.view-main', {
 
 myApp.onPageInit('cri', function (page) {
   $('table').footable();
-  MLK2();
    setdrug();
   setspin();
    MLK();
+    MLK2();
   $(document).on('keyup touchend','#inputKilograms', function() {
   MLK();
   setdrug();
@@ -22,10 +22,10 @@ myApp.onPageInit('cri', function (page) {
 
 myApp.onPageInit('misc', function (page) {
   $('table').footable();
-  MLK2();
-   setdrug();
+  setdrug();
   setspin();
    MLK();
+    MLK2();
   $(document).on('keyup touchend','#inputKilograms', function() {
   MLK();
   setdrug();
@@ -41,15 +41,19 @@ $('table').footable();
   setspin();
    MLK();
     MLK2();
-   $('.printme').on('click touchstart',function() {
+   $(document).on('click touchstart','.printme',function() {
     $('#dosechart3').printThis();
      return false;
   });
-    $('.printme2').on('click touchstart',function() {
+    $(document).on('click touchstart','.printme2',function() {
     $('#dosechart2').printThis();
   return false;
   });   
-     
+    
+$(document).on("click touchstart",'.resetme',function() { 
+ $('#inputKilograms,#inputPounds,#ounce').val(' ');
+  $('td span.chip').text(" ");
+});
 $(document).on('keyup touchend','#inputKilograms', function() {
   MLK();
   setdrug();
@@ -57,14 +61,13 @@ $(document).on('keyup touchend','#inputKilograms', function() {
       });
 myApp.onPageInit('anesthetic', function (page) {
   $('table').footable();
-  setdrug();
-       setspin();
-     MLK();
-       MLK2();
-     $('.resetme').on("click touchstart",function() { 
+   setdrug();
+  setspin();
+   MLK();
+    MLK2();
+     $(document).on("click touchstart",'.resetme',function() { 
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
   $('td span.chip').text(" ");
-
 });
   $('.printme').on('click touchstart',function() {
     $('#dosechart').printThis({     
@@ -77,15 +80,14 @@ myApp.onPageInit('anesthetic', function (page) {
   MLK();
   setdrug();
 });
-
-
       });
+
+
 myApp.onPageInit('misc', function (page) {
   $('table').footable();
-  $('.resetme').on("click touchstart",function() { 
+  $(document).on("click touchstart",'.resetme',function() { 
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
   $('td span.chip').text(" ");
-
 });
   $('.printme').on('click touchstart',function() {
     //$('#drug').printThis({     
@@ -108,13 +110,12 @@ myApp.onPageInit('fluids', function (page) {
 
   $('table').footable();
   setdrug();
-       setspin();
-     MLK();
-       MLK2();
-  $('.resetme').on("click touchstart",function() { 
+  setspin();
+   MLK();
+    MLK2();
+  $(document).on("click touchstart",'.resetme',function() { 
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
   $('td span.chip').text(" ");
-
 });
   $('.printme').on('click touchstart',function() {
     //$('#drug').printThis({     
@@ -126,9 +127,10 @@ myApp.onPageInit('fluids', function (page) {
   }); 
  
   $(document).on('keyup touchend','#inputKilograms', function() {
-  MLK();
-  feedCups();
-  setdrug();
+   setdrug();
+  setspin();
+   MLK();
+    MLK2();
   calcChocTotal();
 calcChoc();  
 });
@@ -136,10 +138,9 @@ calcChoc();
 
 
 myApp.onPageInit('chocolate', function (page) {
-  $('.resetme').on("click touchstart",function() { 
+  $(document).on("click touchstart",'.resetme',function() { 
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
   $('td span.chip').text(" ");
-
 });
   $('.printme').on('click touchstart',function() {
     //$('#drug').printThis({     
@@ -168,11 +169,7 @@ calcChoc();
 });
 
 
-var dynamicPageIndex = 0;
-function createContentPage() {
-    mainView.router.loadContent('<!-- Top Navbar-->' + '<div class="navbar">' + '  <div class="navbar-inner">' + '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' + '    <div class="center sliding">Dynamic Page ' + (++dynamicPageIndex) + '</div>' + '  </div>' + '</div>' + '<div class="pages">' + '  <!-- Page, data-page contains page name-->' + '  <div data-page="dynamic-pages" class="page">' + '    <!-- Scrollable page content-->' + '    <div class="page-content">' + '      <div class="content-block">' + '        <div class="content-block-inner">' + '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' + '          <p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' + '        </div>' + '      </div>' + '    </div>' + '  </div>' + '</div>');
-    return;
-}
+
 
  /*!
 *  © 2017 Mike Sozanski DVM, Dip ABVP
@@ -180,36 +177,6 @@ function createContentPage() {
  */
   
  $(document).ready(function() {
-
-  //$( ".container" ).trigger( "enhance.tablesaw" );
-
-setTimeout(function(){ 
-//setspin();
-}, 500);
-
-
-
-$('#information').on('hidden.bs.collapse', function () {
- $('.patient').text('Show Patient Info')
-});
-$('#information').on('shown.bs.collapse', function () {
- $('.patient').text('Hide Patient Info')
-});
-
-$('#cpr1').on('shown.bs.collapse', function() {
-    $(".emergencyInfo i").addClass('fa-chevron-up').removeClass('fa-chevron-down');
-  });
-
-$('#cpr1').on('hidden.bs.collapse', function() {
-    $(".emergencyInfo i").addClass('fa-chevron-down').removeClass('fa-chevron-up');
-  });
-$('#cpr2').on('shown.bs.collapse', function() {
-    $(".emergencyInfo i").addClass('fa-chevron-up').removeClass('fa-chevron-down');
-  });
-
-$('#cpr2').on('hidden.bs.collapse', function() {
-    $(".emergencyInfo i").addClass('fa-chevron-down').removeClass('fa-chevron-up');
-  });
 
 $('.footable-filtering-search').addClass('hidden-print');
 
@@ -263,29 +230,15 @@ setTimeout(function(){
         initval = parseFloat($(this).attr('value')),
         postfix = $(this).attr('data-postfix');
         prefix = $(this).attr('data-prefix');
-
-      //$('input[name="'+ inputName +'"]').TouchSpin({
-       // min: minDose,
-       // max: maxDose,
-       // step: step,
-       // decimals: decimal,
-       // postfix: postfix,
-       // prefix: prefix,
-       // initval: initval,
-       // verticalbuttons: true,
-         //buttondown_class: 'btn btn-default',
-            //buttonup_class: 'btn btn-default',
-        //verticalupclass: 'fa fa-chevron-up fa-lg',
-      //verticaldownclass: 'fa fa-chevron-down fa-lg'
-     // });
-        
-    //$(this).on('touchspin.on.stopspin', function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();});
-    $(this).on('keyup touchend', function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
+        var inputValue = parseFloat($(drugValue).val());       
+    $(document).on('keyup touchend', 'input[name="'+ inputName +'"]', function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
+console.log(inputName)
+    });
+    $(document).on('keyup touchend', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
     
     });
 
     
-
   }
 //$(function($){
  // $('table.table').footable({
