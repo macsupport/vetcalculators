@@ -1,3 +1,4 @@
+
 var myApp = new Framework7();
 var $$ = Dom7;
 var mainView = myApp.addView('.view-main', {
@@ -7,36 +8,32 @@ var mainView = myApp.addView('.view-main', {
 });
 
 
-myApp.onPageInit('cri', function (page) {
-  $('table').footable();
-   setdrug();
+setdrug();
   setspin();
    MLK();
     MLK2();
-  $(document).on('keyup touchend','#inputKilograms', function() {
+$("#inputKilograms").on('keyup touchend',function() {
   MLK();
   setdrug();
+  calcChocTotal();
+calcChoc();  
 });
+$(document).on("click touchstart",'.resetme',function() { 
+ $('#inputKilograms,#inputPounds,#ounce').val(' ');
+  $('td span.chip').text(" ");
+});
+
+myApp.onPageInit('cri', function (page) {
+  $('table').footable();
  });
 
 myApp.onPageInit('misc', function (page) {
   $('table').footable();
-  setdrug();
-  setspin();
-   MLK();
-    MLK2();
- 
  }); 
-
-
 
 
 myApp.onPageInit('emergency', function (page) {
 $('table').footable();
-  setdrug();
-  setspin();
-   MLK();
-    MLK2();
    $(document).on('click touchstart','.printme',function() {
     $('#dosechart3').printThis();
      return false;
@@ -44,17 +41,11 @@ $('table').footable();
     $(document).on('click touchstart','.printme2',function() {
     $('#dosechart2').printThis();
   return false;
-  });   
-    
-
+  });       
       });
+
 myApp.onPageInit('anesthetic', function (page) {
-  $('table').footable();
-   setdrug();
-  setspin();
-   MLK();
-    MLK2();
-   
+  $('table').footable(); 
   $('.printme').on('click touchstart',function() {
     $('#dosechart').printThis({     
       importCSS: true
@@ -62,34 +53,37 @@ myApp.onPageInit('anesthetic', function (page) {
     //window.print();
   return false;
   });   
-     
       });
 
 
 myApp.onPageInit('misc', function (page) {
   $('table').footable();
- 
-  setdrug();
-  setspin();
- 
+  $('.printme').on('click touchstart',function() {
+    //$('#drug').printThis({     
+      //importCSS: true,          
+    // loadCSS: "css/print.css"
+  //});
+    window.print();
+  return false;
+  }); 
       });
 
 
 myApp.onPageInit('fluids', function (page) {
-
-  $('table').footable();
+$('table').footable();
+  $('.printme').on('click touchstart',function() {
+    //$('#drug').printThis({     
+      //importCSS: true,          
+    // loadCSS: "css/print.css"
+  //});
+    window.print();
+  return false;
+  }); 
  
- 
- 
-
       });
 
 
 myApp.onPageInit('chocolate', function (page) {
-  $(document).on("click touchstart",'.resetme',function() { 
- $('#inputKilograms,#inputPounds,#ounce').val(' ');
-  $('td span.chip').text(" ");
-});
   $('.printme').on('click touchstart',function() {
     //$('#drug').printThis({     
       //importCSS: true,          
@@ -99,8 +93,16 @@ myApp.onPageInit('chocolate', function (page) {
   return false;
   }); 
 
+  $("#ounce").on('keyup touchend',function() {
+  calcChocTotal();
+calcChoc();  
+});
    
+$("#chocolate").on("change",function() {
+calcChocTotal();
+calcChoc();  
 
+}); 
 });
 
 
@@ -112,63 +114,19 @@ myApp.onPageInit('chocolate', function (page) {
  */
   
  $(document).ready(function() {
- $(document).on('keyup touchend',"#ounce",function() {
-  calcChocTotal();
-calcChoc();  
-});   
-   
-   $(document).on("change","#chocolate",function() {
-calcChocTotal();
-calcChoc();  
 
-}); 
-   
-$(document).on("click touchstart",'.resetme',function() { 
- $('#inputKilograms,#inputPounds,#ounce').val(' ');
-  $('td span.chip').text(" ");
-});
-$(document).on('keyup touchend','#inputKilograms', function() {
-  MLK();
-  setdrug();
-    calcChocTotal();
-calcChoc();  
-});
 $('.footable-filtering-search').addClass('hidden-print');
 
 
 $(function($){
  new WOW().init();  
 });
-$('.printmeModal').on('click touchstart',function() {
-    $('.modal-body').printThis({     
-      importCSS: true,          
-    loadCSS: "css/print.css"
-  });
-  return false;
-  });       
-
-
-$('.printme').on('click touchstart',function() {
-    //$('#drug').printThis({     
-      //importCSS: true,          
-    // loadCSS: "css/print.css"
-  //});
-    window.print();
-  return false;
-  });       
+          
 var today = new Date();
 $('.time').html(today.getHours() + ':' + today.getMinutes());
 $('.weekday').html(today.toDateString().substring(0, 3));
 $('.date').html(today.toDateString());
    
-$('.resetme').on("click touchstart",function() { 
- $('#inputKilograms,#inputPounds').val(' ');
-  $('td span.chip-label').text(" ");
-
-});
-setTimeout(function(){ 
-   
-}, 400);
 
 
 });
@@ -203,7 +161,7 @@ console.log(inputName)
 //  });
   
 //});
-setspin();
+
 
 function weightConverter(source,valNum) {
   valNum = parseFloat(valNum);
@@ -251,29 +209,11 @@ valNum = parseFloat(valNum);
   }  
 }
   
-$(document).on('keyup touchend','#inputKilograms', function() {
-  MLK();
-  feedCups();
-  setdrug();
-  calcChocTotal();
-calcChoc();  
-});
-$("#ounce").on('keyup touchend',function() {
-  calcChocTotal();
-calcChoc();  
-});
-   $("#inputPounds").on('keyup touchend',function() {
-    //MLK();
-    //feedCups();
-  //setdrug();
-   //calcChocTotal();
-//calcChoc();  
-});
-$("input#themg").on('keyup touchend',function() {
+$(document).on('keyup touchend','input#themg',function() {
   setdrug();
 });
 
-$("select.pickDose").on("change", function() {
+$(document).on("change","select.pickDose", function() {
                  setdrug();
  });
 
@@ -692,8 +632,3 @@ setdrug();
 MLK();
 });
 }
- setdrug();
-  setspin();
-   MLK();
-    MLK2();
-
