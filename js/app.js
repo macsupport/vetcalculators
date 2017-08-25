@@ -7,10 +7,8 @@ var mainView = myApp.addView('.view-main', {
     allowDuplicateUrls:true
 });
 
-setdrug();
-  setspin();
-   MLK();
-    MLK2();
+
+
 $(document).on('keyup touchend','#inputKilograms',function() {
   MLK();
   setdrug();
@@ -21,20 +19,6 @@ $(document).on("click touchstart",'.resetme',function() {
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
   $('td span.chip').text(" ");
 });
-
-
-$('input.drug').each(function(index) {
-      var inputName = $(this).attr("name"),
-        drugValue =   $('input[name="'+inputName+'"]'),
-        var inputValue = parseFloat($(drugValue).val());       
-    $(document).on('keyup touchend', 'input[name="'+ inputName +'"]', function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
-console.log(inputName)
-    });
-    $(document).on('keyup touchend', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
-    });
-
-
-
 
 myApp.onPageInit('cri', function (page) {
   $('table').footable();
@@ -129,7 +113,10 @@ calcChoc();
  $(document).ready(function() {
 
 $('.footable-filtering-search').addClass('hidden-print');
-
+setdrug();
+  setspin();
+   MLK();
+    MLK2();
 
 $(function($){
  new WOW().init();  
@@ -148,8 +135,7 @@ $('.date').html(today.toDateString());
  function setspin() { 
     $('input.drug').each(function(index) {
       var inputName = $(this).attr("name"),
-        drugValue =   $('input[name="'+inputName+'"]'),
-        var inputValue = parseFloat($(drugValue).val());       
+        drugValue =   $('input[name="'+inputName+'"]'),       
     $(document).on('keyup touchend', 'input[name="'+ inputName +'"]', function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
 console.log(inputName)
     });
