@@ -28,7 +28,14 @@ calcChoc();
   $('td span.chip').text(" ");
 });
 
-setspin();
+      var inputName = $('input.drug').attr("name"),
+        drugValue =   $('input[name="'+inputName+'"]');       
+    $(document).on('keyup', drugValue, function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
+console.log(inputName)
+    });
+    $(document).on('keyup', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
+    
+
 
 
  });
@@ -145,7 +152,7 @@ $('.date').html(today.toDateString());
     $(document).on('keyup', drugValue, function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
 console.log(inputName)
     });
-    //$(document).on('keyup', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
+    $(document).on('keyup', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
     
     }); 
 
