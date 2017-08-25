@@ -29,10 +29,9 @@ var myPicker = myApp.picker({
     values: ['iPhone 4', 'iPhone 4S', 'iPhone 5', 'iPhone 5S', 'iPhone 6', 'iPhone 6 Plus', 'iPad 2', 'iPad Retina', 'iPad Air', 'iPad mini', 'iPad mini 2', 'iPad mini 3']
   }]
 });
-myPicker.open();
-myPicker.setValue('iPhone 4S');
 
-var myPicker = $$('.picker-inline')[0].f7Picker;
+
+
 setdrug();
   //setspin();
    //MLK();
@@ -122,8 +121,8 @@ myApp.onPageInit('fluids', function (page) {
 
 
 myApp.onPageInit('chocolate', function (page) {
-  myPicker.open();
-myPicker.setValue('Milk Chocolate');
+ myPicker.open();
+myPicker.setValue('iPhone 4S');
 
   $('.printme').on('click touchstart',function() {
     //$('#drug').printThis({     
