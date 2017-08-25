@@ -7,12 +7,11 @@ var mainView = myApp.addView('.view-main', {
     allowDuplicateUrls:true
 });
 
-
 setdrug();
   setspin();
    MLK();
     MLK2();
-$("#inputKilograms").on('keyup touchend',function() {
+$(document).on('keyup touchend','#inputKilograms',function() {
   MLK();
   setdrug();
   calcChocTotal();
