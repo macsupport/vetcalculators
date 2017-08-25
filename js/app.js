@@ -16,8 +16,7 @@ var myPicker = myApp.picker({
         }
     ],
      onChange: function (picker, values, displayValues) {
-
-      calcChocTotal();
+calcChocTotal();
 calcChoc();  
 
      }
