@@ -12,16 +12,7 @@ var pickerDevice = myApp.picker({
     cols: [
         {
             textAlign: 'center',
-            values: ['White Chocolate',
-            'Milk Chocolate',
-           'Dark, Sweet Chocolate',
-           'Semi-sweet Chocolate',
-           'Baker’s Chocolate',
-           'Dry Cocoa Powder',
-           'Instant Cocoa Powder',
-          'Cocoa Beans',
-          'Coffee Beans',
-          'Cocoa Bean Hulls']
+            values: ['White Chocolate','Milk Chocolate','Dark, Sweet Chocolate','Semi-sweet Chocolate','Baker’s Chocolate','Dry Cocoa Powder','Instant Cocoa Powder','Cocoa Beans','Coffee Beans','Cocoa Bean Hulls']
         }
     ]
 });
