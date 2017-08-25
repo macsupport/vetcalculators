@@ -8,10 +8,10 @@ var mainView = myApp.addView('.view-main', {
 });
 
 
-setdrug();
+//setdrug();
   setspin();
-   MLK();
-    MLK2();
+   //MLK();
+   // MLK2();
   
 
 
@@ -175,7 +175,6 @@ function weightConverter(source,valNum) {
      $("label[for='inputPounds']").addClass('active'); 
   }
   MLK();
-    feedCups();
   calcChocTotal();
 calcChoc();  
     setdrug();
