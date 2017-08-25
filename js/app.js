@@ -142,12 +142,13 @@ $('.date').html(today.toDateString());
     $('input.drug').each(function(index) {
       var inputName = $(this).attr("name"),
         drugValue =   $('input[name="'+inputName+'"]');       
-    $(document).on('keyup', 'input[name="'+ inputName +'"]', function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
+    $(document).on('keyup', drugValue, function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
 console.log(inputName)
     });
-    $(document).on('keyup', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
+    //$(document).on('keyup', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
     
-    });   
+    }); 
+
   }
 //$(function($){
  // $('table.table').footable({
