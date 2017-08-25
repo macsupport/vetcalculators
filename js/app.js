@@ -8,10 +8,7 @@ var mainView = myApp.addView('.view-main', {
 });
 
 
-setdrug();
-  setspin();
-   MLK();
-    MLK2();
+
   
 
 
@@ -28,15 +25,10 @@ calcChoc();
   $('td span.chip').text(" ");
 });
 
-$('input.drug').each(function(index) {
-      var inputName = $(this).attr("name"),
-        drugValue =   $('input[name="'+inputName+'"]');       
-    $(document).on('keyup touchend', 'input[name="'+ inputName +'"]', function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
-console.log(inputName)
-    });
-    $(document).on('keyup touchend', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
-    
-    });
+setdrug();
+  setspin();
+   MLK();
+    MLK2();
 
 
  });
