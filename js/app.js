@@ -6,9 +6,10 @@ var mainView = myApp.addView('.view-main', {
     //material:true,
     allowDuplicateUrls:true
 });
-
-
-
+setdrug();
+  setspin();
+   MLK();
+    MLK2();
 $(document).on('keyup touchend','#inputKilograms',function() {
   MLK();
   setdrug();
@@ -113,10 +114,7 @@ calcChoc();
  $(document).ready(function() {
 
 $('.footable-filtering-search').addClass('hidden-print');
-setdrug();
-  setspin();
-   MLK();
-    MLK2();
+
 
 $(function($){
  new WOW().init();  
