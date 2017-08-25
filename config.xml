@@ -8,6 +8,7 @@
         MIke Sozanski DVM,Dip. ABVP
     </author>
     <content src="index.html" />
+    <icon src="splash.png" />
     <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -23,7 +24,6 @@
     </platform>
     <platform name="ios">
         <feature name="SocialSharing"><param name="ios-package" value="SocialSharing" /></feature>
-        
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <preference name="BackupWebStorage" value="none" />
