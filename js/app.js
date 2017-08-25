@@ -9,7 +9,7 @@ var mainView = myApp.addView('.view-main', {
 
 
 setdrug();
-  setspin();
+  //setspin();
    //MLK();
    MLK2();
   
@@ -28,7 +28,7 @@ calcChoc();
   $('td span.chip').text(" ");
 });
 
-
+setspin();
 
 
  });
