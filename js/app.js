@@ -6,10 +6,23 @@ var mainView = myApp.addView('.view-main', {
     //material:true,
     allowDuplicateUrls:true
 });
+
 setdrug();
   setspin();
    MLK();
     MLK2();
+
+    
+    $('input.drug').each(function(index) {
+      var inputName = $(this).attr("name"),
+        drugValue =   $('input[name="'+inputName+'"]');       
+    $(document).on('keyup touchend', 'input[name="'+ inputName +'"]', function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
+console.log(inputName)
+    });
+    $(document).on('keyup touchend', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
+    
+    });
+
 $(document).on('keyup touchend','#inputKilograms',function() {
   MLK();
   setdrug();
@@ -133,7 +146,7 @@ $('.date').html(today.toDateString());
  function setspin() { 
     $('input.drug').each(function(index) {
       var inputName = $(this).attr("name"),
-        drugValue =   $('input[name="'+inputName+'"]'),       
+        drugValue =   $('input[name="'+inputName+'"]');       
     $(document).on('keyup touchend', 'input[name="'+ inputName +'"]', function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
 console.log(inputName)
     });
