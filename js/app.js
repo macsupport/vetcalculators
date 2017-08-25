@@ -24,15 +24,18 @@ $(document).on("click touchstart",'.resetme',function() {
 
 myApp.onPageInit('cri', function (page) {
   $('table').footable();
+  setspin();
  });
 
 myApp.onPageInit('misc', function (page) {
   $('table').footable();
+  setspin();
  }); 
 
 
 myApp.onPageInit('emergency', function (page) {
 $('table').footable();
+setspin();
    $(document).on('click touchstart','.printme',function() {
     $('#dosechart3').printThis();
      return false;
@@ -44,7 +47,8 @@ $('table').footable();
       });
 
 myApp.onPageInit('anesthetic', function (page) {
-  $('table').footable(); 
+  $('table').footable();
+  setspin();
   $('.printme').on('click touchstart',function() {
     $('#dosechart').printThis({     
       importCSS: true
@@ -57,6 +61,7 @@ myApp.onPageInit('anesthetic', function (page) {
 
 myApp.onPageInit('misc', function (page) {
   $('table').footable();
+  setspin();
   $('.printme').on('click touchstart',function() {
     //$('#drug').printThis({     
       //importCSS: true,          
@@ -70,6 +75,7 @@ myApp.onPageInit('misc', function (page) {
 
 myApp.onPageInit('fluids', function (page) {
 $('table').footable();
+setspin();
   $('.printme').on('click touchstart',function() {
     //$('#drug').printThis({     
       //importCSS: true,          
@@ -83,6 +89,7 @@ $('table').footable();
 
 
 myApp.onPageInit('chocolate', function (page) {
+  setspin();
   $('.printme').on('click touchstart',function() {
     //$('#drug').printThis({     
       //importCSS: true,          
@@ -135,13 +142,13 @@ $('.date').html(today.toDateString());
     $('input.drug').each(function(index) {
       var inputName = $(this).attr("name"),
         drugValue =   $('input[name="'+inputName+'"]'),
-        minDose = parseFloat($(this).attr('data-min')),
-        maxDose = parseFloat($(this).attr('data-max')),
-        step = parseFloat($(this).attr('data-step')),
-        decimal = parseFloat($(this).attr('data-decimal')),
-        initval = parseFloat($(this).attr('value')),
-        postfix = $(this).attr('data-postfix');
-        prefix = $(this).attr('data-prefix');
+        //minDose = parseFloat($(this).attr('data-min')),
+        //maxDose = parseFloat($(this).attr('data-max')),
+        //step = parseFloat($(this).attr('data-step')),
+        //decimal = parseFloat($(this).attr('data-decimal')),
+        //initval = parseFloat($(this).attr('value')),
+        //postfix = $(this).attr('data-postfix');
+        //prefix = $(this).attr('data-prefix');
         var inputValue = parseFloat($(drugValue).val());       
     $(document).on('keyup touchend', 'input[name="'+ inputName +'"]', function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
 console.log(inputName)
