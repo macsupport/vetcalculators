@@ -23,7 +23,7 @@ myApp.onPageInit('cri misc emergency anesthetic fluids chocolate', function (pag
   calcChocTotal();
 calcChoc();  
 });
-  $(document).on("click touchstart",'.resetme',function() { 
+  $(document).on('click touchstart','.resetme',function() { 
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
   $('td span.chip').text(" ");
 });
@@ -33,7 +33,7 @@ calcChoc();
     $(document).on('keyup', drugValue, function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
 console.log(inputName)
     });
-    $(document).on('keyup', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
+    //$(document).on('keyup', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
     
 
 
@@ -58,7 +58,6 @@ myApp.onPageInit('emergency', function (page) {
       });
 
 myApp.onPageInit('anesthetic', function (page) {
-
   $('.printme').on('click touchstart',function() {
     $('#dosechart').printThis({     
       importCSS: true
