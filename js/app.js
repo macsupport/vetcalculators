@@ -7,12 +7,16 @@ var mainView = myApp.addView('.view-main', {
     allowDuplicateUrls:true
 });
 
+$$(document).on('page:init', function (e) {
 setdrug();
   setspin();
    MLK();
     MLK2();
+  
+})
 
-    
+
+
     $('input.drug').each(function(index) {
       var inputName = $(this).attr("name"),
         drugValue =   $('input[name="'+inputName+'"]');       
@@ -45,6 +49,12 @@ myApp.onPageInit('misc', function (page) {
 
 myApp.onPageInit('emergency', function (page) {
 $('table').footable();
+$(document).on('keyup touchend','#inputKilograms',function() {
+  MLK();
+  setdrug();
+  calcChocTotal();
+calcChoc();  
+});
    $(document).on('click touchstart','.printme',function() {
     $('#dosechart3').printThis();
      return false;
