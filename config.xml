@@ -4,7 +4,7 @@
     <description>
         Veterinary Drug Calculators
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
+    <author email="info@vetcalculators.com" href="http://vetcalculators.com">
         MIke Sozanski DVM,Dip. ABVP
     </author>
     <content src="index.html" />
@@ -23,7 +23,7 @@
     </platform>
     <platform name="ios">
         <feature name="SocialSharing"><param name="ios-package" value="SocialSharing" /></feature>
-        <splash height="960" platform="ios" src="www/splash.png" width="640" />
+        
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <preference name="BackupWebStorage" value="none" />
