@@ -43,7 +43,7 @@
         <div class="item-inner">
           <div class="item-title label">Pounds</div>
           <div class="item-input">
-              <input id="inputPounds" class="form-control" type="tel" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+              <input id="inputPounds" class="form-control" type="number" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
         <div class="item-inner">
           <div class="item-title label">Kilograms</div>
           <div class="item-input">
-             <input id="inputKilograms" class="form-control" type="tel" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+             <input id="inputKilograms" class="form-control" type="number" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -119,7 +119,7 @@
             <td>bradycardia</td>
             <td><span>0.02mg/kg IV, IM</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#atroDogmg" data-ml="#atroDog" name="atropine2" type="tel" data-conc="0.5" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="2" data-value="0.02" value="0.02">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#atroDogmg" data-ml="#atroDog" name="atropine2" type="number" data-conc="0.5" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="2" data-value="0.02" value="0.02">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="atroDogmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="atroDog" class="chip-label label-success number"></span></span></td>
@@ -130,7 +130,7 @@
             <td>bradyarrhythmias</td>
             <td><span>0.011 mg/kg IV or IM</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#glycoDogmg" data-ml="#glycoDog" name="glyco2" type="tel" data-conc="0.2" data-min="0.011" data-max="0.033" data-step="0.011" data-postfix="mg/kg" data-decimal="3" value="0.011">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#glycoDogmg" data-ml="#glycoDog" name="glyco2" type="number" data-conc="0.2" data-min="0.011" data-max="0.033" data-step="0.011" data-postfix="mg/kg" data-decimal="3" value="0.011">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="glycoDogmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="glycoDog" class="chip-label label-success number"></span></span></td>
@@ -141,7 +141,7 @@
             <td>hypocalcemia</td>
             <td><span>94-140 mg/kg slow IV</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="calcium2" type="tel" data-mg="#calciumDogmg" data-ml="#calciumDog" data-conc="100" data-min="94" data-max="140" data-step="1" data-postfix="mg/kg" data-decimal="2" value="94">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="calcium2" type="number" data-mg="#calciumDogmg" data-ml="#calciumDog" data-conc="100" data-min="94" data-max="140" data-step="1" data-postfix="mg/kg" data-decimal="2" value="94">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="calciumDogmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="calciumDog" class="chip-label label-success number"></span></span></td>
@@ -150,7 +150,7 @@
             <td class="text-uppercase font-weight-bold">IV Fluids <div class="subtitle">1x maint</div></td>
             <td>Maintenance </td>
             <td><span>(30cc x kg) + 70cc IV</span></td>
-            <td class="active"><input class="fluid" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#main1Dog" name="main1Dog" type="tel" data-conc="30" data-multiply="1" data-value="30" value="30" style="display:none"></td>
+            <td class="active"><input class="fluid" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#main1Dog" name="main1Dog" type="number" data-conc="30" data-multiply="1" data-value="30" value="30" style="display:none"></td>
             <td class="dosage"></td>
             <td class="vol"><span class="rx2 chip"><span id="main1Dog" class="chip-label label-info  number"></span></span></td>
           </tr>
@@ -158,7 +158,7 @@
             <td class="text-uppercase font-weight-bold">IV Fluids <div class="subtitle">1.5x maint</div></td>
             <td>1.5x Maintenance </td>
             <td><span>(30cc x kg) + 70cc IV x 1.5</span></td>
-            <td class="active"><input class="fluid" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#main15Dog" name="main15Dog" type="tel" data-conc="30" data-multiply="1.5" data-value="30" value="30" style="display:none"></td>
+            <td class="active"><input class="fluid" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#main15Dog" name="main15Dog" type="number" data-conc="30" data-multiply="1.5" data-value="30" value="30" style="display:none"></td>
             <td class="dosage"></td>
             <td class="vol"><span class="rx2 chip"><span id="main15Dog" class="chip-label label-info  number"></span></span></td>
           </tr>
@@ -166,7 +166,7 @@
             <td class="text-uppercase font-weight-bold">IV Fluids <div class="subtitle">2x maint</div></td>
             <td>2x Maintenance </td>
             <td><span>(30cc x kg) + 70cc IV x 2</span></td>
-            <td class="active"><input class="fluid" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#main2Dog" name="main2Dog" type="tel" data-conc="30" data-multiply="2" data-value="30" value="30" style="display:none"></td>
+            <td class="active"><input class="fluid" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#main2Dog" name="main2Dog" type="number" data-conc="30" data-multiply="2" data-value="30" value="30" style="display:none"></td>
             <td class="dosage"></td>
             <td class="vol"><span class="rx2 chip"><span id="main2Dog" class="chip-label label-info  number"></span></span></td>
           </tr>
@@ -174,7 +174,7 @@
             <td class="text-uppercase font-weight-bold">IV Fluids <div class="subtitle">Shock</div></td>
             <td>Shock </td>
             <td><span>90mL/kg IV</span></td>
-            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#mainShockDog" name="mainShockDog" type="tel" data-conc="90" data-multiply="1" data-value="90" value="90" style="display:none"></td>
+            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#mainShockDog" name="mainShockDog" type="number" data-conc="90" data-multiply="1" data-value="90" value="90" style="display:none"></td>
             <td class="dosage"></td>
             <td class="vol"><span class="rx2 chip"><span id="mainShockDog" class="chip-label label-info  number"></span></span></td>
           </tr>
@@ -182,7 +182,7 @@
             <td class="text-uppercase font-weight-bold">Hetastarch</td>
             <td>colloid</td>
             <td><span>1mL/kg/hr; <div class="subtitle"><b>max</b> 20mL/kg/24hrs</div></span></td>
-            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#hetastarchDog" name="hetastarchDog" type="tel" data-conc="1" data-multiply="1" data-value="1" value="1" style="display:none"></td>
+            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#hetastarchDog" name="hetastarchDog" type="number" data-conc="1" data-multiply="1" data-value="1" value="1" style="display:none"></td>
             <td class="dosage"></td>
             <td class="vol"><span class="rx2 chip"><span id="hetastarchDog" class="chip-label label-info  number"></span></span></td>
           </tr>
@@ -191,7 +191,7 @@
               <div class="subtitle">130/0.4 in 0.9% NaCl</div></td>
             <td>colloid</td>
             <td><span>20ml/kg, <div class="subtitle">initial 10-20ml slow</div></span></td>
-            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#vetstarchDog" name="vetstarchDog" type="tel" data-conc="20" data-multiply="1" data-value="20" value="20" style="display:none"></td>
+            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#vetstarchDog" name="vetstarchDog" type="number" data-conc="20" data-multiply="1" data-value="20" value="20" style="display:none"></td>
             <td class="dosage"></td>
             <td class="vol"><span class="rx2 chip"><span id="vetstarchDog" class="chip-label label-info  number"></span></span></td>
           </tr>
@@ -200,7 +200,7 @@
               <div class="subtitle">7.2%</div></td>
             <td>hypovolemic shock</td>
             <td><span>4 mls/kg single bolus</span></td>
-            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#naclDog" name="naclDog" type="tel" data-conc="4" data-multiply="1" data-value="4" value="4" style="display:none"></td>
+            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#naclDog" name="naclDog" type="number" data-conc="4" data-multiply="1" data-value="4" value="4" style="display:none"></td>
             <td class="dosage"></td>
             <td class="vol"><span class="rx2 chip"><span id="naclDog" class="chip-label label-info  number"></span></span></td>
           </tr>
@@ -210,7 +210,7 @@
             <td>shock</td>
             <td><span>2.2-4.4 mg/kg IV</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#dexDogmg" data-ml="#dexDog" name="dexDog" type="tel" data-conc="4" data-min="1.1" data-max="8.8" data-step="0.1" data-postfix="mg/kg" data-decimal="3" value="2.2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#dexDogmg" data-ml="#dexDog" name="dexDog" type="number" data-conc="4" data-min="1.1" data-max="8.8" data-step="0.1" data-postfix="mg/kg" data-decimal="3" value="2.2">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="dexDogmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="dexDog" class="chip-label label-success number"></span></span></td>
@@ -221,7 +221,7 @@
             <td>seizure</td>
             <td><span>0.25mg/kg IV</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="valDog" type="tel" data-mg="#valDogmg" data-ml="#valDog" data-conc="5" value="0.25" data-min="0.25" data-max="1" data-step="0.25" data-postfix="mg/kg" data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="valDog" type="number" data-mg="#valDogmg" data-ml="#valDog" data-conc="5" value="0.25" data-min="0.25" data-max="1" data-step="0.25" data-postfix="mg/kg" data-decimal="2">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="valDogmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="valDog" class="chip-label label-success number"></span></span></td>
@@ -233,7 +233,7 @@
             <td><div>0.06-0.60mg/kg/hr</div>
             <div class="subtitle">@ 1 ml/kg/hr</div></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg/hr" data-appendVol=" ml" name="dobutamineDog" type="tel" data-mg="#dobutamineDogmg" data-ml="#dobutamineDogml" data-conc="12.5" value="0.12" data-min="0.05" data-max="0.6" data-step="0.01" data-postfix="mg/kg/hr" data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg/hr" data-appendVol=" ml" name="dobutamineDog" type="number" data-mg="#dobutamineDogmg" data-ml="#dobutamineDogml" data-conc="12.5" value="0.12" data-min="0.05" data-max="0.6" data-step="0.01" data-postfix="mg/kg/hr" data-decimal="2">
               </div></td>
               <td>
 
@@ -267,7 +267,7 @@
             <td>severe hypotension</td>
             <td><span>0.12-0.60mg/kg/hr</span><div class="subtitle">@ 1 ml/kg/hr</div></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg/hr" data-appendVol=" ml" name="dopamineDog" type="tel" data-mg="#dopamineDogmg" data-ml="#dopamineDogml" data-conc="40" value="0.42" data-min="0.1" data-max="0.60" data-step="0.01" data-postfix="mg/kg/hr" data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg/hr" data-appendVol=" ml" name="dopamineDog" type="number" data-mg="#dopamineDogmg" data-ml="#dopamineDogml" data-conc="40" value="0.42" data-min="0.1" data-max="0.60" data-step="0.01" data-postfix="mg/kg/hr" data-decimal="2">
               </div></td>
               <td><div class="subtitle">Fluid Size</div><select id="fluidVol" class="custom-select span1 selectpicker show-tick mb-2 mr-sm-2 mb-sm-0" data-width="200px">
         <option value="1000">1000ml</option>
@@ -286,7 +286,7 @@
             <td>respiratory stimulant</td>
             <td><span>5-10mg/kg IV</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="doxpramDog" type="tel" data-mg="#doxpramDogmg" data-ml="#doxpramDog" data-conc="20" value="5" data-min="1" data-max="10" data-step="0.5" data-postfix="mg/kg" data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="doxpramDog" type="number" data-mg="#doxpramDogmg" data-ml="#doxpramDog" data-conc="20" value="5" data-min="1" data-max="10" data-step="0.5" data-postfix="mg/kg" data-decimal="2">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="doxpramDogmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="doxpramDog" class="chip-label label-success number"></span></span></td>
@@ -297,7 +297,7 @@
             <td>asystole</td>
             <td><span>0.1-0.2mg/kg IV <div class="subtitle">repeat Q3-5min</div></span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="epiDogHi" type="tel" data-mg="#epiDogHimg" data-ml="#epiDogHi" data-conc="1" value="0.1" data-min="0.1" data-max="0.5" data-step="0.1" data-postfix="mg/kg" data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="epiDogHi" type="number" data-mg="#epiDogHimg" data-ml="#epiDogHi" data-conc="1" value="0.1" data-min="0.1" data-max="0.5" data-step="0.1" data-postfix="mg/kg" data-decimal="2">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="epiDogHimg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="epiDogHi" class="chip-label label-success number"></span></span></td>
@@ -308,7 +308,7 @@
             <td>asystole</td>
             <td><span>0.01-0.02mg/kg IV <div class="subtitle">repeat Q3-5min</div></span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="epiDogLo" type="tel" data-mg="#epiDogLomg" data-ml="#epiDogLo" data-conc="1" value="0.01" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="3">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="epiDogLo" type="number" data-mg="#epiDogLomg" data-ml="#epiDogLo" data-conc="1" value="0.01" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="3">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="epiDogLomg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="epiDogLo" class="chip-label label-success number"></span></span></td>
@@ -319,7 +319,7 @@
             <td>antiarrhythmic</td>
             <td><span>1mg/kg bolus slow IV</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="lidocaine2" type="tel" data-mg="#lidoDogmg" data-ml="#lidoDog" data-conc="20" data-min="0.5" data-max="5" data-step="0.5" data-postfix="mg/kg" data-decimal="2" value="1">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="lidocaine2" type="number" data-mg="#lidoDogmg" data-ml="#lidoDog" data-conc="20" data-min="0.5" data-max="5" data-step="0.5" data-postfix="mg/kg" data-decimal="2" value="1">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="lidoDogmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="lidoDog" class="chip-label label-success number"></span></span></td>
@@ -330,7 +330,7 @@
             <td>antiarrhythmic</td>
             <td><span>5mg/kg IV</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="amiodoroneDog" type="tel" data-mg="#amiodoroneDogMG" data-ml="#amiodoroneDog" data-conc="50" value="5" data-min="1" data-max="10" data-step="1" data-postfix="mg/kg" data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="amiodoroneDog" type="number" data-mg="#amiodoroneDogMG" data-ml="#amiodoroneDog" data-conc="50" value="5" data-min="1" data-max="10" data-step="1" data-postfix="mg/kg" data-decimal="2">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="amiodoroneDogMG" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="amiodoroneDog" class="chip-label label-success number"></span></span></td>
@@ -341,7 +341,7 @@
             <td>antiarrhythmic</td>
             <td><span>0.8U/kg IV</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" U" data-appendVol=" ml" name="vassopressinDog" type="tel" data-mg="#vassopressinDogMG" data-ml="#vassopressinDog" data-conc="20" data-min="0.4" data-max="1.6" data-step="0.1" data-postfix="U/kg" data-decimal="2" value="0.8">
+                <input class="form-control form-control-sm drug" data-appendDose=" U" data-appendVol=" ml" name="vassopressinDog" type="number" data-mg="#vassopressinDogMG" data-ml="#vassopressinDog" data-conc="20" data-min="0.4" data-max="1.6" data-step="0.1" data-postfix="U/kg" data-decimal="2" value="0.8">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="vassopressinDogMG" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="vassopressinDog" class="chip-label label-success number"></span></span></td>
@@ -352,7 +352,7 @@
             <td>cerebral edema</td>
             <td><span>0.5-1.5g/kg IV <div class="subtitle">over 10-20min</div></span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" grams" data-appendVol=" ml" name="mannDog" type="tel" data-mg="#mannDogMg" data-ml="#mannDog" data-conc="0.2" value="0.5" data-min="0.1" data-max="1.5" data-step="0.1" data-postfix="grams/kg" data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" grams" data-appendVol=" ml" name="mannDog" type="number" data-mg="#mannDogMg" data-ml="#mannDog" data-conc="0.2" value="0.5" data-min="0.1" data-max="1.5" data-step="0.1" data-postfix="grams/kg" data-decimal="2">
               </div></td>
                <td class="dosage"><span class="rx1 chip"><span id="mannDogMg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx1 chip"><span id="mannDog" class="chip-label label-success  number"></span></span></td>
@@ -363,7 +363,7 @@
             <td>opioid reversal</td>
             <td><span>0.01-0.04 mg/kg IV,IM</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="naloxDog" type="tel" data-mg="#naloxDogmg" data-ml="#naloxDog" data-conc="0.4" value="0.01" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="3">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="naloxDog" type="number" data-mg="#naloxDogmg" data-ml="#naloxDog" data-conc="0.4" value="0.01" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="3">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="naloxDogmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="naloxDog" class="chip-label label-success number"></span></span></td>
@@ -374,7 +374,7 @@
             <td>metabolic acidosis</td>
             <td><span>1 mEq/kg IV,<div class="subtitle">then 0.5mEq/kg Q15min</div></span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mEq" data-appendVol=" ml" name="bicarbDog" type="tel" data-mg="#bicarbDogMg" data-ml="#bicarbDog" data-conc="1" value="1" data-min="0.5" data-max="1.5" data-step="0.5" data-postfix="mEq/kg" data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mEq" data-appendVol=" ml" name="bicarbDog" type="number" data-mg="#bicarbDogMg" data-ml="#bicarbDog" data-conc="1" value="1" data-min="0.5" data-max="1.5" data-step="0.5" data-postfix="mEq/kg" data-decimal="2">
               </div></td>
               <td class="dosage"><span class="rx1 chip"><span id="bicarbDogMg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="bicarbDog" class="chip-label label-success  number"></span></span></td>
@@ -413,7 +413,7 @@
             <td>bradycardia</td>
             <td><span>0.02mg/kg SC, IV, IM</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#atroCatmg" data-ml="#atroCat" name="atropine" type="tel" data-conc="0.5" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="2" value="0.02">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#atroCatmg" data-ml="#atroCat" name="atropine" type="number" data-conc="0.5" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="2" value="0.02">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="atroCatmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="atroCat" class="chip-label label-success number"></span></span></td>
@@ -424,7 +424,7 @@
             <td>bradyarrhythmias</td>
             <td><span>0.011mg/kg SC</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#glycoCatmg" data-ml="#glycoCat" name="glyco" type="tel" data-conc="0.2" data-min="0.011" data-max="0.033" data-step="0.011" data-postfix="mg/kg" data-decimal="3" value="0.011">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#glycoCatmg" data-ml="#glycoCat" name="glyco" type="number" data-conc="0.2" data-min="0.011" data-max="0.033" data-step="0.011" data-postfix="mg/kg" data-decimal="3" value="0.011">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="glycoCatmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="glycoCat" class="chip-label label-success number"></span></span></td>
@@ -435,7 +435,7 @@
             <td>hypocalcemia</td>
             <td><span>94-140 mg/kg slow IV </span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="calcium" type="tel" data-mg="#calciumCatmg" data-ml="#calciumCat" data-conc="100" data-min="94" data-max="140" data-step="1" data-postfix="mg/kg" data-decimal="2" value="94">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="calcium" type="number" data-mg="#calciumCatmg" data-ml="#calciumCat" data-conc="100" data-min="94" data-max="140" data-step="1" data-postfix="mg/kg" data-decimal="2" value="94">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="calciumCatmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="calciumCat" class="chip-label label-success number"></span></span></td>
@@ -444,7 +444,7 @@
             <td class="text-uppercase font-weight-bold">IV Fluids <div class="subtitle">1x maint</div></td>
             <td>Maintenance </td>
             <td><span>(30cc x kg) + 70cc IV</span></td>
-            <td class="active"><input class="fluid" data-appendDose=" mg" data-appendVol=" mls/hr" data-mg="" data-ml="#main1Cat" name="main1Cat" type="tel" data-conc="30" data-multiply="1" data-value="30" value="30" style="display:none"></td>
+            <td class="active"><input class="fluid" data-appendDose=" mg" data-appendVol=" mls/hr" data-mg="" data-ml="#main1Cat" name="main1Cat" type="number" data-conc="30" data-multiply="1" data-value="30" value="30" style="display:none"></td>
             <td class="dosage"></td>
             <td class="vol"><span class="rx2 chip"><span id="main1Cat" class="chip-label label-info  number"></span></span></td>
           </tr>
@@ -452,7 +452,7 @@
             <td class="text-uppercase font-weight-bold">IV Fluids <div class="subtitle">1.5x maint</div></td>
             <td>1.5x Maintenance </td>
             <td><span>(30cc x kg) + 70cc IV x 1.5</span></td>
-            <td class="active"><input class="fluid" data-appendDose=" mg" data-appendVol=" mls/hr" data-mg="" data-ml="#main15Cat" name="main15Cat" type="tel" data-conc="30" data-multiply="1.5" data-value="30" value="30" style="display:none"></td>
+            <td class="active"><input class="fluid" data-appendDose=" mg" data-appendVol=" mls/hr" data-mg="" data-ml="#main15Cat" name="main15Cat" type="number" data-conc="30" data-multiply="1.5" data-value="30" value="30" style="display:none"></td>
             <td class="dosage"></td>
             <td class="vol"><span class="rx2 chip"><span id="main15Cat" class="chip-label label-info  number"></span></span></td>
           </tr>
@@ -460,7 +460,7 @@
             <td class="text-uppercase font-weight-bold">IV Fluids <div class="subtitle">2x maint</div></td>
             <td>2x Maintenance </td>
             <td><span>(30cc x kg) + 70cc IV x 2</span></td>
-            <td class="active"><input class="fluid" data-appendDose=" mg" data-appendVol=" mls/hr" data-mg="" data-ml="#main2Cat" name="main2Cat" type="tel" data-conc="30" data-multiply="2" data-value="30" value="30" style="display:none"></td>
+            <td class="active"><input class="fluid" data-appendDose=" mg" data-appendVol=" mls/hr" data-mg="" data-ml="#main2Cat" name="main2Cat" type="number" data-conc="30" data-multiply="2" data-value="30" value="30" style="display:none"></td>
             <td class="dosage"></td>
             <td class="vol"><span class="rx2 chip"><span id="main2Cat" class="chip-label label-info  number"></span></span></td>
           </tr>
@@ -468,7 +468,7 @@
             <td class="text-uppercase font-weight-bold">IV Fluids <div class="subtitle">Shock</div></td>
             <td>Shock </td>
             <td><span>90mL/kg IV</span></td>
-            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" mls/hr" data-mg="" data-ml="#mainShockCat" name="mainShockCat" type="tel" data-conc="60" data-multiply="1" data-value="60" value="60" style="display:none"></td>
+            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" mls/hr" data-mg="" data-ml="#mainShockCat" name="mainShockCat" type="number" data-conc="60" data-multiply="1" data-value="60" value="60" style="display:none"></td>
             <td class="dosage"></td>
             <td class="vol"><span class="rx2 chip"><span id="mainShockCat" class="chip-label label-info  number"></span></span></td>
           </tr>
@@ -476,7 +476,7 @@
             <td class="text-uppercase font-weight-bold">Hetastarch</td>
             <td>colloid</td>
             <td><span>1mL/kg/hr; <div class="subtitle"><b>max</b> 20mL/kg/24hrs</div></span></td>
-            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#hetastarchCat" name="hetastarchCat" type="tel" data-conc="1" data-multiply="1" data-value="1" value="1" style="display:none"></td>
+            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#hetastarchCat" name="hetastarchCat" type="number" data-conc="1" data-multiply="1" data-value="1" value="1" style="display:none"></td>
             <td class="dosage"></td>
             <td class="vol"><span class="rx2 chip"><span id="hetastarchCat" class="chip-label label-info  number"></span></span></td>
           </tr>
@@ -485,7 +485,7 @@
               <div class="subtitle">130/0.4 in 0.9% NaCl</div></td>
             <td>colloid</td>
             <td><span>20ml/kg, <div class="subtitle">initial 10-20ml slow</div></span></td>
-            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#vetstarchCat" name="vetstarchCat" type="tel" data-conc="20" data-multiply="1" data-value="20" value="20" style="display:none"></td>
+            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" mls" data-mg="" data-ml="#vetstarchCat" name="vetstarchCat" type="number" data-conc="20" data-multiply="1" data-value="20" value="20" style="display:none"></td>
             <td class="dosage"></td>
             <td class="vol"><span class="rx2 chip"><span id="vetstarchCat" class="chip-label label-info  number"></span></span></td>
           </tr>
@@ -494,7 +494,7 @@
               <div class="subtitle">7.2%</div></td>
             <td>hypovolemic shock</td>
             <td><span>4 mls/kg single bolus</span></td>
-            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" ml" data-mg="" data-ml="#naclCat" name="naclCat" type="tel" data-conc="4" data-multiply="1" data-value="4" value="4" style="display:none"></td>
+            <td class="active"><input class="shock" data-appendDose=" mg" data-appendVol=" ml" data-mg="" data-ml="#naclCat" name="naclCat" type="number" data-conc="4" data-multiply="1" data-value="4" value="4" style="display:none"></td>
             <td class="dosage"></td>
             <td class="vol"><span class="rx2 chip"><span id="naclCat" class="chip-label label-info  number"></span></span></td>
           </tr>
@@ -504,7 +504,7 @@
             <td>shock </td>
             <td><span>2.2-4.4 mg/kg IV</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#dexCatDmg" data-ml="#dexCat" name="dexCat" type="tel" data-conc="4" data-min="1.1" data-max="8.8" data-step="0.1" data-postfix="mg/kg" data-decimal="3" value="2.2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#dexCatDmg" data-ml="#dexCat" name="dexCat" type="number" data-conc="4" data-min="1.1" data-max="8.8" data-step="0.1" data-postfix="mg/kg" data-decimal="3" value="2.2">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="dexCatmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="dexCat" class="chip-label label-success number"></span></span></td>
@@ -515,7 +515,7 @@
             <td>seizure</td>
             <td><span>0.25mg/kg IV</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="valCat" type="tel" data-mg="#valCatmg" data-ml="#valCat" data-conc="5" value="0.25" data-min="0.25" data-max="1" data-step="0.25" data-postfix="mg/kg" data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="valCat" type="number" data-mg="#valCatmg" data-ml="#valCat" data-conc="5" value="0.25" data-min="0.25" data-max="1" data-step="0.25" data-postfix="mg/kg" data-decimal="2">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="valCatmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="valCat" class="chip-label label-success number"></span></span></td>
@@ -527,7 +527,7 @@
             <td><span>0.06-0.60mg/kg/hr</span>
             <div class="subtitle">@ 1 ml/kg/hr</div></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg/hr" data-appendVol=" ml" name="dobutamineCat" type="tel" data-mg="#dobutamineCatmg" data-ml="#dobutamineCatml" data-conc="12.5" value="0.12" data-min="0.05" data-max="0.6" data-step="0.01" data-postfix="mg/kg/hr"  data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg/hr" data-appendVol=" ml" name="dobutamineCat" type="number" data-mg="#dobutamineCatmg" data-ml="#dobutamineCatml" data-conc="12.5" value="0.12" data-min="0.05" data-max="0.6" data-step="0.01" data-postfix="mg/kg/hr"  data-decimal="2">
               </div></td>
              <td><div class="subtitle">Fluid Size</div><select id="fluidVol2" class="custom-select span1 selectpicker show-tick mb-2 mr-sm-2 mb-sm-0" data-width="200px">
         <option value="1000">1000ml</option>
@@ -543,7 +543,7 @@
             <td>respiratory stimulant</td>
             <td><span>5-10mg/kg IV</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="doxpramCat" type="tel" data-mg="#doxpramCatmg" data-ml="#doxpramCat" data-conc="20" value="5" data-min="1" data-max="10" data-step="0.5" data-postfix="mg/kg" data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="doxpramCat" type="number" data-mg="#doxpramCatmg" data-ml="#doxpramCat" data-conc="20" value="5" data-min="1" data-max="10" data-step="0.5" data-postfix="mg/kg" data-decimal="2">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="doxpramCatmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="doxpramCat" class="chip-label number label-success"></span></span></td>
@@ -554,7 +554,7 @@
             <td>asystole</td>
             <td><span>0.1-0.2 mg/kg IV, <div class="subtitle"> repeat Q3-5min</div></span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="epiCatHi" type="tel" data-mg="#epiCatHimg" data-ml="#epiCatHi" data-conc="1" value="0.1" data-min="0.1" data-max="0.5" data-step="0.1" data-postfix="mg/kg" data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="epiCatHi" type="number" data-mg="#epiCatHimg" data-ml="#epiCatHi" data-conc="1" value="0.1" data-min="0.1" data-max="0.5" data-step="0.1" data-postfix="mg/kg" data-decimal="2">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="epiCatHimg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="epiCatHi" class="chip-label label-success number"></span></span></td>
@@ -565,7 +565,7 @@
             <td>asystole</td>
             <td><span>0.01-0.02mg/kg IV,IC <div class="subtitle"> repeat Q3-5min</div></span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="epiCatLo" type="tel" data-mg="#epiCatLomg" data-ml="#epiCatLo" data-conc="1" value="0.01" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="3">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="epiCatLo" type="number" data-mg="#epiCatLomg" data-ml="#epiCatLo" data-conc="1" value="0.01" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="3">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="epiCatLomg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="epiCatLo" class="chip-label label-success number"></span></span></td>
@@ -576,7 +576,7 @@
             <td>antiarrhythmic</td>
             <td><span>0.5mg/kg bolus slowly IV</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="lidocaine" type="tel" data-mg="#lidoCatmg" data-ml="#lidoCat" data-conc="20" data-min="0.5" data-max="5" data-step="0.5" data-postfix="mg/kg" data-decimal="2" value="1">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="lidocaine" type="number" data-mg="#lidoCatmg" data-ml="#lidoCat" data-conc="20" data-min="0.5" data-max="5" data-step="0.5" data-postfix="mg/kg" data-decimal="2" value="1">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="lidoCatmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="lidoCat" class="chip-label label-success number"></span></span></td>
@@ -588,7 +588,7 @@
             <td>antiarrhythmic</td>
             <td><span>5mg/kg IV</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="amiodoroneCat" type="tel" data-mg="#amiodoroneCatMG" data-ml="#amiodoroneCat" data-conc="50" value="5" data-min="1" data-max="10" data-step="1" data-postfix="mg/kg" data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="amiodoroneCat" type="number" data-mg="#amiodoroneCatMG" data-ml="#amiodoroneCat" data-conc="50" value="5" data-min="1" data-max="10" data-step="1" data-postfix="mg/kg" data-decimal="2">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="amiodoroneCatMG" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="amiodoroneCat" class="chip-label label-success number"></span></span></td>
@@ -599,7 +599,7 @@
             <td>antiarrhythmic</td>
             <td><span>0.8U/kg IV</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" U" data-appendVol=" ml" name="vassopressin" type="tel" data-mg="#vassopressinCatMG" data-ml="#vassopressinCat" data-conc="20" data-min="0.4" data-max="1.6" data-step="0.1" data-postfix="U/kg" data-decimal="2" value="0.8">
+                <input class="form-control form-control-sm drug" data-appendDose=" U" data-appendVol=" ml" name="vassopressin" type="number" data-mg="#vassopressinCatMG" data-ml="#vassopressinCat" data-conc="20" data-min="0.4" data-max="1.6" data-step="0.1" data-postfix="U/kg" data-decimal="2" value="0.8">
               </div></td>
               
               <td class="dosage">
@@ -613,7 +613,7 @@
             <td>cerebral edema</td>
             <td><span>0.5-1.5g/kg IV <div class="subtitle">over 10-20min</div></span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" grams" data-appendVol=" ml" name="mannCat" type="tel" data-mg="#mannCatMg" data-ml="#mannCat" data-conc="0.2" value="0.5" data-min="0.1" data-max="1.5" data-step="0.1" data-postfix="grams/kg" data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" grams" data-appendVol=" ml" name="mannCat" type="number" data-mg="#mannCatMg" data-ml="#mannCat" data-conc="0.2" value="0.5" data-min="0.1" data-max="1.5" data-step="0.1" data-postfix="grams/kg" data-decimal="2">
               </div></td>
               <td class="dosage"><span class="rx1 chip"><span id="mannCatMg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="mannCat" class="chip-label label-success  number"></span></span></td>
@@ -624,7 +624,7 @@
             <td>opioid reversal</td>
             <td><span>0.01-0.04 mg/kg IV,IM</span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="naloxCat" type="tel" data-mg="#naloxCatmg" data-ml="#naloxCat" data-conc="0.4" value="0.01" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="3">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" name="naloxCat" type="number" data-mg="#naloxCatmg" data-ml="#naloxCat" data-conc="0.4" value="0.01" data-min="0.01" data-max="0.05" data-step="0.01" data-postfix="mg/kg" data-decimal="3">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="naloxCatmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="naloxCat" class="chip-label label-success number"></span></span></td>
@@ -635,7 +635,7 @@
             <td>metabolic acidosis<br></td>
             <td><span>1mEq/kg IV <div class="subtitle">then 0.5mEq/kg Q15min</div></span></td>
             <td><div>
-                <input class="form-control form-control-sm drug" data-appendDose=" mEq" data-appendVol=" ml" name="bicarbCat" type="tel" data-mg="#bicarbCatmg" data-ml="#bicarbCat" data-conc="1" value="1" data-min="0.5" data-max="1.5" data-step="0.5" data-postfix="mEq/kg" data-decimal="2">
+                <input class="form-control form-control-sm drug" data-appendDose=" mEq" data-appendVol=" ml" name="bicarbCat" type="number" data-mg="#bicarbCatmg" data-ml="#bicarbCat" data-conc="1" value="1" data-min="0.5" data-max="1.5" data-step="0.5" data-postfix="mEq/kg" data-decimal="2">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="bicarbCatmg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="bicarbCat" class="chip-label label-success  number"></span></span></td>

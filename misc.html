@@ -47,7 +47,7 @@
         <div class="item-inner">
           <div class="item-title label">Pounds</div>
           <div class="item-input">
-              <input id="inputPounds" class="form-control" type="tel" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+              <input id="inputPounds" class="form-control" type="number" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@
         <div class="item-inner">
           <div class="item-title label">Kilograms</div>
           <div class="item-input">
-             <input id="inputKilograms" class="form-control" type="tel" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+             <input id="inputKilograms" class="form-control" type="number" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@
         <div class="item-inner">
           <div class="item-title label">Feline BSA</div>
           <div class="item-input">
-              <input type="tel" class="form-control drug" id="bsaCat" name="bsaCat"  disabled>
+              <input type="number" class="form-control drug" id="bsaCat" name="bsaCat"  disabled>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@
         <div class="item-inner">
           <div class="item-title label">Canine BSA</div>
           <div class="item-input">
-             <input type="tel" class="form-control drug" id="bsaDog" name="bsaDog"  disabled>
+             <input type="number" class="form-control drug" id="bsaDog" name="bsaDog"  disabled>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@
         <div class="item-inner">
           <div class="item-title label">Temp ℉</div>
           <div class="item-input">
-              <input type="tel" class="form-control" id="tempF" placeholder="Enter Temp ℉" oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
+              <input type="number" class="form-control" id="tempF" placeholder="Enter Temp ℉" oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -109,7 +109,7 @@
         <div class="item-inner">
           <div class="item-title label">Temp ℃</div>
           <div class="item-input">
-          <input type="tel" class="form-control" id="tempC" placeholder="Enter Temp ℃" oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
+          <input type="number" class="form-control" id="tempC" placeholder="Enter Temp ℃" oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@
         <div class="item-inner">
           <div class="item-title label">mg</div>
           <div class="item-input">
-             <input type="tel" class="form-control" id="mg"  placeholder="Enter mg" oninput="ugmgConverter(this.id,this.value)" onchange="ugmgConverter(this.id,this.value)">
+             <input type="number" class="form-control" id="mg"  placeholder="Enter mg" oninput="ugmgConverter(this.id,this.value)" onchange="ugmgConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -137,7 +137,7 @@
         <div class="item-inner">
           <div class="item-title label">ug</div>
           <div class="item-input">
-          <input type="tel" class="form-control" id="ug"  placeholder="Enter mcg" oninput="ugmgConverter(this.id,this.value)" onchange="ugmgConverter(this.id,this.value)">
+          <input type="number" class="form-control" id="ug"  placeholder="Enter mcg" oninput="ugmgConverter(this.id,this.value)" onchange="ugmgConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -167,10 +167,10 @@
 </td>
             </td>
             <td><div class="input-group mb-2 mr-sm-2 mb-sm-0">
-    <input class="form-control form-control-sm drug" id="themg" name="themg" type="tel" placeholder="Enter Drug mg/ml" data-min="0" data-max="1000" data-step="0.1" data-postfix="mg/ml" data-decimal="3" value="1" > 
+    <input class="form-control form-control-sm drug" id="themg" name="themg" type="number" placeholder="Enter Drug mg/ml" data-min="0" data-max="1000" data-step="0.1" data-postfix="mg/ml" data-decimal="3" value="1" > 
   </div></td>
              <td><div class="col-md-10">
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#drugDoseMg" data-ml="#drugDoseMl" name="drugDose" type="tel" data-conc="1" data-min="0" data-max="1000" data-step="0.1" data-postfix="mg/kg" data-decimal="3" value="1">
+                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#drugDoseMg" data-ml="#drugDoseMl" name="drugDose" type="number" data-conc="1" data-min="0" data-max="1000" data-step="0.1" data-postfix="mg/kg" data-decimal="3" value="1">
               </div></td>
             <td class="dosage"><span class="rx1 chip"><span id="drugDoseMg" class="chip-label label-primary  number"></span></span></td>
             <td class="vol"><span class="rx2 chip"><span id="drugDoseMl" class="chip-label label-success number"></span></span></td>
