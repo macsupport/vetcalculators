@@ -17,7 +17,7 @@ setdrug();
 
 myApp.onPageInit('cri misc emergency anesthetic fluids chocolate', function (page) {
   $('table').footable();
-  $(document).on('keyup','#inputKilograms',function() {
+  $(document).on('keypress','#inputKilograms',function() {
   MLK();
   setdrug();
   calcChocTotal();
@@ -99,7 +99,7 @@ myApp.onPageInit('chocolate', function (page) {
   return false;
   }); 
 
-  $(document).on('keyup','#ounce',function() {
+  $(document).on('keypress','#ounce',function() {
   calcChocTotal();
 calcChoc();  
 });
@@ -142,10 +142,10 @@ $('.date').html(today.toDateString());
     $('input.drug').each(function(index) {
       var inputName = $(this).attr("name"),
         drugValue =   $('input[name="'+inputName+'"]');       
-    $(document).on('keyup', 'input[name="'+ inputName +'"]', function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
+    $(document).on('keypress', 'input[name="'+ inputName +'"]', function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
 console.log(inputName)
     });
-    $(document).on('keyup', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
+    $(document).on('keypress', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
     
     });   
   }
@@ -205,7 +205,7 @@ valNum = parseFloat(valNum);
   }  
 }
   
-$(document).on('keyup touchend','input#themg',function() {
+$(document).on('keypress touchend','input#themg',function() {
   setdrug();
 });
 
@@ -463,10 +463,10 @@ $("#dogBCS").on("change",function() {
 $("#catBCS").on("change",function() {
  feedCups();
   });
-$("#catCalCups").on("keyup touchend",function() {
+$("#catCalCups").on("keypress touchend",function() {
  feedCups();
   });
-$("#dogCalCups").on("keyup touchend",function() {
+$("#dogCalCups").on("keypress touchend",function() {
  feedCups();
  });
 $("#rerCat").on("change",function() {
