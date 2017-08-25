@@ -1,26 +1,5 @@
 
 var myApp = new Framework7();
-var $$ = Dom7;
-var mainView = myApp.addView('.view-main', {
-    dynamicNavbar: true,
-    //material:true,
-    allowDuplicateUrls:true
-});
-
-var myPicker = myApp.picker({
-    input: '#chocolate-picker',
-    cols: [
-        {
-            textAlign: 'center',
-            values: ['White Chocolate','Milk Chocolate','Dark Sweet Chocolate','Semi-sweet Chocolate','Baker\'s Chocolate','Dry Cocoa Powder','Instant Cocoa Powder','Cocoa Beans','Coffee Beans','Cocoa Bean Hulls']
-        }
-    ],
-     onChange: function (picker, values, displayValues) {
-calcChocTotal();
-calcChoc();  
-
-     }
-});
 
 var pickerDevice = myApp.picker({
     input: '#picker-device',
@@ -29,10 +8,23 @@ var pickerDevice = myApp.picker({
     cols: [
         {
             textAlign: 'center',
-            values: ['iPhone 4', 'iPhone 4S', 'iPhone 5', 'iPhone 5S', 'iPhone 6', 'iPhone 6 Plus', 'iPad 2', 'iPad Retina', 'iPad Air', 'iPad mini', 'iPad mini 2', 'iPad mini 3']
+            values: ['White Chocolate','Milk Chocolate','Dark Sweet Chocolate','Semi-sweet Chocolate','Baker\'s Chocolate','Dry Cocoa Powder','Instant Cocoa Powder','Cocoa Beans','Coffee Beans','Cocoa Bean Hulls']
         }
-    ]
+    ],onChange: function (picker, values, displayValues) {
+calcChocTotal();
+calcChoc();  
+
+     }
 });
+
+var $$ = Dom7;
+var mainView = myApp.addView('.view-main', {
+    dynamicNavbar: true,
+    //material:true,
+    allowDuplicateUrls:true
+});
+
+
 
 
 
@@ -126,7 +118,7 @@ myApp.onPageInit('fluids', function (page) {
 
 myApp.onPageInit('chocolate', function (page) {
  pickerDevice.open();
-pickerDevice.setValue('iPhone 4S');
+pickerDevice.setValue('Milk Chocolate');
 
   $('.printme').on('click touchstart',function() {
     //$('#drug').printThis({     
