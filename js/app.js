@@ -24,6 +24,8 @@ calcChoc();
 
 var pickerDevice = myApp.picker({
     input: '#picker-device',
+    toolbarCloseText: 'Close',
+    toolbar:true,
     cols: [
         {
             textAlign: 'center',
