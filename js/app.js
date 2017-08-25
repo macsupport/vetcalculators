@@ -31,6 +31,8 @@ var myPicker = myApp.picker({
 });
 myPicker.open();
 myPicker.setValue('iPhone 4S');
+
+var myPicker = $$('.picker-inline')[0].f7Picker;
 setdrug();
   //setspin();
    //MLK();
