@@ -22,8 +22,7 @@ calcChoc();
 
      }
 });
-myPicker.open();
-myPicker.setValue('Milk Chocolate')
+
 
 setdrug();
   //setspin();
@@ -114,6 +113,8 @@ myApp.onPageInit('fluids', function (page) {
 
 
 myApp.onPageInit('chocolate', function (page) {
+  myPicker.open();
+myPicker.setValue('Milk Chocolate');
 
   $('.printme').on('click touchstart',function() {
     //$('#drug').printThis({     
