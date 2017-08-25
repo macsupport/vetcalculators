@@ -8,13 +8,16 @@ var mainView = myApp.addView('.view-main', {
 });
 
 
-
+setdrug();
+  setspin();
+   MLK();
+    MLK2();
   
 
 
 myApp.onPageInit('cri misc emergency anesthetic fluids chocolate', function (page) {
   $('table').footable();
-  $(document).on('keyup touchend','#inputKilograms',function() {
+  $(document).on('keyup','#inputKilograms',function() {
   MLK();
   setdrug();
   calcChocTotal();
@@ -25,10 +28,7 @@ calcChoc();
   $('td span.chip').text(" ");
 });
 
-setdrug();
-  setspin();
-   MLK();
-    MLK2();
+
 
 
  });
@@ -99,12 +99,12 @@ myApp.onPageInit('chocolate', function (page) {
   return false;
   }); 
 
-  $("#ounce").on('keyup touchend',function() {
+  $(document).on('keyup','#ounce',function() {
   calcChocTotal();
 calcChoc();  
 });
    
-$("#chocolate").on("change",function() {
+$(document).on("change","#chocolate",function() {
 calcChocTotal();
 calcChoc();  
 
@@ -142,10 +142,10 @@ $('.date').html(today.toDateString());
     $('input.drug').each(function(index) {
       var inputName = $(this).attr("name"),
         drugValue =   $('input[name="'+inputName+'"]');       
-    $(document).on('keyup touchend', 'input[name="'+ inputName +'"]', function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
+    $(document).on('keyup', 'input[name="'+ inputName +'"]', function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
 console.log(inputName)
     });
-    $(document).on('keyup touchend', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
+    $(document).on('keyup', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
     
     });   
   }
@@ -380,7 +380,7 @@ var quota = parseFloat($('#toxicTotal2').text());
     $('span.red,span.yellow,span.red2').fadeOut('fast');
     }     
  }
- $("#chocolate").on("change",function() {
+ $(document).on("change","#chocolate",function() {
 calcChocTotal();
 calcChoc();  
 });
@@ -582,7 +582,7 @@ $mlkdose.text("not a number");
 }
 MLK();
 function MLK2() {
-$("#fluidVol, #fluidVol1,#fluidVol2, #fluidVol3, #fluidVol4, .morphV,.hydroV,.buprenV,.butorphV, #ketV, #mlkghr,  #mlkghr2, #mlkghr3, #mlkghr4,input[name='lidoV'], input[name='ketV'],input[name='lidoV2'], input[name='ketV2'],input[name='lidoV3'], input[name='ketV3'],input[name='lidoV4'], input[name='ketV4']").on("change", function() {
+$(document).on("change","#fluidVol, #fluidVol1,#fluidVol2, #fluidVol3, #fluidVol4, .morphV,.hydroV,.buprenV,.butorphV, #ketV, #mlkghr,  #mlkghr2, #mlkghr3, #mlkghr4,input[name='lidoV'], input[name='ketV'],input[name='lidoV2'], input[name='ketV2'],input[name='lidoV3'], input[name='ketV3'],input[name='lidoV4'], input[name='ketV4']", function() {
     var morphV = parseFloat($('input[name="morphV"]').val());
     var hydroV = parseFloat($('input[name="hydroV"]').val());
     var buprenV = parseFloat($('input[name="buprenV"]').val());
