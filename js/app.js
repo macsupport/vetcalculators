@@ -7,16 +7,23 @@ var mainView = myApp.addView('.view-main', {
     allowDuplicateUrls:true
 });
 
-var pickerDevice = myApp.picker({
+var myPicker = myApp.picker({
     input: '#chocolate-picker',
     cols: [
         {
             textAlign: 'center',
             values: ['White Chocolate','Milk Chocolate','Dark, Sweet Chocolate','Semi-sweet Chocolate','Baker’s Chocolate','Dry Cocoa Powder','Instant Cocoa Powder','Cocoa Beans','Coffee Beans','Cocoa Bean Hulls']
         }
-    ]
-});
+    ],
+     onChange: function (picker, values, displayValues) {
 
+      calcChocTotal();
+calcChoc();  
+
+     }
+});
+myPicker.open();
+myPicker.setValue('Milk Chocolate')
 
 setdrug();
   //setspin();
