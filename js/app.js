@@ -39,7 +39,7 @@ myApp.onPageInit('misc', function (page) {
 
 
 myApp.onPageInit('emergency', function (page) {
-
+ setspin();
    $(document).on('click touchstart','.printme',function() {
     $('#dosechart3').printThis();
      return false;
@@ -51,7 +51,7 @@ myApp.onPageInit('emergency', function (page) {
       });
 
 myApp.onPageInit('anesthetic', function (page) {
- 
+  setspin();
   $('.printme').on('click touchstart',function() {
     $('#dosechart').printThis({     
       importCSS: true
