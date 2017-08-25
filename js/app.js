@@ -1,30 +1,11 @@
 
 var myApp = new Framework7();
-
-var pickerDevice = myApp.picker({
-    input: '#picker-device',
-    toolbarCloseText: 'Close',
-    toolbar:true,
-    cols: [
-        {
-            textAlign: 'center',
-            values: ['White Chocolate','Milk Chocolate','Dark Sweet Chocolate','Semi-sweet Chocolate','Baker\'s Chocolate','Dry Cocoa Powder','Instant Cocoa Powder','Cocoa Beans','Coffee Beans','Cocoa Bean Hulls']
-        }
-    ],onChange: function (picker, values, displayValues) {
-calcChocTotal();
-calcChoc();  
-
-     }
-});
-
 var $$ = Dom7;
 var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true,
     //material:true,
     allowDuplicateUrls:true
 });
-
-
 
 
 
@@ -117,8 +98,7 @@ myApp.onPageInit('fluids', function (page) {
 
 
 myApp.onPageInit('chocolate', function (page) {
- pickerDevice.open();
-pickerDevice.setValue('Milk Chocolate');
+
 
   $('.printme').on('click touchstart',function() {
     //$('#drug').printThis({     
