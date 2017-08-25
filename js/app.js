@@ -7,13 +7,13 @@ var mainView = myApp.addView('.view-main', {
     allowDuplicateUrls:true
 });
 
-$$(document).on('page:init', function (e) {
+
 setdrug();
   setspin();
    MLK();
     MLK2();
   
-})
+
 
 
 
@@ -27,34 +27,30 @@ console.log(inputName)
     
     });
 
-$(document).on('keyup touchend','#inputKilograms',function() {
+
+
+
+myApp.onPageInit('cri misc emergency anesthetic fluids chocolate', function (page) {
+  $('table').footable();
+  $(document).on('keyup touchend','#inputKilograms',function() {
   MLK();
   setdrug();
   calcChocTotal();
 calcChoc();  
 });
-$(document).on("click touchstart",'.resetme',function() { 
+  $(document).on("click touchstart",'.resetme',function() { 
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
   $('td span.chip').text(" ");
 });
-
-myApp.onPageInit('cri', function (page) {
-  $('table').footable();
  });
 
 myApp.onPageInit('misc', function (page) {
-  $('table').footable();
+ 
  }); 
 
 
 myApp.onPageInit('emergency', function (page) {
-$('table').footable();
-$(document).on('keyup touchend','#inputKilograms',function() {
-  MLK();
-  setdrug();
-  calcChocTotal();
-calcChoc();  
-});
+
    $(document).on('click touchstart','.printme',function() {
     $('#dosechart3').printThis();
      return false;
@@ -66,7 +62,7 @@ calcChoc();
       });
 
 myApp.onPageInit('anesthetic', function (page) {
-  $('table').footable(); 
+ 
   $('.printme').on('click touchstart',function() {
     $('#dosechart').printThis({     
       importCSS: true
@@ -78,7 +74,7 @@ myApp.onPageInit('anesthetic', function (page) {
 
 
 myApp.onPageInit('misc', function (page) {
-  $('table').footable();
+  
   $('.printme').on('click touchstart',function() {
     //$('#drug').printThis({     
       //importCSS: true,          
@@ -91,7 +87,7 @@ myApp.onPageInit('misc', function (page) {
 
 
 myApp.onPageInit('fluids', function (page) {
-$('table').footable();
+
   $('.printme').on('click touchstart',function() {
     //$('#drug').printThis({     
       //importCSS: true,          
