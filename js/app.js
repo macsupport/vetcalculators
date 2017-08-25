@@ -7,6 +7,25 @@ var mainView = myApp.addView('.view-main', {
     allowDuplicateUrls:true
 });
 
+var pickerDevice = myApp.picker({
+    input: '#chocolate-picker',
+    cols: [
+        {
+            textAlign: 'center',
+            values: ['White Chocolate',
+            'Milk Chocolate',
+           'Dark, Sweet Chocolate',
+           'Semi-sweet Chocolate',
+           'Baker’s Chocolate',
+           'Dry Cocoa Powder',
+           'Instant Cocoa Powder',
+          'Cocoa Beans',
+          'Coffee Beans',
+          'Cocoa Bean Hulls']
+        }
+    ]
+});
+
 
 setdrug();
   //setspin();
@@ -95,7 +114,9 @@ myApp.onPageInit('fluids', function (page) {
       });
 
 
+
 myApp.onPageInit('chocolate', function (page) {
+
   $('.printme').on('click touchstart',function() {
     //$('#drug').printThis({     
       //importCSS: true,          
@@ -270,15 +291,15 @@ function setdrug() {
    var vasoT = parseFloat(($('#vassopressinDog.chip-label').html().replace(' ml', ''))*3).toFixed(2);
   }
     if ($('#dexdomitorMl').length) {
-    var dex = parseFloat($('#dexdomitorMl.label').html().replace(' ml', '')).toFixed(2);
+    var dex = parseFloat($('#dexdomitorMl.chip-label').html().replace(' ml', '')).toFixed(2);
 }if ($('#dexdomitorMagicMl').length) {
-    var dex2 = parseFloat($('#dexdomitorMagicMl.label').html().replace(' ml', '')).toFixed(2);
+    var dex2 = parseFloat($('#dexdomitorMagicMl.chip-label').html().replace(' ml', '')).toFixed(2);
      }if ($('#dttMl').length) {
     var dtt = parseFloat($('#dttMl.label').html().replace(' ml', '')).toFixed(2);
      }if ($('#ketamineMagicMl').length) {
-    var ket2 = parseFloat($('#ketamineMagicMl.label').html().replace(' ml', '')).toFixed(2);
+    var ket2 = parseFloat($('#ketamineMagicMl.chip-label').html().replace(' ml', '')).toFixed(2);
     }if ($('#butorphanolMagicMl').length) {
-    var butorph2 = parseFloat($('#butorphanolMagicMl.label').html().replace(' ml', '')).toFixed(2);
+    var butorph2 = parseFloat($('#butorphanolMagicMl.chip-label').html().replace(' ml', '')).toFixed(2);
     }
     var bsaDogs = parseFloat((Math.pow((kg/2.2), .67) * 10.1)/100).toFixed(3);
     var bsaCats = parseFloat((Math.pow((kg/2.2), .67) * 10.4)/100).toFixed(3);
@@ -309,9 +330,9 @@ if (!isNaN(kg)) {
     $('#lidoT.chip-label').text(lidoT).append(' ml');
     $('#vasoT.chip-label').text(vasoT).append(' ml');
     $('#naloxoneT.chip-label').text(naloxoneT).append(' ml');
-    $('#antisedanDTTMl.label').text(dex).append(' ml');
-    $('#antisedanMagicMl.label').text(dex2).append(' ml');
-    $('#totalMagic.label').text(totalMagic).append(' ml');
+    $('#antisedanDTTMl.chip-label').text(dex).append(' ml');
+    $('#antisedanMagicMl.chip-label').text(dex2).append(' ml');
+    $('#totalMagic.chip-label').text(totalMagic).append(' ml');
     $('#bsaDog').val(bsaDogs);
     $('#bsaCat').val(bsaCats);
     
