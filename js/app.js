@@ -16,7 +16,7 @@ setdrug();
   
 
 
-myApp.onPageInit('cri misc emergency anesthetic fluids chocolate lab', function (page) {
+myApp.onPageInit('cri misc emergency anesthetic fluids chocolate lab iris', function (page) {
   $('table').footable();
   $(document).on('keyup','#inputKilograms',function() {
   MLK();
