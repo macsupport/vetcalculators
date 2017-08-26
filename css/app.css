@@ -12,7 +12,7 @@ height: auto
  .popover {
       width: 200px;
     }
-
+.center{text-align: center;}
 .footable .form-control.drug{width:100%;}
 .navbar a.link {color:#ffffff !important;}
 
