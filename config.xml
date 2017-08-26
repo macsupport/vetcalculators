@@ -11,6 +11,7 @@
     <icon src="splash.png" />
     <splash src="splash.png" />
     <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
+    <gap:plugin name="cordova-plugin-printer" source="npm" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
