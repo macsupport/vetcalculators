@@ -9,6 +9,7 @@
     </author>
     <content src="index.html" />
     <icon src="splash.png" />
+    <splash src="splash.png" />
     <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
