@@ -5,9 +5,14 @@
         Veterinary Drug Calculators
     </description>
     <author email="info@vetcalculators.com" href="http://vetcalculators.com">
-        MIke Sozanski DVM,Dip. ABVP
+        Mike Sozanski DVM,Dip. ABVP
     </author>
     <content src="index.html" />
+     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
+    <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
+      <preference name="auto-hide-splash-screen"    value="true" />
+    
      <plugin name="cordova-plugin-splashscreen" source="npm" />
     
     <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
@@ -28,10 +33,10 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <preference name="BackupWebStorage" value="none" />
-        <splash height="960" platform="ios" src="www/res/screen/ios/Default@2x~iphone.png" width="640" />
-        <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
-        <icon height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
-        <icon height="114" platform="ios" src="www/res/icon/ios/icon@2x.png" width="114" />
+        <splash height="960" platform="ios" src="res/screen/ios/Default@2x~iphone.png" width="640" />
+        <splash height="480" platform="ios" src="res/screen/ios/Default~iphone.png" width="320" />
+        <icon height="57" platform="ios" src="res/icon/ios/icon.png" width="57" />
+        <icon height="114" platform="ios" src="res/icon/ios/icon@2x.png" width="114" />
     </platform>
     <icon src="splash.png" />
     <splash src="splash.png" />
