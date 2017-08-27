@@ -16,6 +16,7 @@
      <plugin name="cordova-plugin-splashscreen" source="npm" />
     
     <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
+    <gap:plugin name="cordova-plugin-printer" source="npm" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
