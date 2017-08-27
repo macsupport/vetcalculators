@@ -16,7 +16,7 @@ setdrug();
  
 
 
-myApp.onPageInit('cri misc emergency anesthetic fluids chocolate lab iris calorie', function (page) {
+myApp.onPageInit('cri misc emergency anesthetic fluids chocolate lab iris calories', function (page) {
   $('table').footable();
   $('table').find('td[colspan]').siblings().remove();
   $(document).on('keyup','#inputKilograms',function() {
@@ -44,6 +44,21 @@ console.log(inputName)
  });
 
 myApp.onPageInit('calories', function (page) {
+  $("#bcs").on("change",function() {
+ feedCups();
+  });
+$("#catCalCups").on("keyup touchend",function() {
+ feedCups();
+  });
+$("#dogCalCups").on("keyup touchend",function() {
+ feedCups();
+ });
+$("#rerCat").on("change",function() {
+ feedCups();
+  });
+$("#rerDog").on("change",function() {
+ feedCups();
+ });
  feedCups(); 
  }); 
 
@@ -452,10 +467,10 @@ var caloriesCats = parseFloat(catMultiplyer) * parseFloat(RERCats);
 var caloriesCats = caloriesCats.toFixed(2);
 //$('#dogCups').val(cups/totalCups).number( true, 1 );
 if (!isNaN(resultD)) { 
-$('.dogCups').html('<span class="label label-default"> ' + resultD + '</span>');
+$('.dogCups').html('<span class="chip"><span class="chip-label label-default"> ' + resultD + '</span></span>');
 }
 if (!isNaN(resultC)) { 
-$('.catCups').html('<span class="label label-default"> ' + resultC + '</span>');
+$('.catCups').html('<span class="chip"><span class="chip-label label-default"> ' + resultC + '</span></span>');
 }
 $('#caloriesCats').val(parseFloat(RERCat));
 $('#caloriesDogs').val(parseFloat(RERDog));
