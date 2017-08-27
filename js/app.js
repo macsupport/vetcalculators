@@ -73,7 +73,9 @@ myApp.onPageInit('emergency', function (page) {
      return false;
   });
     $(document).on('click touchstart','.printme2',function() {
-    $('#dosechart2').printThis();
+    //$('#dosechart2').printThis();
+     cordova.plugins.printer.print('#dosechart2', { duplex: 'long' }, function (res) {
+    alert(res ? 'Done' : 'Canceled');
   return false;
   });       
       });
@@ -280,7 +282,7 @@ function setdrug() {
       
        });  
     $('input.drug').each(function(index) {
-      var drug = parseFloat($(this).val()).toFixed(3);
+      var drug = parseFloat($(this).val()).toFixed(3) || 0;
       var drugmg = $(this).attr('data-mg');
       var drugml = $(this).attr('data-ml');
       var drugconc = parseFloat($(this).attr('data-conc'));
