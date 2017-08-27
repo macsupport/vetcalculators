@@ -409,7 +409,7 @@ var cups = parseFloat($('#caloriesDogs').val());
   var RERDogs = 70 * parseFloat(calDogs);
 
 
-var bcs  = parseFloat($('#dogBCS').val());
+var bcs  = parseFloat($('#bcs').val());
 var idealWeightKG = parseFloat((kg * (1 - bcs))).toFixed(1);
 var idealWeightLB = parseFloat((kg * (1 - bcs))*2.2046).toFixed(1);
 var idealCalc = Math.pow(idealWeightKG, 0.75);
@@ -424,7 +424,7 @@ var idealKcalDogsTotalLoss = (0.8 * parseFloat(idealKcalCatsTotal)).toFixed();
 
 
 
-var bcs2  = parseFloat($('#catBCS').val());
+var bcs2  = parseFloat($('#bcs').val());
 var idealWeightKG2 = parseFloat((kg * (1 - bcs2))).toFixed(1);
 var idealWeightLB2 = parseFloat((kg * (1 - bcs2))*2.2046).toFixed(1);
 var idealCalc2 = Math.pow(idealWeightKG2, 0.75);
@@ -468,10 +468,7 @@ $('#idealWeightLBCats').val(parseFloat(idealWeightLB2));
 
 
 
-$("#dogBCS").on("change",function() {
- feedCups();
-  });
-$("#catBCS").on("change",function() {
+$("#bcs").on("change",function() {
  feedCups();
   });
 $("#catCalCups").on("keyup touchend",function() {
