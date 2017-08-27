@@ -66,7 +66,10 @@ $("#rerDog").on("change",function() {
 myApp.onPageInit('emergency', function (page) {
 
    $(document).on('click touchstart','.printme',function() {
-    $('#dosechart3').printThis();
+    //$('#dosechart3').printThis();
+    cordova.plugins.printer.print('#dosechart3', { duplex: 'long' }, function (res) {
+    alert(res ? 'Done' : 'Canceled');
+});
      return false;
   });
     $(document).on('click touchstart','.printme2',function() {
