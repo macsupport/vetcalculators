@@ -76,9 +76,9 @@
  <li>
       <div class="item-content">
         <div class="item-inner">
-          <div class="item-title label">Pounds</div>
+          <div class="item-title label">Ideal lbs</div>
           <div class="item-input">
-            <input type="text" class="form-control" id="idealWeightLBDogs"  readonly>
+            <input type="text" class="form-control" id="idealWeightLBDogs"  disabled>
           </div>
         </div>
       </div>
@@ -86,18 +86,18 @@
      <li>
       <div class="item-content">
         <div class="item-inner">
-          <div class="item-title label">Kilograms</div>
+          <div class="item-title label">Ideal kgs</div>
           <div class="item-input">
-            <input type="text" class="form-control" id="idealWeightKGDogs"  readonly>
+            <input type="text" class="form-control disabled" id="idealWeightKGDogs"  disabled>
           </div>
         </div>
       </div>
     </li>
      <li>
       <div class="item-content">
-        <div class="item-media"><i class="fa fa-paw fa-fw"></i></div>
+        <div class="item-media"></div>
         <div class="item-inner">
-          <div class="item-title label">BCS</div>
+          <div class="item-title label">Multiplier</div>
           <div class="item-input">
              <select id="rerDog" class="selectpicker form-control" data-width="200px" title="Choose...">
               <option value="1.6" selected>Neutered adult dog</option>
@@ -111,21 +111,39 @@
           </div>
         </div>
       </div>
-    </li>
-  </ul>
-   <li>
+    </li> 
+    <li>
       <div class="item-content">
         <div class="item-inner">
           <div class="item-title label">Calories/Day</div>
           <div class="item-input">
-            <input type="text" class="form-control" id="caloriesDogs" readonly>
+            <input type="text" class="form-control" id="caloriesDogs" disabled>
           </div>
         </div>
       </div>
     </li>
+  </ul>
   </div>
-     
+     </div>
+
+<div class="content-block">
+       <div class="content-block-title">Canine</div>
+<div class="list-block">
+  <ul>
+ <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label"></div>
+          <div class="item-input">
+             <input type="text" class="form-control" id="dogCalCups" placeholder="Enter Calories">
+          </div>
+        </div>
       </div>
+    </li>
+ </ul>
+  </div>
+     </div>
+
     </div>
     <!-- Tab 2 -->
     <div id="tab2" class="tab">
@@ -136,9 +154,9 @@
  <li>
       <div class="item-content">
         <div class="item-inner">
-          <div class="item-title label">Pounds</div>
+          <div class="item-title label">Ideal lbs</div>
           <div class="item-input">
-            <input type="text" class="form-control" id="idealWeightLBCats" readonly>
+            <input type="text" class="form-control disabled" id="idealWeightLBCats" disabled>
           </div>
         </div>
       </div>
@@ -146,18 +164,18 @@
      <li>
       <div class="item-content">
         <div class="item-inner">
-          <div class="item-title label">Kilograms</div>
+          <div class="item-title label">Ideal kgs</div>
           <div class="item-input">
-              <input type="text" class="form-control" id="idealWeightKGCats"  readonly>
+              <input type="text" class="form-control disabled" id="idealWeightKGCats"  disabled>
           </div>
         </div>
       </div>
     </li>
      <li>
       <div class="item-content">
-        <div class="item-media"><i class="fa fa-paw fa-fw"></i></div>
+        <div class="item-media"></div>
         <div class="item-inner">
-          <div class="item-title label">BCS</div>
+          <div class="item-title label">Multiplier</div>
           <div class="item-input">
             <select id="rerCat" class="selectpicker form-control" data-width="200px" title="Choose...">
               <option value="1.2" selected>Neutered adult cat</option>
@@ -177,7 +195,7 @@
         <div class="item-inner">
           <div class="item-title label">Calories/Day</div>
           <div class="item-input">
-            <input type="text" class="form-control" id="caloriesCats"  readonly>
+            <input type="text" class="form-control" id="caloriesCats"  disabled>
           </div>
         </div>
       </div>
@@ -187,6 +205,25 @@
      
     
       </div>
+
+<div class="content-block">
+       <div class="content-block-title">Canine</div>
+<div class="list-block">
+  <ul>
+ <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label"></div>
+          <div class="item-input">
+             <input type="text" class="form-control" id="catCalCups" placeholder="Enter Calories">
+          </div>
+        </div>
+      </div>
+    </li>
+ </ul>
+  </div>
+     </div>
+      
     </div>
  
 
