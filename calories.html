@@ -41,9 +41,14 @@
         <div class="item-inner">
           <div class="item-title label">BCS</div>
           <div class="item-input">
-            <div id="bcs" class="range-slider">
-              <input id="bcs" class="slider"  name="bcs" type="number" min="4" max="9" step="1">
-            </div>
+            <select name="bcs" id="bcs">
+              <option value="0">4</option>
+              <option value="0" selected>5</option>
+              <option value="0.1">6</option>
+              <option value="0.2">7</option>
+              <option value="0.3">8</option>
+              <option value="0.4">9</option>
+            </select>
           </div>
         </div>
       </div>
@@ -65,15 +70,64 @@
     <!-- Tab 1, active by default -->
     <div id="tab1" class="tab active">
       <div class="content-block">
-        <p>This is tab 1 content</p>
-        ...
+       <div class="content-block-title">Canine</div>
+<div class="list-block">
+  <ul>
+ <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Kilograms</div>
+          <div class="item-input">
+            <input type="text" class="form-control" id="idealWeightLBDogs"  readonly>
+          </div>
+        </div>
+      </div>
+    </li>
+     <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Kilograms</div>
+          <div class="item-input">
+            <input type="text" class="form-control" id="idealWeightKGDogs"  readonly>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  </div>
+     
       </div>
     </div>
     <!-- Tab 2 -->
     <div id="tab2" class="tab">
       <div class="content-block">
-        <p>This is tab 2 content</p>
-        ...
+               <div class="content-block-title">Feline</div>
+<div class="list-block">
+  <ul>
+ <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Kilograms</div>
+          <div class="item-input">
+            <input type="text" class="form-control" id="idealWeightLBCats" readonly>
+          </div>
+        </div>
+      </div>
+    </li>
+     <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Kilograms</div>
+          <div class="item-input">
+              <input type="text" class="form-control" id="idealWeightKGCats"  readonly>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  </div>
+     
+    
       </div>
     </div>
  
