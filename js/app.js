@@ -67,15 +67,15 @@ myApp.onPageInit('emergency', function (page) {
 
    $(document).on('click touchstart','.printme',function() {
     //$('#dosechart3').printThis();
-    cordova.plugins.printer.print('#dosechart3', { duplex: 'long' }, function (res) {
-    alert(res ? 'Done' : 'Canceled');
-});
+    var page = document.getElementById('dosechart3');
+cordova.plugins.printer.print(page, 'emergency.html');
+  
      return false;
   });
     $(document).on('click touchstart','.printme2',function() {
     //$('#dosechart2').printThis();
-     cordova.plugins.printer.print('#dosechart2', { duplex: 'long' }, function (res) {
-    alert(res ? 'Done' : 'Canceled');
+      var page = document.getElementById('dosechart2');
+cordova.plugins.printer.print(page, 'emergency.html');
   return false;
   });       
       });
