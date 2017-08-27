@@ -13,13 +13,14 @@ setdrug();
   //setspin();
    //MLK();
    MLK2();
-  
+ 
 
 
 myApp.onPageInit('cri misc emergency anesthetic fluids chocolate lab iris calorie', function (page) {
   $('table').footable();
   $('table').find('td[colspan]').siblings().remove();
   $(document).on('keyup','#inputKilograms',function() {
+     feedCups(); 
   MLK();
   setdrug();
   calcChocTotal();
@@ -32,7 +33,7 @@ calcChoc();
 
       var inputName = $('input.drug').attr("name"),
         drugValue =   $('input[name="'+inputName+'"]');       
-    $(document).on('keyup', drugValue, function () {  MLK(); calcChocTotal(); calcChoc();  setdrug();
+    $(document).on('keyup', drugValue, function () {  feedCups();  MLK(); calcChocTotal(); calcChoc();  setdrug();
 console.log(inputName)
     });
     //$(document).on('keyup', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
