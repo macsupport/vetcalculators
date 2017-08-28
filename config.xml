@@ -46,9 +46,13 @@
         <icon height="114" platform="ios" src="res/icon/ios/icon@2x.png" width="114" />
     </platform>
     <icon src="icon.png" />
-    <preference name="DisallowOverscroll" value="true" />
- <preference name="SplashScreen" value="res/screen/ios/Default@2x~iphone.png" />  
-    <splash src="res/screen/ios/Default@2x~iphone.png"/> 
+    <preference name="pgb-builder-version" value="2" />
+    <preference name="phonegap-version" value="cli-7.0.1" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="1500" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <splash src="splash.png"/> 
 
 
 
