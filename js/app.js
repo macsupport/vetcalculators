@@ -65,6 +65,28 @@ $("#rerDog").on("change",function() {
 
 myApp.onPageInit('emergency', function (page) {
 
+document.addEventListener("deviceready", onDeviceReady, false);
+
+// Cordova Device Ready.
+function onDeviceReady() {
+
+cordova.plugins.printer.isAvailable(
+    //Check whether the printer is available or not.
+    function (isAvailable) {
+         //Enter the page location.
+         var page = location.href;
+         cordova.plugins.printer.print(page, 'Document.html', function () {
+         alert('printing finished or canceled')
+});
+    }
+);
+
+}
+
+
+
+  
+
    $(document).on('click touchstart','.printme',function() {
     //$('#dosechart3').printThis();
     var page = document.getElementById('dosechart3');
