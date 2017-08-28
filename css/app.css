@@ -12,6 +12,26 @@ height: auto
  .popover {
       width: 200px;
     }
+.logo::before {
+  background: url(../img/syringe480.jpg)no-repeat center center fixed;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  content: "";
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1; 
+
+}
+
+
+
+
 .center{text-align: center;}
 .pull-right{float: right;}
 .list-block .item-title{overflow: visible;}
