@@ -68,14 +68,14 @@ myApp.onPageInit('emergency', function (page) {
    $(document).on('click touchstart','.printme',function() {
     //$('#dosechart3').printThis();
     var page = document.getElementById('dosechart3');
-cordova.plugins.printer.print(page, 'emergency.html');
+cordova.plugins.printer.print(page, 'index.html');
   
      return false;
   });
     $(document).on('click touchstart','.printme2',function() {
     //$('#dosechart2').printThis();
       var page = document.getElementById('dosechart2');
-cordova.plugins.printer.print(page, 'emergency.html');
+cordova.plugins.printer.print(page, 'index.html');
   return false;
   });       
       });
