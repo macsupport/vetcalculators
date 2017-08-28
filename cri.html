@@ -9,28 +9,9 @@
 
 
 <div data-page="cri" class="page theme-bluegray">
-
-<div class="popover popover-links">
-    <div class="popover-angle"></div>
-    <div class="popover-inner">
-      <div class="list-block">
-        <ul>
-        <li><a href="index.html" class="list-button item-link">Home</a></li>
-          <li><a href="emergency.html" class="list-button item-link">Emergency</a></li>
-          <li><a href="anesthetic.html" class="list-button item-link">Anesthetic</a></li>
-          <li><a href="fluids.html" class="list-button item-link">Fluids</a></li>
-          <li><a href="cri.html" class="list-button item-link">CRI</a></li>
-          <li><a href="chocolate.html" class="list-button item-link">Chocolate</a></li>
-          <li><a href="misc.html" class="list-button item-link">Conversion</a></li>
-          <li><a href="lab.html" class="list-button item-link">Lab</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
 <div class="page-content hide-bars-on-scroll">
 
-<div class="content-block-title">Constant Rate Infusion</div>
+<div class="content-block-title"><i class="fa fa-clock-o fa-lg fa-fw color-orange"></i> Constant Rate Infusion</div>
 
 <div class="col-25">
 <p class="buttons-row">
@@ -47,7 +28,7 @@
     <li>
       <div class="item-content">
         <div class="item-inner">
-          <div class="item-title label"><i class="fa fa-balance-scale fa-lg fa-fw"></i> Pounds</div>
+          <div class="item-title label"> Pounds</div>
           <div class="item-input">
               <input id="inputPounds" class="form-control  no-fastclick" type="number" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
           </div>
@@ -57,7 +38,7 @@
     <li>
       <div class="item-content">
         <div class="item-inner">
-          <div class="item-title label"><i class="fa fa-balance-scale fa-lg fa-fw"></i> Kilograms</div>
+          <div class="item-title label"> Kilograms</div>
           <div class="item-input">
              <input id="inputKilograms" class="form-control  no-fastclick" type="number" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
           </div>
@@ -65,6 +46,7 @@
       </div>
     </li>
   </ul>
+   <div class="list-block-label"><i class="fa fa-balance-scale fa-lg fa-fw"></i> Enter Pounds or Kilograms</div>
 </div>  
 
 <form id="cri-form" class="list-block store-data">
@@ -94,10 +76,6 @@
       </div>
     </li>
 </ul> 
-
-
-
-
 </form>
 
 <div class="content-block-title">CRI Calculators</div>
