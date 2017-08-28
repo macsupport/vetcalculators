@@ -16,7 +16,7 @@ setdrug();
  
 
 
-myApp.onPageInit('cri misc emergency anesthetic fluids chocolate lab iris calories', function (page) {
+myApp.onPageInit('cri misc emergency anesthetic fluids chocolate lab iris calories cat-canned, cat-dry, dog-dry, dog-canned', function (page) {
   $('table').footable();
   $('table').find('td[colspan]').siblings().remove();
   $(document).on('keyup','#inputKilograms',function() {
