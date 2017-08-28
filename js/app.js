@@ -103,7 +103,7 @@ cordova.plugins.printer.print(page, 'index.html');
       });
 
 myApp.onPageInit('anesthetic', function (page) {
-  $('.printme').on('click touchstart',function() {
+  $('#print').on('click touchstart',function() {
     $('#dosechart').printThis({     
       importCSS: true
   });
