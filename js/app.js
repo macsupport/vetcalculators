@@ -89,7 +89,7 @@ cordova.plugins.printer.isAvailable(
 
    $(document).on('click touchstart','.printme',function() {
     //$('#dosechart3').printThis();
-    var page = document.getElementById('dosechart3');
+    var page = document.getElementById('dogTable');
 cordova.plugins.printer.print(page, 'index.html');
   
      return false;
