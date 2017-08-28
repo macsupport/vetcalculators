@@ -13,6 +13,8 @@ height: auto
       width: 200px;
     }
 .center{text-align: center;}
+.pull-right{float: right;}
+.list-block .item-title{overflow: visible;}
 .footable .form-control.drug{width:100%;}
 .navbar a.link {color:#ffffff !important;}
 .chip.choc{font-size: 16px;height:35px;}
