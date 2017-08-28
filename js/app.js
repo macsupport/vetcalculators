@@ -105,7 +105,7 @@ cordova.plugins.printer.print(page, 'index.html');
       });
 
 myApp.onPageInit('anesthetic', function (page) {
-  
+
   $(document).on('click touchstart','.printme',function() {
      $('head').append('<link rel="stylesheet" type="text/css" href="css/print.css">');
      var page = document.getElementById('dosechart');
@@ -118,7 +118,7 @@ cordova.plugins.printer.print(page, 'index.html');
 
 myApp.onPageInit('misc', function (page) {
   
-  $('.printme').on('click touchstart',function() {
+  $(document).on('click touchstart','.printme',function() {
     //$('#drug').printThis({     
       //importCSS: true,          
     // loadCSS: "css/print.css"
@@ -131,7 +131,7 @@ myApp.onPageInit('misc', function (page) {
 
 myApp.onPageInit('fluids', function (page) {
 
-  $('.printme').on('click touchstart',function() {
+ $(document).on('click touchstart','.printme',function() {
     //$('#drug').printThis({     
       //importCSS: true,          
     // loadCSS: "css/print.css"
@@ -147,7 +147,7 @@ myApp.onPageInit('fluids', function (page) {
 myApp.onPageInit('chocolate', function (page) {
 
 
-  $('.printme').on('click touchstart',function() {
+  $(document).on('click touchstart','.printme',function() {
     //$('#drug').printThis({     
       //importCSS: true,          
     // loadCSS: "css/print.css"
