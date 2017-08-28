@@ -65,7 +65,7 @@ $("#rerDog").on("change",function() {
 
 myApp.onPageInit('emergency', function (page) {
 
-document.addEventListener("deviceready", onDeviceReady, false);
+//document.addEventListener("deviceready", onDeviceReady, false);
 
 // Cordova Device Ready.
 function onDeviceReady() {
@@ -85,7 +85,7 @@ cordova.plugins.printer.isAvailable(
 
 
 
-  
+
 
    $(document).on('click touchstart','.printme',function() {
     //$('#dosechart3').printThis();
