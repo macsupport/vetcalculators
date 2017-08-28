@@ -20,6 +20,8 @@ height: auto
 .theme-bluegray .button:not(.button-fill) {
   color: #607d8b;
 }
+.button.active{background-color: #607d8b;}
+.button{border: 1px solid #607d8b;}
 .color-brown{color:#795548;}
 .color-orange{color:#ff9800;}
 .color-purple{color:#673ab7;}
