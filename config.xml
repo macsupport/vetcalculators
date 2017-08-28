@@ -47,8 +47,8 @@
     </platform>
     <icon src="icon.png" />
     <preference name="DisallowOverscroll" value="true" />
- <preference name="SplashScreen" value="res/screen/ios/icon@2x.png" />  
-    <splash src="res/screen/ios/icon@2x.png"/> 
+ <preference name="SplashScreen" value="res/screen/ios/Default@2x~iphone.png" />  
+    <splash src="res/screen/ios/Default@2x~iphone.png"/> 
 
 
 
