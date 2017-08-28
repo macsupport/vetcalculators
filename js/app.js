@@ -96,6 +96,7 @@ cordova.plugins.printer.print(page, 'index.html');
      return false;
   });
     $(document).on('click touchstart','.printme2',function() {
+       $('head').append('<link rel="stylesheet" type="text/css" href="css/print.css">');
     //$('#dosechart2').printThis();
       var page = document.getElementById('dosechart2');
 cordova.plugins.printer.print(page, 'index.html');
@@ -104,10 +105,10 @@ cordova.plugins.printer.print(page, 'index.html');
       });
 
 myApp.onPageInit('anesthetic', function (page) {
-  $('#print').on('click touchstart',function() {
-    $('#dosechart').printThis({     
-      importCSS: true
-  });
+  $(document).on('click touchstart','.printme',function() {
+     $('head').append('<link rel="stylesheet" type="text/css" href="css/print.css">');
+     var page = document.getElementById('dosechart');
+cordova.plugins.printer.print(page, 'index.html');
     //window.print();
   return false;
   });   
