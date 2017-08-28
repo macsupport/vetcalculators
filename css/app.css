@@ -16,10 +16,14 @@ height: auto
 .footable .form-control.drug{width:100%;}
 .navbar a.link {color:#ffffff !important;}
 .chip.choc{font-size: 16px;height:35px;}
-
+.fa-lg{line-height: 1em;}
 .theme-bluegray .button:not(.button-fill) {
   color: #607d8b;
 }
+.color-brown{color:#795548;}
+.color-orange{color:#ff9800;}
+.color-purple{color:#673ab7;}
+.color-bluegray{color:#607d8b;}
 .theme-bluegray .navbar .button:not(.button-fill),
 .theme-bluegray.navbar .button:not(.button-fill),
 .theme-bluegray .toolbar .button:not(.button-fill),
@@ -432,8 +436,6 @@ input2 {
 a[href^="http://"]:after{content: " (" attr(href) ") ";}
 
 a {text-decoration:none;}
-
-
 
 
 }
