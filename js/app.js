@@ -89,6 +89,7 @@ cordova.plugins.printer.isAvailable(
 
    $(document).on('click touchstart','.printme',function() {
     //$('#dosechart3').printThis();
+    $('head').append('<link rel="stylesheet" type="text/css" href="css/print.css">');
     var page = document.getElementById('dogTable');
 cordova.plugins.printer.print(page, 'index.html');
   
