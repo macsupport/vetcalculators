@@ -130,6 +130,58 @@
   </ul>
 </div>  
 
+ <div class="content-block-title">Drug Dose Calculator</div>
+ <div class="list-block">
+  <ul>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Name</div>
+          <div class="item-input">
+            <input class="form-control" id="thedrug" type="text" placeholder="Drug Name"
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Drug MG</div>
+          <div class="item-input">
+           <input class="form-control form-control-sm drug" id="themg" name="themg" type="number" placeholder="Enter Drug mg/ml" data-min="0" data-max="1000" data-step="0.1" data-postfix="mg/ml" data-decimal="3" value="1" >
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Drug MG</div>
+          <div class="item-input">
+           <input class="form-control form-control-sm drug" id="themg" name="themg" type="number" placeholder="Enter Drug mg/ml" data-min="0" data-max="1000" data-step="0.1" data-postfix="mg/ml" data-decimal="3" value="1" >
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Drug mg/ml</div>
+          <div class="item-input">
+           <input class="form-control form-control-sm drug" id="themg" name="themg" type="number" placeholder="Enter Drug mg/ml" data-min="0" data-max="1000" data-step="0.1" data-postfix="mg/ml" data-decimal="3" value="1" >
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 <div class="card data-table data-table-collapsible data-table-init">
       <div class="card-header">
        <div class="data-table-title"><h4>Drug Dose Calculator</h4> </div>
@@ -137,7 +189,7 @@
 <table data-toggle-column="first" id="dosechart" class="table-sm table table-bordered">
  <thead class="thead-default">
           <tr class="printThis">
-            <th data-tablesaw-priority="persist" >Drug</th>
+            <th data-tablesaw-priority="persist">Drug</th>
             <th data-tablesaw-priority="2">Drug mg/ml</th>
             <th data-tablesaw-priority="2">Set Dose</th>
             <th data-tablesaw-priority="persist">Total Dose</th>
