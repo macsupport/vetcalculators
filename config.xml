@@ -46,8 +46,7 @@
         <icon height="114" platform="ios" src="res/icon/ios/icon@2x.png" width="114" />
     </platform>
     <icon src="icon.png" />
-    <preference name="pgb-builder-version" value="2" />
-    <preference name="phonegap-version" value="cli-7.0.1" />
+   
     <preference name="ShowSplashScreenSpinner" value="true" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="1500" />
