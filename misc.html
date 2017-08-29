@@ -156,9 +156,9 @@
     <li>
       <div class="item-content">
         <div class="item-inner">
-          <div class="item-title label">Drug MG</div>
+          <div class="item-title label">Dosage mg</div>
           <div class="item-input">
-           <input class="form-control form-control-sm drug" id="themg" name="themg" type="number" placeholder="Enter Drug mg/ml" data-min="0" data-max="1000" data-step="0.1" data-postfix="mg/ml" data-decimal="3" value="1" >
+          <span class="rx1 chip"><span id="drugDoseMg" class="chip-label label-primary  number"></span></span>
           </div>
         </div>
       </div>
@@ -166,9 +166,9 @@
     <li>
       <div class="item-content">
         <div class="item-inner">
-          <div class="item-title label">Drug mg/ml</div>
+          <div class="item-title label">Volume ml</div>
           <div class="item-input">
-           <input class="form-control form-control-sm drug" id="themg" name="themg" type="number" placeholder="Enter Drug mg/ml" data-min="0" data-max="1000" data-step="0.1" data-postfix="mg/ml" data-decimal="3" value="1" >
+<span class="rx2 chip"><span id="drugDoseMl" class="chip-label label-success number"></span></span>
           </div>
         </div>
       </div>
@@ -178,44 +178,6 @@
  
  
  
- 
- 
- 
- 
-<div class="card data-table data-table-collapsible data-table-init">
-      <div class="card-header">
-       <div class="data-table-title"><h4>Drug Dose Calculator</h4> </div>
-      <div class="card-content">
-<table data-toggle-column="first" id="dosechart" class="table-sm table table-bordered">
- <thead class="thead-default">
-          <tr class="printThis">
-            <th data-tablesaw-priority="persist">Drug</th>
-            <th data-tablesaw-priority="2">Drug mg/ml</th>
-            <th data-tablesaw-priority="2">Set Dose</th>
-            <th data-tablesaw-priority="persist">Total Dose</th>
-            <th data-tablesaw-priority="persist">Volume</th>
-          </tr>
-        </thead>
-<tbody>
-<tr>
-            <td><input class="form-control" id="thedrug" type="text" placeholder="Drug Name">
-</td>
-            </td>
-            <td><div class="input-group mb-2 mr-sm-2 mb-sm-0">
-    <input class="form-control form-control-sm drug" id="themg" name="themg" type="number" placeholder="Enter Drug mg/ml" data-min="0" data-max="1000" data-step="0.1" data-postfix="mg/ml" data-decimal="3" value="1" > 
-  </div></td>
-             <td><div class="col-md-10">
-                <input class="form-control form-control-sm drug" data-appendDose=" mg" data-appendVol=" ml" data-mg="#drugDoseMg" data-ml="#drugDoseMl" name="drugDose" type="number" data-conc="1" data-min="0" data-max="1000" data-step="0.1" data-postfix="mg/kg" data-decimal="3" value="1">
-              </div></td>
-            <td class="dosage"><span class="rx1 chip"><span id="drugDoseMg" class="chip-label label-primary  number"></span></span></td>
-            <td class="vol"><span class="rx2 chip"><span id="drugDoseMl" class="chip-label label-success number"></span></span></td>
-          </tr>
-</tbody>
-</table>
-
-
-</div>
-</div>
 
 
 
