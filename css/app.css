@@ -12,14 +12,14 @@ height: auto
  .popover {
       width: 200px;
     }
-.logo::before {
-  background: url(../img/syringe150.jpg)no-repeat center center fixed;
+.page[data-page="index"]::before {
+  background: url(../img/emergency3x.png)no-repeat center center fixed;
    -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   content: "";
-  opacity: 0.5;
+  opacity: 0.4;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -29,7 +29,7 @@ height: auto
 
 }
 
-
+.logo{background:transparent;}
 
 
 .center{text-align: center;}
