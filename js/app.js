@@ -16,9 +16,8 @@ setdrug();
  
 
 
-myApp.onPageInit('cri misc emergency anesthetic fluids chocolate lab iris calories cat-canned cat-dry dog-dry dog-canned', function (page) {
+myApp.onPageInit('cri  emergency anesthetic fluids chocolate lab iris calories cat-canned cat-dry dog-dry dog-canned', function (page) {
   $('table').footable();
-  $('table').find('td[colspan]').siblings().remove();
   $(document).on('keyup','#inputKilograms',function() {
      feedCups(); 
   MLK();
@@ -117,7 +116,23 @@ cordova.plugins.printer.print(page, 'index.html');
 
 
 myApp.onPageInit('misc', function (page) {
-  
+  $(document).on('keyup','#inputKilograms',function() {
+     feedCups(); 
+  MLK();
+  setdrug();
+  calcChocTotal();
+calcChoc();  
+});
+  $(document).on('click touchstart','.resetme',function() { 
+ $('#inputKilograms,#inputPounds,#ounce').val(' ');
+  $('td span.chip').text(" ");
+});
+
+      var inputName = $('input.drug').attr("name"),
+        drugValue =   $('input[name="'+inputName+'"]');       
+    $(document).on('keyup', drugValue, function () {  feedCups();  MLK(); calcChocTotal(); calcChoc();  setdrug();
+console.log(inputName)
+    });
   $(document).on('click touchstart','.printme',function() {
     //$('#drug').printThis({     
       //importCSS: true,          
@@ -575,8 +590,8 @@ var mlkFent = parseFloat($('#mlkFent').val());
  if (!isNaN(kg)) { // the input is a number
         $mlkdose.text(kg * 0.2);
 
-        $('#dopamineDogVol').text((parseFloat(((dopamineV * fluidVol)/40)).toFixed(2))).prepend('Add: ').append(' mls'); 
-        $('.dopaminefluids, .dobutaminefluids').text(parseFloat((kg)).toFixed(2)).prepend('Rate: ').append(' ml\/hr');
+        $('#dopamineDogVol').text((parseFloat(((dopamineV * fluidVol)/40)).toFixed(2))).prepend('Add ').append(' mls'); 
+        $('.dopaminefluids, .dobutaminefluids').text(parseFloat((kg)).toFixed(2)).prepend('@').append(' ml\/hr');
         $('#dobutamineDogVol').text((parseFloat(((dobutamineV * fluidVol1)/12.5)).toFixed(2))).prepend('Add: ').append(' mls'); 
         $('#dobutamineCatVol').text((parseFloat(((dobutamineV2 * fluidVol2)/12.5)).toFixed(2))).prepend('Add: ').append(' mls');
 
