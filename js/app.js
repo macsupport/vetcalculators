@@ -96,7 +96,7 @@ cordova.plugins.printer.isAvailable(
     //$('head').append('<link rel="stylesheet" type="text/css" href="css/print.css">');
 
     var page = document.getElementById('dogTable');
-    page.append('<link rel="stylesheet" type="text/css" href="css/print.css">')
+    page.css({'td': 'display:table-cell', 'font-size': 13px})
 cordova.plugins.printer.print(page, 'index.html');
   
      return false;
