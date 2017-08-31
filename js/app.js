@@ -22,7 +22,7 @@ setdrug();
 
 
 myApp.onPageInit('cri  emergency anesthetic fluids chocolate lab iris calories cat-canned cat-dry dog-dry dog-canned', function (page) {
-  $('table').footable();
+  $('table.table').footable();
   $(document).on('keyup','#inputKilograms',function() {
      feedCups(); 
   MLK();
@@ -94,6 +94,7 @@ cordova.plugins.printer.isAvailable(
    $(document).on('click touchstart','.printme',function() {
     //$('#dosechart3').printThis();
     //$('head').append('<link rel="stylesheet" type="text/css" href="css/print.css">');
+
     var page = document.getElementById('dogTable');
     page.append('<link rel="stylesheet" type="text/css" href="css/print.css">')
 cordova.plugins.printer.print(page, 'index.html');
