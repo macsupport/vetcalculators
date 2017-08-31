@@ -142,3 +142,4 @@ input2 {
 a[href^="http://"]:after{content: " (" attr(href) ") ";}
 
 a {text-decoration:none;}
+td{display: table-cell !important;}
