@@ -95,8 +95,8 @@ cordova.plugins.printer.isAvailable(
     //$('#dosechart3').printThis();
     //$('head').append('<link rel="stylesheet" type="text/css" href="css/print.css">');
 
-    var page = document.getElementById('dogTable');
-    page.css({'td': 'display:table-cell', 'font-size': 13px})
+    var page = $('#dogTable');
+    page += '<style type="text/css">td:display:table-cell; font-size:13px;</style>';
 cordova.plugins.printer.print(page, 'index.html');
   
      return false;
