@@ -378,7 +378,9 @@ margin-bottom: 0.1rem !important; }
 
 input[type=text]{font-size: 12px; max-width:100%;}
 
-
+.active .dog,.active .cat  {
+  fill: white;
+}
 
    .col-sm-12{
     width: 100%;
