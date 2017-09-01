@@ -140,32 +140,11 @@ cordova.plugins.printer.print(page, 'Document.html', function () {
 
 myApp.onPageInit('anesthetic', function (page) {
 
-
-
-
 $(document).on('click touchstart','.printme',function() {
   printMe();
   return false;
   });   
-      
-
-
-
-
-
-
-
-
-
-  $(document).on('click touchstart','.printme',function() {
-     var page = document.getElementById('dosechart');
-cordova.plugins.printer.print(page, 'Document.html', function () {
-  $('head').append('<link rel="stylesheet" type="text/css" media="print" href="css/print.css">');
-
-         alert('printing finished or canceled')
- }); 
-  return false;
-  });   
+       
       });
 
 
