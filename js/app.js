@@ -98,7 +98,7 @@ cordova.plugins.printer.isAvailable(
     //var url = 'document.html';
    //page += '<style type="text/css">td{display:table-cell; font-size:13px;}</style>';
 cordova.plugins.printer.print(page, 'Document.html', function () {
-  page.append('<link rel="stylesheet" type="text/css" href="css/print.css">');
+  $(this).append('<style type="text/css">td{display:table-cell; font-size:13px;}</style>');
 
          alert('printing finished or canceled')
  }); 
