@@ -121,7 +121,7 @@ myApp.onPageInit('anesthetic', function (page) {
 
 
 function printGrid() {
-        var gridElement = $('#grid'),
+        var gridElement = $('#dosechart'),
             printableContent = '',
             win = window.open('', '', 'width=800, height=500, resizable=1, scrollbars=1'),
             doc = win.document.open();
