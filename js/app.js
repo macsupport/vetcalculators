@@ -78,9 +78,9 @@ cordova.plugins.printer.isAvailable(
     //Check whether the printer is available or not.
     function (isAvailable) {
          //Enter the page location.
-         var page = location.href;
-         cordova.plugins.printer.print(page, 'Document.html', function () {
-         alert('printing finished or canceled')
+         //var page = location.href;
+         //cordova.plugins.printer.print(page, 'Document.html', function () {
+         //alert('printing finished or canceled')
 });
     }
 );
@@ -94,11 +94,14 @@ cordova.plugins.printer.isAvailable(
    $(document).on('click touchstart','.printme',function() {
     //$('#dosechart3').printThis();
     //$('head').append('<link rel="stylesheet" type="text/css" href="css/print.css">');
-    var page = $('#dogTable');
-    var url = 'document.html';
+  var page = document.getElementById('dogTable');
+    //var url = 'document.html';
    //page += '<style type="text/css">td{display:table-cell; font-size:13px;}</style>';
-cordova.plugins.printer.print(page, 'document.html');
-  
+cordova.plugins.printer.print(page, 'Document.html', function () {
+  page.append('<link rel="stylesheet" type="text/css" href="css/print.css">');
+
+         alert('printing finished or canceled')
+ }); 
      return false;
   });
     $(document).on('click touchstart','.printme2',function() {
