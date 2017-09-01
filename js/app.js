@@ -91,11 +91,11 @@ cordova.plugins.printer.isAvailable(
 
 
 
-   $(document).on('click touchstart','#print',function() {
+   $(document).on('click touchstart','.printme',function() {
     //$('#dosechart3').printThis();
     //$('head').append('<link rel="stylesheet" type="text/css" href="css/print.css">');
     var page = $('#dogTable');
-   // page += '<style type="text/css">td:display:table-cell; font-size:13px;</style>';
+   page += '<style type="text/css">td{display:table-cell; font-size:13px;}</style>';
 cordova.plugins.printer.print(page, 'index.html');
   
      return false;
