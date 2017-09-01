@@ -110,7 +110,13 @@ cordova.plugins.printer.print( htmlStart + printableContent + htmlEnd, 'Document
  
  }); 
 }
-
+$('.printme').each(function(index) {     
+    $(document).on('click touchstart',this,function() {
+  printMe();
+  return false;
+  });   
+    
+    }); 
 
 
    $(document).on('click touchstart','.printme',function() {
