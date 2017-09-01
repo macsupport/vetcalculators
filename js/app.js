@@ -98,7 +98,7 @@ cordova.plugins.printer.isAvailable(
     //var url = 'document.html';
    //page += '<style type="text/css">td{display:table-cell; font-size:13px;}</style>';
 cordova.plugins.printer.print(page, 'Document.html', function () {
-  $(this).append('<link rel="stylesheet" type="text/css" media="print" href="css/print.css">');
+  $("head").append('<link rel="stylesheet" type="text/css" media="print" href="css/print.css">');
 
          alert('printing finished or canceled')
  }); 
@@ -108,7 +108,7 @@ cordova.plugins.printer.print(page, 'Document.html', function () {
     //$('#dosechart2').printThis();
       var page = document.getElementById('dosechart2');
 cordova.plugins.printer.print(page, 'Document.html', function () {
-  $(this).append('<link rel="stylesheet" type="text/css" media="print" href="css/print.css">');
+  $('head').append('<link rel="stylesheet" type="text/css" media="print" href="css/print.css">');
 
          alert('printing finished or canceled')
  }); 
@@ -121,7 +121,7 @@ myApp.onPageInit('anesthetic', function (page) {
   $(document).on('click touchstart','.printme',function() {
      var page = document.getElementById('dosechart');
 cordova.plugins.printer.print(page, 'Document.html', function () {
-  $(this).append('<link rel="stylesheet" type="text/css" media="print" href="css/print.css">');
+  $('head').append('<link rel="stylesheet" type="text/css" media="print" href="css/print.css">');
 
          alert('printing finished or canceled')
  }); 
