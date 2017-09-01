@@ -93,12 +93,12 @@ cordova.plugins.printer.isAvailable(
 
    $(document).on('click touchstart','.printme',function() {
     //$('#dosechart3').printThis();
-    //$('head').append('<link rel="stylesheet" type="text/css" href="css/print.css">');
+    //$('head').append('<link rel="stylesheet" type="text/css" media="print" href="css/print.css">');
   var page = document.getElementById('dogTable');
     //var url = 'document.html';
    //page += '<style type="text/css">td{display:table-cell; font-size:13px;}</style>';
 cordova.plugins.printer.print(page, 'Document.html', function () {
-  $(this).append('<style type="text/css">td{display:table-cell; font-size:13px;}</style>');
+  $(this).append('<link rel="stylesheet" type="text/css" media="print" href="css/print.css">');
 
          alert('printing finished or canceled')
  }); 
@@ -107,7 +107,11 @@ cordova.plugins.printer.print(page, 'Document.html', function () {
     $(document).on('click touchstart','.printme2',function() {
     //$('#dosechart2').printThis();
       var page = document.getElementById('dosechart2');
-cordova.plugins.printer.print(page, 'index.html');
+cordova.plugins.printer.print(page, 'Document.html', function () {
+  $(this).append('<link rel="stylesheet" type="text/css" media="print" href="css/print.css">');
+
+         alert('printing finished or canceled')
+ }); 
   return false;
   });       
       });
@@ -116,8 +120,11 @@ myApp.onPageInit('anesthetic', function (page) {
 
   $(document).on('click touchstart','.printme',function() {
      var page = document.getElementById('dosechart');
-cordova.plugins.printer.print(page, 'index.html');
-    //window.print();
+cordova.plugins.printer.print(page, 'Document.html', function () {
+  $(this).append('<link rel="stylesheet" type="text/css" media="print" href="css/print.css">');
+
+         alert('printing finished or canceled')
+ }); 
   return false;
   });   
       });
