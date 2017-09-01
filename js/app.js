@@ -95,8 +95,9 @@ cordova.plugins.printer.isAvailable(
     //$('#dosechart3').printThis();
     //$('head').append('<link rel="stylesheet" type="text/css" href="css/print.css">');
     var page = $('#dogTable');
-   page += '<style type="text/css">td{display:table-cell; font-size:13px;}</style>';
-cordova.plugins.printer.print(page, 'index.html');
+    var url = 'document.html';
+   //page += '<style type="text/css">td{display:table-cell; font-size:13px;}</style>';
+cordova.plugins.printer.print(page, 'document.html');
   
      return false;
   });
