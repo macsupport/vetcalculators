@@ -155,7 +155,7 @@ cordova.plugins.printer.print(htmlStart + printableContent + htmlEnd, 'Document.
  }); 
   return false;
   });   
-      });
+      
 
 
 
