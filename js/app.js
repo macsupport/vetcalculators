@@ -124,13 +124,23 @@ myApp.onPageInit('anesthetic', function (page) {
 $(document).on('click touchstart','.printmex',function() {
      var gridElement = $('#dosechart'),
             printableContent = '';
-        var htmlStart ='<link rel="stylesheet" type="text/css" media="print" href="css/print.css"> ' 
-                
+        var htmlStart =
+                '<!DOCTYPE html>' +
+                '<html>' +
+                '<head>' +
+                '<meta charset="utf-8" />' +
+                '<title>Kendo UI Grid</title>' +
+                '<link rel="stylesheet" type="text/css" media="print" href="css/print.css"> ' +
+                '</head>' +
+                '<body> TEST';
 
+        var htmlEnd =
+                '</body>' +
+                '</html>';
 
-       var printableContent = gridElement + htmlStart;
+       var printableContent = gridElement.clone()[0].outerHTML;
 
-cordova.plugins.printer.print(printableContent , 'index.html', function () {
+cordova.plugins.printer.print( printableContent + htmlStart, 'Document.html', function () {
  
  }); 
   return false;
