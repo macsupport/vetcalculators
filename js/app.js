@@ -122,7 +122,7 @@ myApp.onPageInit('anesthetic', function (page) {
 
 
 $(document).on('click touchstart','.printmex',function() {
-     var gridElement = $('#dosechart'),
+     var gridElement = $('#hiddenTable'),
             printableContent = '';
         var htmlStart =
                 '<!DOCTYPE html>' +
