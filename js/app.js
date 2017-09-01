@@ -510,10 +510,10 @@ var caloriesCats = parseFloat(catMultiplyer) * parseFloat(RERCats);
 var caloriesCats = caloriesCats.toFixed(2);
 //$('#dogCups').val(cups/totalCups).number( true, 1 );
 if (!isNaN(resultD)) { 
-$('.dogCups').html('<span class="chip"><span class="chip-label label-default"> ' + resultD + '</span></span> <span> Cups or Cans per Day</span>');
+$('.dogCups').html('<span>Feed </span><span class="chip bg-blue"><span class="chip-label label-default"> ' + resultD + ' </span></span> <span> Cups or Cans per Day</span>');
 }
 if (!isNaN(resultC)) { 
-$('.catCups').html('<span class="chip"><span class="chip-label label-default"> ' + resultC + '</span></span> <span> Cups or Cans per Day</span>');
+$('.catCups').html('<span>Feed </span><span class="chip bg-blue"><span class="chip-label label-default"> ' + resultC + ' </span></span> <span> Cups or Cans per Day</span>');
 }
 $('#caloriesCats').val(parseFloat(RERCat));
 $('#caloriesDogs').val(parseFloat(RERDog));
