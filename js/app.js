@@ -120,12 +120,10 @@ myApp.onPageInit('anesthetic', function (page) {
 
 
 
-function printGrid() {
-        var gridElement = $('#dosechart'),
-            printableContent = '',
-            win = window.open('', '', 'width=800, height=500, resizable=1, scrollbars=1'),
-            doc = win.document.open();
 
+$(document).on('click touchstart','.printmex',function() {
+     var gridElement = $('#dosechart'),
+            printableContent = '';
         var htmlStart =
                 '<!DOCTYPE html>' +
                 '<html>' +
@@ -150,38 +148,14 @@ function printGrid() {
                 '</body>' +
                 '</html>';
 
-        var gridHeader = gridElement.children('.k-grid-header');
-        if (gridHeader[0]) {
-            var thead = gridHeader.find('thead').clone().addClass('k-grid-header');
-            printableContent = gridElement
-                .clone()
-                    .children('.k-grid-header').remove()
-                .end()
-                    .children('.k-grid-content')
-                        .find('table')
-                            .first()
-                                .children('tbody').before(thead)
-                            .end()
-                        .end()
-                    .end()
-                .end()[0].outerHTML;
-        } else {
-            printableContent = gridElement.clone()[0].outerHTML;
-        }
+       var printableContent = gridElement.clone()[0].outerHTML;
 
-        doc.write(htmlStart + printableContent + htmlEnd);
-        doc.close();
-        win.print();
-    }
-
-
-
-$('.printmex').click(function () {
-            printGrid();
-        });
-
-
-
+cordova.plugins.printer.print(htmlStart + printableContent + htmlEnd, 'Document.html', function () {
+ 
+ }); 
+  return false;
+  });   
+      });
 
 
 
