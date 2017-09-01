@@ -130,17 +130,7 @@ $(document).on('click touchstart','.printmex',function() {
                 '<head>' +
                 '<meta charset="utf-8" />' +
                 '<title>Kendo UI Grid</title>' +
-                '<link href="http://kendo.cdn.telerik.com/' + kendo.version + '/styles/kendo.common.min.css" rel="stylesheet" /> ' +
-                '<style>' +
-                'html { font: 11pt sans-serif; }' +
-                '.k-grid { border-top-width: 0; }' +
-                '.k-grid, .k-grid-content { height: auto !important; }' +
-                '.k-grid-content { overflow: visible !important; }' +
-                'div.k-grid table { table-layout: auto; width: 100% !important; }' +
-                '.k-grid .k-grid-header th { border-top: 1px solid; }' +
-                '.k-grouping-header, .k-grid-toolbar, .k-grid-pager > .k-link { display: none; }' +
-                // '.k-grid-pager { display: none; }' + // optional: hide the whole pager
-                '</style>' +
+                '<link rel="stylesheet" type="text/css" media="print" href="css/print.css"> ' +
                 '</head>' +
                 '<body>';
 
@@ -150,7 +140,7 @@ $(document).on('click touchstart','.printmex',function() {
 
        var printableContent = gridElement.clone()[0].outerHTML;
 
-cordova.plugins.printer.print(htmlStart + printableContent + htmlEnd, 'Document.html', function () {
+cordova.plugins.printer.print(gridElement + printableContent + htmlEnd, 'Document.html', function () {
  
  }); 
   return false;
