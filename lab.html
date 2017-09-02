@@ -10,11 +10,11 @@
 
 
 <div data-page="lab" class="page theme-bluegray">
-<div class="page-content hide-bars-on-scroll">
+<div id="labPage" class="page-content hide-bars-on-scroll">
 <div class="content-block-title"><i class="fa fa-clipboard fa-lg fa-fw color-bluegray"></i> Normal Lab Values</div>
 <div class="col-20">
 <p class="buttons-row">
-       <button  data-rel="drug" class="no-fastclick printme button button-raised button-fill color-pink ripple-blue"><i class="fa fa-print fa-lg"></i></button>
+       <a  data-rel="drug" class="no-fastclick printme button button-raised button-fill color-pink ripple-blue hidden-print"><i class="fa fa-print fa-lg"></i></a>
 </p>
 </div>
 
@@ -32,14 +32,14 @@
         <thead class="thead-default">
           <tr>
             <th><b>Test</b></th>
-            <th><b>Units</b></th>
+            <th data-breakpoints="xs"><b>Units</b></th>
             <th><b>Canine</b></th>
             <th><b>Feline</b></th>
           </tr>
           </thead>
           <tbody>
           <tr>
-            <td>Red Blood Cells</td>
+            <td>RBC's</td>
           </tr>
           <tr>
             <td><b>HCT*</b></td>
@@ -102,7 +102,7 @@
             <td>9-61</td>
           </tr>
           <tr>
-            <td>White Blood Cells</td>
+            <td>WBC's</td>
           </tr>
           <tr>
             <td><b>WBC*</b></td>
@@ -187,7 +187,7 @@
          <thead class="thead-default">
           <tr>
             <th> Test </th>
-            <th> Units </th>
+            <th data-breakpoints="xs"> Units </th>
             <th> Canine </th>
             <th> Feline </th>
           </tr>
@@ -398,13 +398,13 @@
             <td> 15-49 </td>
           </tr>
           <tr>
-            <td> Bile Acids (fast/random) </td>
+            <td> Bile Acids <div class="subtitle">(fast/random)</div> </td>
             <td> µmol/L </td>
             <td> 0-13 </td>
             <td> 0-13 </td>
           </tr>
           <tr>
-            <td> Bile Acids (postprandial) </td>
+            <td> Bile Acids <div class="subtitle">(postprandial)</div> </td>
             <td> µmol/L </td>
             <td> 0-30 </td>
             <td> 0-25 </td>
@@ -504,7 +504,7 @@
             <td> 13 - 20 </td>
           </tr>
           <tr>
-            <td> Ionized Calcium </td>
+            <td> Calcium </td>
             <td> 1.16 - 1.40 </td>
             <td> 1.11 - 1.38 </td>
           </tr>
