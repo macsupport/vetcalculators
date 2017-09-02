@@ -59,7 +59,7 @@ calcChoc();
 });
   $(document).on('click touchstart','.resetme',function() { 
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
-  $('td span.chip').text(" ");
+  //$('td span.chip').text(" ");
 });
 
       var inputName = $('input.drug').attr("name"),
@@ -117,7 +117,7 @@ cordova.plugins.printer.isAvailable(
 
 
 $(document).on('click touchstart','.printme',function() {
-     var gridElement = $('#dogTable'),
+     var gridElement = $('#emergencyPage'),
             printableContent = '';
         var htmlStart =
                 '<!DOCTYPE html>' +
@@ -207,7 +207,7 @@ calcChoc();
 });
   $(document).on('click touchstart','.resetme',function() { 
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
-  $('td span.chip').text(" ");
+  //$('td span.chip').text(" ");
 });
 
       var inputName = $('input.drug').attr("name"),
