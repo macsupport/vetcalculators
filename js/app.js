@@ -42,10 +42,16 @@ var printLink = $(this).data('print');
 cordova.plugins.printer.print( htmlStart + printableContent + htmlEnd, 'Document.html', function () {
  
  }); 
+
 }
 
-
-
+$(document).on('click touchstart','.printme',function() {
+$( ".printme" ).each(function( index ) {
+  var printLink = $(this).data('print');
+     var gridElement = $('#'+ printLink);
+  console.log(gridElement);
+});
+});
 
 
 myApp.onPageInit('cri  emergency anesthetic fluids chocolate lab iris calories cat-canned cat-dry dog-dry dog-canned', function (page) {
