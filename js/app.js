@@ -21,7 +21,7 @@ setdrug();
  
 
 function printMe() {
-var printLink = $(this).attr('data-printme');
+var printLink = $(this).data('print');
      var gridElement = $('#'+ printLink),
             printableContent = '';
         var htmlStart =
