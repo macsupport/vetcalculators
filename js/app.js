@@ -48,6 +48,14 @@ cordova.plugins.printer.print( htmlContent, 'Document.html', function () {
 
 myApp.onPageInit('cri  emergency anesthetic fluids chocolate lab iris calories cat-canned cat-dry dog-dry dog-canned', function (page) {
   $('table.table').footable();
+
+  var today = new Date();
+$('.time').html(today.getHours() + ':' + today.getMinutes());
+$('.weekday').html(today.toDateString().substring(0, 3));
+$('.date').html(today.toDateString());
+});
+
+
   $(document).on('keyup','#inputKilograms',function() {
      feedCups(); 
   MLK();
@@ -212,14 +220,7 @@ $(function($){
  new WOW().init();  
 });
           
-var today = new Date();
-$('.time').html(today.getHours() + ':' + today.getMinutes());
-$('.weekday').html(today.toDateString().substring(0, 3));
-$('.date').html(today.toDateString());
-   
 
-
-});
 
 
  function setspin() { 
