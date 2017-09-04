@@ -48,14 +48,6 @@ cordova.plugins.printer.print( htmlContent, 'Document.html', function () {
 
 myApp.onPageInit('cri  emergency anesthetic fluids chocolate lab iris calories cat-canned cat-dry dog-dry dog-canned', function (page) {
   $('table.table').footable();
-
-  var today = new Date();
-$('.time').html(today.getHours() + ':' + today.getMinutes());
-$('.weekday').html(today.toDateString().substring(0, 3));
-$('.date').html(today.toDateString());
-});
-
-
   $(document).on('keyup','#inputKilograms',function() {
      feedCups(); 
   MLK();
@@ -213,14 +205,12 @@ calcChoc();
 
  $(document).ready(function() {
 
-$('.footable-filtering-search').addClass('hidden-print');
-
-
-$(function($){
- new WOW().init();  
+$('.footable-filtering-search').addClass('hidden-print');         
+var today = new Date();
+$('.time').html(today.getHours() + ':' + today.getMinutes());
+$('.weekday').html(today.toDateString().substring(0, 3));
+$('.date').html(today.toDateString());
 });
-          
-
 
 
  function setspin() { 
