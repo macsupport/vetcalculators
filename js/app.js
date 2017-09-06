@@ -20,6 +20,30 @@ setdrug();
    MLK2();
  
 
+
+
+
+myApp.onPageInit('cri  emergency anesthetic fluids chocolate lab iris calories cat-canned cat-dry dog-dry dog-canned', function (page) {
+  $('table.table').footable();
+  $(document).on('keyup','#inputKilograms',function() {
+     feedCups(); 
+  MLK();
+  setdrug();
+  calcChocTotal();
+calcChoc();  
+});
+  $(document).on('click touchstart','.resetme',function() { 
+ $('#inputKilograms,#inputPounds,#ounce').val(' ');
+  //$('td span.chip').text(" ");
+});
+
+      var inputName = $('input.drug').attr("name"),
+        drugValue =   $('input[name="'+inputName+'"]');       
+    $(document).on('keyup', drugValue, function () {  feedCups();  MLK(); calcChocTotal(); calcChoc();  setdrug();
+console.log(inputName)
+    });
+    //$(document).on('keyup', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
+    
 $(document).on('click touchstart','.printme',function() {
 $( ".printme" ).each(function( index ) {
   var printLink = $(this).data('print');
@@ -44,30 +68,6 @@ cordova.plugins.printer.print( htmlContent, 'Document.html', function () {
   console.log(htmlContent);
 });
 });
-
-
-myApp.onPageInit('cri  emergency anesthetic fluids chocolate lab iris calories cat-canned cat-dry dog-dry dog-canned', function (page) {
-  $('table.table').footable();
-  $(document).on('keyup','#inputKilograms',function() {
-     feedCups(); 
-  MLK();
-  setdrug();
-  calcChocTotal();
-calcChoc();  
-});
-  $(document).on('click touchstart','.resetme',function() { 
- $('#inputKilograms,#inputPounds,#ounce').val(' ');
-  //$('td span.chip').text(" ");
-});
-
-      var inputName = $('input.drug').attr("name"),
-        drugValue =   $('input[name="'+inputName+'"]');       
-    $(document).on('keyup', drugValue, function () {  feedCups();  MLK(); calcChocTotal(); calcChoc();  setdrug();
-console.log(inputName)
-    });
-    //$(document).on('keyup', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
-    
-
 
 
  });
