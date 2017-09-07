@@ -28,7 +28,7 @@ $(document).on('click','.refresh-link.refresh-home', function () {
         $('.refresh-link.refresh-home').removeClass('refreshing');
         clicked.addClass('refreshing');
     });
-$(document).on('click touchstart','.resetme',function(){$('#inputKilograms,#inputPounds').val(' '); localStorage.clear();});
+$(document).on('click touchstart','.resetme',function(){$('#inputKilograms,#inputPounds').val(' ');});
 
 myApp.onPageInit('cri  emergency anesthetic fluids chocolate lab iris calories cat-canned cat-dry dog-dry dog-canned', function (page) {
   $('table.table').footable();
@@ -101,6 +101,12 @@ $("#rerDog").on("change",function() {
 
 myApp.onPageInit('emergency', function (page) {
 
+ $$('.resetme').on('click', function() {
+  var storedData = myApp.formDeleteData('emergency-page');
+});
+ 
+ 
+ 
 //document.addEventListener("deviceready", onDeviceReady, false);
 
 // Cordova Device Ready.
