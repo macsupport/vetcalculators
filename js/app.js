@@ -186,7 +186,8 @@ myApp.onPageInit('fluids', function (page) {
 
 myApp.onPageInit('chocolate', function (page) {
 
-
+ calcChocTotal();
+calcChoc();  
  
 
   $(document).on('keyup','#ounce',function() {
