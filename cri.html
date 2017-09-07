@@ -19,14 +19,14 @@
 
 
 
-       <div class="list-block">
+<form id="cri-form" class="list-block store-data">
   <ul>
     <li>
       <div class="item-content">
         <div class="item-inner">
           <div class="item-title label"> Pounds</div>
           <div class="item-input">
-              <input id="inputPounds" class="form-control  no-fastclick" type="number" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+              <input id="inputPounds" name="inputPoundsC" class="form-control  no-fastclick" type="number" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
         <div class="item-inner">
           <div class="item-title label"> Kilograms</div>
           <div class="item-input">
-             <input id="inputKilograms" class="form-control  no-fastclick" type="number" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+             <input id="inputKilograms" name="inputKilogramsC" class="form-control  no-fastclick" type="number" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@
 <div class="item-inner">
 <div class="item-title label"><i class="fa fa-stethoscope  fa-lg"></i> Fluid Size </div>
 <div class="item-input">
-<select id="fluidVol" class="form-control custom-select span1 selectpicker show-tick">
+<select id="fluidVol" name="fluidVol" class="form-control custom-select span1 selectpicker show-tick">
         <option value="1000">1000 ml</option>
         <option value="500">500 ml</option>
         <option value="250">250 ml</option>
