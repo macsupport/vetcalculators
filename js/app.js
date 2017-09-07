@@ -20,12 +20,12 @@ setdrug();
    MLK2();
  
 
-$$('.refresh-link.refresh-home').on('click', function () {
-        var clicked = $$(this);
+$(document).on('click','.refresh-link.refresh-home', function () {
+        var clicked = $(this);
         if (clicked.hasClass('refreshing')) {
             return;
         }
-        $$('.refresh-link.refresh-home').removeClass('refreshing');
+        $('.refresh-link.refresh-home').removeClass('refreshing');
         clicked.addClass('refreshing');
     });
 $(document).on('click touchstart','.resetme',function(){$('#inputKilograms,#inputPounds').val(' ');
