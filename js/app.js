@@ -20,7 +20,14 @@ setdrug();
    MLK2();
  
 
-
+$$('.refresh-link.refresh-home').on('click', function () {
+        var clicked = $$(this);
+        if (clicked.hasClass('refreshing')) {
+            return;
+        }
+        $$('.refresh-link.refresh-home').removeClass('refreshing');
+        clicked.addClass('refreshing');
+    });
 
 
 myApp.onPageInit('cri  emergency anesthetic fluids chocolate lab iris calories cat-canned cat-dry dog-dry dog-canned', function (page) {
