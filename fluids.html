@@ -11,7 +11,8 @@
 <div data-page="fluids" class="page theme-bluegray">
 <div id="fluidsPage" class="page-content hide-bars-on-scroll">
 <div class="content-block-title"><i class="fa fa-tint fa-lg fa-fw color-lightblue"></i> IV Fluid Calculator</div>
-        <div class="list-block">
+
+        <form id="fluids-form" class="list-block store-data">
   <ul>
     <li>
       <div class="item-content">
@@ -19,7 +20,7 @@
         <div class="item-inner">
           <div class="item-title label"> Pounds</div>
           <div class="item-input">
-              <input id="inputPounds" class="form-control" type="number" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+              <input id="inputPounds" class="form-control" type="number" name="inputPounds" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -30,14 +31,14 @@
         <div class="item-inner">
           <div class="item-title label"> Kilograms</div>
           <div class="item-input">
-             <input id="inputKilograms" class="form-control" type="number" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+             <input id="inputKilograms" class="form-control" type="number" name="inputKilograms" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
           </div>
         </div>
       </div>
     </li>
   </ul>
    <div class="list-block-label"> Enter Pounds or Kilograms</div>
-</div>  
+</form>  
 
     <div class="card data-table data-table-init">
       <div class="card-header">

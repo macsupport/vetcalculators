@@ -10,14 +10,16 @@
 <div data-page="anesthetic" class="page theme-bluegray">
   <div id="anestheticPage" class="page-content hide-bars-on-scroll">
     <div class="content-block-title hidden-print"><i class="fa fa-stethoscope fa-lg fa-fw color-blue"></i> Anesthetic Drug Calculator</div>
-    <div class="list-block">
+
+
+   <form id="anesthetic-form" class="list-block store-data">
       <ul>
         <li>
           <div class="item-content">
             <div class="item-inner">
               <div class="item-title label">Pounds</div>
               <div class="item-input">
-                <input id="inputPounds" class="form-control" type="number" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+                <input id="inputPounds" class="form-control" name="inputPounds" type="number" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
               </div>
             </div>
           </div>
@@ -27,14 +29,14 @@
             <div class="item-inner">
               <div class="item-title label">Kilograms</div>
               <div class="item-input">
-                <input id="inputKilograms" class="form-control" type="number" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+                <input id="inputKilograms" class="form-control" name="inputKilograms" type="number" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
               </div>
             </div>
           </div>
         </li>
       </ul>
        <div class="list-block-label hidden-print"> Enter Pounds or Kilograms</div>
-    </div>
+    </form>
 
 
     <div class="data-table  data-table-init">

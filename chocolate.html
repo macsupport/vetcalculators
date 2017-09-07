@@ -15,14 +15,14 @@
 
 <div class="content-block-title"><i class="fa fa-bars fa-lg fa-fw color-brown"></i> Chocolate Calculator    <a href="#" class="link icon-only external printme hidden-print" data-print="chocolatePage"><i class="fa fa-print fa-lg"></i></a></div>
          
-        <div class="list-block">
+     <form id="chocolate-form" class="list-block store-data">
   <ul>
     <li>
       <div class="item-content">
         <div class="item-inner">
           <div class="item-title label"> Pounds</div>
           <div class="item-input">
-              <input id="inputPounds" class="form-control" type="number" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+              <input id="inputPounds" class="form-control" name="inputPounds" type="number" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
         <div class="item-inner">
           <div class="item-title label"> Kilograms</div>
           <div class="item-input">
-             <input id="inputKilograms" class="form-control" type="number" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+             <input id="inputKilograms" class="form-control"  name="inputKilograms" type="number" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@
         <div class="item-inner">
           <div class="item-title label"><i class="fa fa-bars  fa-lg fa-fw color-brown"></i> Type:</div>
           <div class="item-input">
-           <select id="chocolate" title="Select Chocolate Type" selected="" class="form-control selectpicker show-tick show-menu-arrow">
+           <select id="chocolate" name="chocolate_type" title="Select Chocolate Type" selected="" class="form-control selectpicker show-tick show-menu-arrow">
               <option value="0.25" data-value="0.85">White Chocolate</option>
               <option value="58" selected data-value="6">Milk Chocolate</option>
               <option value="130" data-value="20">Dark, Sweet Chocolate</option>
@@ -70,7 +70,7 @@
     </li>
   </ul>
    <div class="list-block-label"> Enter Pounds or Kilograms. Select Chocolate Type and Ounces Ingested</div>
-</div>  
+</form>  
 
  
   
