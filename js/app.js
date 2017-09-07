@@ -154,7 +154,9 @@ cordova.plugins.printer.print( htmlStart + printableContent + htmlEnd, 'Document
       });
 
 myApp.onPageInit('anesthetic', function (page) {
-
+ $$('.resetme').on('click', function() {
+  var storedData = myApp.formDeleteData('anesthetic-form');
+});
   
    
       });
