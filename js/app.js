@@ -102,7 +102,7 @@ $("#rerDog").on("change",function() {
 myApp.onPageInit('emergency', function (page) {
 
  $$('.resetme').on('click', function() {
-  var storedData = myApp.formDeleteData('emergency-page');
+  var storedData = myApp.formDeleteData('emergency-form');
 });
  
  
