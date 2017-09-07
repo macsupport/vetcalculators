@@ -28,7 +28,7 @@ $$('.refresh-link.refresh-home').on('click', function () {
         $$('.refresh-link.refresh-home').removeClass('refreshing');
         clicked.addClass('refreshing');
     });
-
+$(document).on('click touchstart','.resetme',function(){$('#inputKilograms,#inputPounds').val(' ');
 
 myApp.onPageInit('cri  emergency anesthetic fluids chocolate lab iris calories cat-canned cat-dry dog-dry dog-canned', function (page) {
   $('table.table').footable();
