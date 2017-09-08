@@ -197,7 +197,7 @@ console.log(inputName)
       });
 
 myApp.onPageInit('calories', function (page) {
-
+feedCups(); 
 $$('.resetme').on('click', function() {
   var storedData = myApp.formDeleteData('calories-form');
 });
@@ -278,11 +278,11 @@ function weightConverter(source,valNum) {
    var inputKilogramsVal =  parseFloat($(inputKilograms).val()); 
       var inputPoundsVal =  parseFloat($(inputPounds).val()); 
   if (source=="inputPounds") {
-     inputKilograms.value=(valNum/2.2046).toFixed(2); 
+     inputKilograms.value=(valNum/2.2046).toFixed(1); 
       $("label[for='inputKilograms']").addClass('active');  
   }
   if (source=="inputKilograms") { 
-     inputPounds.value=(valNum*2.2046).toFixed(2); 
+     inputPounds.value=(valNum*2.2046).toFixed(1); 
      $("label[for='inputPounds']").addClass('active'); 
   }
   MLK();
@@ -297,10 +297,10 @@ valNum = parseFloat(valNum);
   var inputFahrenheit = document.getElementById("tempF");
   var inputCelsius = document.getElementById("tempC");
   if (source=="tempF") {
-    inputCelsius.value=((valNum-32)/1.8).toFixed(2);
+    inputCelsius.value=((valNum-32)/1.8).toFixed(1);
   }
   if (source=="tempC") {
-    inputFahrenheit.value=((valNum*1.8)+32).toFixed(2);
+    inputFahrenheit.value=((valNum*1.8)+32).toFixed(1);
   }  
 }
 
@@ -309,10 +309,10 @@ valNum = parseFloat(valNum);
   var inputMg = document.getElementById("mg");
   var inputUg = document.getElementById("ug");
   if (source=="mg") {
-    inputUg.value=((valNum*1000)).toFixed(2);
+    inputUg.value=((valNum*1000)).toFixed(1);
   }
   if (source=="ug") {
-    inputMg.value=((valNum/1000)).toFixed(2);
+    inputMg.value=((valNum/1000)).toFixed(1);
   }  
 }
   
@@ -385,8 +385,8 @@ function setdrug() {
     }if ($('#butorphanolMagicMl').length) {
     var butorph2 = parseFloat($('#butorphanolMagicMl.chip-label').html().replace(' ml', '')).toFixed(2);
     }
-    var bsaDogs = parseFloat((Math.pow((kg/2.2), .67) * 10.1)/100).toFixed(3);
-    var bsaCats = parseFloat((Math.pow((kg/2.2), .67) * 10.4)/100).toFixed(3);
+    var bsaDogs = parseFloat((Math.pow((kg/2.2), .67) * 10.1)/100).toFixed(2);
+    var bsaCats = parseFloat((Math.pow((kg/2.2), .67) * 10.4)/100).toFixed(2);
    
     //if($('element')[0] || $('element')[0])
 //{
