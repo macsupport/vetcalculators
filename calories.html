@@ -44,6 +44,7 @@
      <li>
       <div class="item-content">
         <div class="item-inner">
+        <div class="item-media"><a href="#"  data-popup=".popup-bcs" class="open-popup no-fastclick link icon-only"><i class="fa fa-info fa-fw"></i></a></div>
           <div class="item-title label">Select BCS </div>
           <div class="item-input">
             <select name="bcs" id="bcs">
@@ -318,6 +319,40 @@
 </ul>
 </div>
 </div>
+
+
+  <div class="popup popup-bcs">
+    <div class="content-block">
+     <p>BCS
+      <a href="#" class="close-popup button">Close</a></p>
+    <!-- Buttons row as tabs controller -->
+    <div class="buttons-row">
+      <!-- Link to 1st tab, active -->
+      <a href="#tab1" class="tab-link active button">Canine BCS</a>
+      <!-- Link to 2nd tab -->
+      <a href="#tab2" class="tab-link button">Feline BCS</a>
+
+    </div>
+  </div>
+  <!-- Tabs, tabs wrapper -->
+  <div class="tabs">
+    <!-- Tab 1, active by default -->
+    <div id="tab1" class="tab active">
+      <div class="content-block">
+       <img class="img-fluid" src="img/BCSCanine.jpg">
+      </div>
+    </div>
+    <!-- Tab 2 -->
+    <div id="tab2" class="tab">
+      <div class="content-block">
+      <img class="img-fluid" src="img/BCSFeline.jpg">
+      </div>
+    </div>
+     </div>
+  </div>  <!-- popup-bcs -->
+
+
+
 
 </div>
 </div>
