@@ -15,9 +15,7 @@ var mainView = myApp.addView('.view-main', {
 
 
 setdrug();
-  //setspin();
-   //MLK();
-   MLK2();
+MLK2();
  
 
  $$('.refresh-link.refresh-home').on('click', function () {
@@ -28,7 +26,6 @@ setdrug();
         clicked.addClass('refreshing');
      $('.refresh-link.refresh-home').removeClass('refreshing');
     });
-$(document).on('click touchstart','.resetme',function(){$('#inputKilograms,#inputPounds').val(' ');});
 
 myApp.onPageInit('cri  emergency anesthetic fluids chocolate lab iris calories cat-canned cat-dry dog-dry dog-canned', function (page) {
   $('table.table').footable();
@@ -51,7 +48,7 @@ console.log(inputName)
     });
     //$(document).on('keyup', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
     
-$(document).on('click touchstart','.printme',function() {
+$$(document).on('click touchstart','.printme',function() {
 $( ".printme" ).each(function( index ) {
   var printLink = $(this).data('print');
      var gridElement = $('#'+ printLink);
@@ -164,6 +161,10 @@ myApp.onPageInit('anesthetic', function (page) {
 
 
 myApp.onPageInit('misc', function (page) {
+  $$('.resetme').on('click', function() {
+  var storedData = myApp.formDeleteData('misc-form');
+});
+ 
   $(document).on('keyup','#inputKilograms',function() {
      feedCups(); 
   MLK();
@@ -194,14 +195,22 @@ console.log(inputName)
 
 myApp.onPageInit('fluids', function (page) {
 
- 
- 
-      });
+$$('.resetme').on('click', function() {
+  var storedData = myApp.formDeleteData('fluids-form');
+});
+  });
+myApp.onPageInit('cri', function (page) {
 
-
+$$('.resetme').on('click', function() {
+  var storedData = myApp.formDeleteData('cri-form');
+});
+  });
 
 myApp.onPageInit('chocolate', function (page) {
-
+$$('.resetme').on('click', function() {
+  var storedData = myApp.formDeleteData('chocolate-form');
+});
+ 
  calcChocTotal();
 calcChoc();  
  
