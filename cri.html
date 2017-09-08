@@ -14,7 +14,6 @@
 <div class="content-block-title"><i class="fa fa-clock-o fa-lg fa-fw color-orange"></i> Constant Rate Infusion</div>
 <p>      
        <a href="#"  data-popup=".popup-cri" class="open-popup no-fastclick link icon-only">About CRI's</a>
-       <a href="#" class="link icon-only resetme refresh-link refresh-home"><i class="fa fa-refresh fa-lg"></i></a>
 </p>
 
 
@@ -73,19 +72,26 @@
     </li>
 </ul> 
 <div class="list-block-label"> Select Fluid Volume and Rate</div>
+
 </form>
 
 <div class="content-block-title">CRI Calculators</div>
-<div class="list-block accordion-list">
-  <ul>
-    <li id="criMLK" class="accordion-item  accordion-item-expanded"><a href="#" class="item-content item-link">
-        <div class="item-inner">
-          <div class="item-title color-blue">Morphine-Lidocaine-Ketamine CRI </div>
-        </div></a>
-      <div class="accordion-item-content">
-        <div class="content-block">
-         <a class="link icon-only external printme pull-right hidden-print" data-print="criMLK"><i class="fa fa-print fa-lg"></i></a>
-      <table  class="table table-sm table-bordered">
+
+<div id="criMLK" class="data-table data-table-init card">
+  <!-- Card Header -->
+  <div class="card-header">
+    <!-- Table title -->
+    <div class="data-table-title">Morphine-Lidocaine-Ketamine CRI</div>
+    <!-- Table actions -->
+    <div class="data-table-actions">
+    <a class="link icon-only printme hidden-print" data-print="criMLK" ><i class="fa fa-print fa-lg"></i></a>
+      <a href="#" class="link icon-only resetme refresh-link refresh-home pull-right"><i class="fa fa-refresh fa-lg"></i></a>
+    </div>
+  </div>
+  <!-- Card Content -->
+  <div class="card-content"> 
+
+ <table  class="table table-sm table-bordered">
                 <thead>
                   <tr>
                     <th>Drug</th>
@@ -136,18 +142,25 @@
                   </tr>
                 </tbody>
               </table>
-      
-        </div>
-      </div>
-    </li>
-    <li id="criHLK" class="accordion-item"><a href="#" class="item-content item-link">
-        <div class="item-inner">
-          <div class="item-title color-blue">Hydromorphone-Lidocaine-Ketamine CRI</div>
-        </div></a>
-      <div class="accordion-item-content">
-        <div class="content-block">
-       <a class="link icon-only external printme pull-right hidden-print" data-print="criHLK"><i class="fa fa-print fa-lg"></i></a>
-       <table  class="table table-condensed table-bordered">
+
+  </div>
+</div>
+
+
+<div id="criHLK" class="data-table data-table-init card">
+  <!-- Card Header -->
+  <div class="card-header">
+    <!-- Table title -->
+    <div class="data-table-title">Hydromorphone-Lidocaine-Ketamine CRI</div>
+    <!-- Table actions -->
+    <div class="data-table-actions">
+      <a class="link icon-only external printme pull-right hidden-print" data-print="criHLK"><i class="fa fa-print fa-lg"></i></a>
+      <a href="#" class="link icon-only resetme refresh-link refresh-home pull-right"><i class="fa fa-refresh fa-lg"></i></a>
+    </div>
+  </div>
+  <!-- Card Content -->
+  <div class="card-content"> 
+<table  class="table table-condensed table-bordered">
                 <thead>
                   <tr>
                     <th>Drug</th>
@@ -198,18 +211,24 @@
                   </tr>
                 </tbody>
               </table>
-      
-        </div>
-      </div>
-    </li>
-<li id="criBuLK" class="accordion-item"><a href="#" class="item-content item-link">
-        <div class="item-inner">
-          <div class="item-title color-blue">Buprenorphine-Lidocaine-Ketamine CRI</div>
-        </div></a>
-      <div class="accordion-item-content">
-        <div class="content-block">
-         <a class="link icon-only external printme pull-right hidden-print" data-print="criBuLK"><i class="fa fa-print fa-lg"></i></a>
-           <table class="table table-condensed table-bordered">
+
+  </div>
+</div>
+
+<div id="criBuLK" class="data-table data-table-init card">
+  <!-- Card Header -->
+  <div class="card-header">
+    <!-- Table title -->
+    <div class="data-table-title">Buprenorphine-Lidocaine-Ketamine CRI</div>
+    <!-- Table actions -->
+    <div class="data-table-actions">
+      <a class="link icon-only external printme pull-right hidden-print" data-print="criBuLK"><i class="fa fa-print fa-lg"></i></a>
+      <a href="#" class="link icon-only resetme refresh-link refresh-home pull-right"><i class="fa fa-refresh fa-lg"></i></a>
+    </div>
+  </div>
+  <!-- Card Content -->
+  <div class="card-content"> 
+ <table class="table table-condensed table-bordered">
                 <thead>
                   <tr>
                     <th>Drug</th>
@@ -262,79 +281,24 @@
                   </tr>
                 </tbody>
               </table>
-        </div>
-      </div>
-    </li>
-    <li id="criButLK" class="accordion-item"><a href="#" class="item-content item-link">
-        <div class="item-inner">
-          <div class="item-title color-blue">Butorphanol-Lidocaine-Ketamine CRI</div>
-        </div></a>
-      <div class="accordion-item-content">
-        <div class="content-block">
-           <a class="link icon-only external printme pull-right hidden-print" data-print="criButLK"><i class="fa fa-print fa-lg"></i></a>
-       <table class="table table-condensed table-bordered">
-                <thead>
-                  <tr>
-                    <th>Drug</th>
-                     <th  data-breakpoints="xs" class="usage">Dose Range</th>
-                    <th>Drug Dose (mg/ml)</th>
-                    <th>Volume</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td><b>Fluid Rate to Administer ButLK cc/hr <i class="fa fa-circle-arrow-right"></i></b></td>
-                    <td><span class="chip bg-lightblue"><span  class="butorphfluids chip-chip-label chip-label-info number"></span></span></span></td>
-                  </tr>
-                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Dose/kg of body weight">
-                    <td> Butorphanol   10 mg/ml
-                    </td>
-                      <td>  <b>0.012 to 0.072 mg/kg/hr (0.2 to 1.20 ug/kg/min)</b></td>
-                    <td><div class="col-md-12">
-                    <input class="butorphV form-control form-control-sm drug"  name="butorphV" type="number"  data-min="0.01" data-max="0.08" data-step="0.005" data-postfix="mg/kg" data-decimal="3" value="0.02">
-                      </div></td>
-                    <td><span class="chip bg-green"><span id="mlkButorph" class="chip-label  number"></span></span></td>
-                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Volume in ml to give of each drug">
-                    <td>Lidocaine 20mg/ml
-                      </td>
-                      <td><b>0.6 to 3.0 mg/kg/hr (10 to 50 ug/kg/minute)*</b></td>
-                    <td><div class="col-md-12">
-                      <input id="lidoV4"  class="lidoV4 form-control form-control-sm drug"  name="lidoV4" type="number"  data-min="0.6" data-max="3.0" data-step="0.1" data-postfix="mg/kg" data-decimal="2" value="1.5"></div></td>
-                    <td><span class="chip bg-green"><span id="mlkLido4" class="mlkLido4 chip-label  number"></span></span></td>
-                  </tr>
-                    </tr>
-                  
-                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Volume in ml to give of each drug">
-                    <td>Ketamine 100mg/ml
-                      </td>
-                      <td><b>0.12 to 1.2 mg/kg/hr (2 to 20 ug/kg/minute)</b></td>
-                  <td><div class="col-md-12">
-                        <input id="ketV4" class="form-control form-control-sm drug"  name="ketV4" type="number"  data-min="0.1" data-max="1.5" data-step="0.01" data-postfix="mg/kg" data-decimal="2" value="0.6">
-                      </div></td>
-                    <td><span class="chip bg-green"><span id="mlkKet4" class="mlkKet4 chip-label  number"></span></span></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td><span class="pull-right">Volume of fluid to remove from bag</span></td>
-                    <td><span class="chip bg-red"><span id="buttotal" class=" chip-label chip-label-danger number"></span></span></td>
-                  </tr>
-                </tbody>
-              </table>
-      
-        </div>
-      </div>
-    </li>
-<li id="criFLK" class="accordion-item"><a href="#" class="item-content item-link">
-        <div class="item-inner">
-          <div class="item-title color-blue">Fentanyl-Lidocaine-Ketamine CRI</div>
-        </div></a>
-      <div class="accordion-item-content">
-        <div class="content-block">
-          <a class="link icon-only external printme pull-right hidden-print" data-print="criFLK"><i class="fa fa-print fa-lg"></i></a>
-        <table class="table table-condensed table-bordered">
+
+  </div>
+</div>
+
+<div id="criFLK"  class="data-table data-table-init card">
+  <!-- Card Header -->
+  <div class="card-header">
+    <!-- Table title -->
+    <div class="data-table-title">Fentanyl-Lidocaine-Ketamine CRI</div>
+    <!-- Table actions -->
+    <div class="data-table-actions">
+      <a class="link icon-only external printme pull-right hidden-print" data-print="criFLK"><i class="fa fa-print fa-lg"></i></a>
+      <a href="#" class="link icon-only resetme refresh-link refresh-home pull-right"><i class="fa fa-refresh fa-lg"></i></a>
+    </div>
+  </div>
+  <!-- Card Content -->
+  <div class="card-content"> 
+ <table class="table table-condensed table-bordered">
                 <thead>
                   <tr>
                     <th>Drug</th>
@@ -385,12 +349,82 @@
                   </tr>
                 </tbody>
               </table>
-      
-        </div>
-      </div>
-    </li>
-  </ul>
+
+  </div>
 </div>
+
+
+
+<div id="criButLK" class="data-table data-table-init card">
+  <!-- Card Header -->
+  <div class="card-header">
+    <!-- Table title -->
+    <div class="data-table-title">Butorphanol-Lidocaine-Ketamine CRI</div>
+    <!-- Table actions -->
+    <div class="data-table-actions">
+      <a class="link icon-only external printme pull-right hidden-print" data-print="criButLK"><i class="fa fa-print fa-lg"></i></a>
+      <a href="#" class="link icon-only resetme refresh-link refresh-home pull-right"><i class="fa fa-refresh fa-lg"></i></a>
+    </div>
+  </div>
+  <!-- Card Content -->
+  <div class="card-content"> 
+<table class="table table-condensed table-bordered">
+                <thead>
+                  <tr>
+                    <th>Drug</th>
+                     <th  data-breakpoints="xs" class="usage">Dose Range</th>
+                    <th>Drug Dose (mg/ml)</th>
+                    <th>Volume</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td><b>Fluid Rate to Administer ButLK cc/hr <i class="fa fa-circle-arrow-right"></i></b></td>
+                    <td><span class="chip bg-lightblue"><span  class="butorphfluids chip-chip-label chip-label-info number"></span></span></span></td>
+                  </tr>
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Dose/kg of body weight">
+                    <td> Butorphanol   10 mg/ml
+                    </td>
+                      <td>  <b>0.012 to 0.072 mg/kg/hr (0.2 to 1.20 ug/kg/min)</b></td>
+                    <td><div class="col-md-12">
+                    <input class="butorphV form-control form-control-sm drug"  name="butorphV" type="number"  data-min="0.01" data-max="0.08" data-step="0.005" data-postfix="mg/kg" data-decimal="3" value="0.02">
+                      </div></td>
+                    <td><span class="chip bg-green"><span id="mlkButorph" class="chip-label  number"></span></span></td>
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Volume in ml to give of each drug">
+                    <td>Lidocaine 20mg/ml
+                      </td>
+                      <td><b>0.6 to 3.0 mg/kg/hr (10 to 50 ug/kg/minute)*</b></td>
+                    <td><div class="col-md-12">
+                      <input id="lidoV4"  class="lidoV4 form-control form-control-sm drug"  name="lidoV4" type="number"  data-min="0.6" data-max="3.0" data-step="0.1" data-postfix="mg/kg" data-decimal="2" value="1.5"></div></td>
+                    <td><span class="chip bg-green"><span id="mlkLido4" class="mlkLido4 chip-label  number"></span></span></td>
+                  </tr>
+                    </tr>
+                  
+                  <tr data-toggle="tooltip" data-placement="top" title="" data-original-title="Volume in ml to give of each drug">
+                    <td>Ketamine 100mg/ml
+                      </td>
+                      <td><b>0.12 to 1.2 mg/kg/hr (2 to 20 ug/kg/minute)</b></td>
+                  <td><div class="col-md-12">
+                        <input id="ketV4" class="form-control form-control-sm drug"  name="ketV4" type="number"  data-min="0.1" data-max="1.5" data-step="0.01" data-postfix="mg/kg" data-decimal="2" value="0.6">
+                      </div></td>
+                    <td><span class="chip bg-green"><span id="mlkKet4" class="mlkKet4 chip-label  number"></span></span></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td><span class="pull-right">Volume of fluid to remove from bag</span></td>
+                    <td><span class="chip bg-red"><span id="buttotal" class=" chip-label chip-label-danger number"></span></span></td>
+                  </tr>
+                </tbody>
+              </table>
+
+  </div>
+</div>
+
+
+
 
 
   <div class="popup popup-cri">

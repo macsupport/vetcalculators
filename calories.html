@@ -14,14 +14,19 @@
 
  <div class="content-block">
 
-<div class="list-block">
+ <div class="content-block-title">
+ <a class="link icon-only printme hidden-print" data-print="caloriesPage" ><i class="fa fa-print fa-lg"></i></a>
+<a href="#" class="link icon-only resetme refresh-link refresh-home"><i class="fa fa-refresh fa-lg"></i></a>
+
+ </div>
+<form id="calories-form" class="list-block store-data">
   <ul>
     <li>
       <div class="item-content">
         <div class="item-inner">
           <div class="item-title label"> Pounds</div>
           <div class="item-input">
-              <input id="inputPounds" class="form-control  no-fastclick" type="number" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+              <input id="inputPounds" class="form-control no-fastclick" name="inputPoundsCal" type="number" placeholder="Enter Pounds"  oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -31,7 +36,7 @@
         <div class="item-inner">
           <div class="item-title label">Kilograms</div>
           <div class="item-input">
-             <input id="inputKilograms" class="form-control  no-fastclick" type="number" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+             <input id="inputKilograms" class="form-control no-fastclick" name="inputKilogramsCal" type="number" placeholder="Enter Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
           </div>
         </div>
       </div>
@@ -55,7 +60,7 @@
     </li>
   </ul>
    <div class="list-block-label">Enter Pounds or Kilograms, Select Pet's BCS</div>
-</div>  
+</form>  
 
   <!-- Buttons row as tabs controller -->
     <div class="buttons-row  bg-bluegray">
