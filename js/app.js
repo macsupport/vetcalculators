@@ -23,7 +23,7 @@ MLK2();
         if (clicked.hasClass('refreshing')) {
             return;
         }
-        $$('.refresh-link.refresh-home').removeClass('refreshing');
+        //$$('.refresh-link.refresh-home').removeClass('refreshing');
         clicked.addClass('refreshing');
      
     });
