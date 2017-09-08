@@ -20,13 +20,13 @@ setdrug();
    MLK2();
  
 
-$(document).on('click','.refresh-link.refresh-home', function () {
-        var clicked = $(this);
+ $$('.refresh-link.refresh-home').on('click', function () {
+        var clicked = $$(this);
         if (clicked.hasClass('refreshing')) {
             return;
         }
-        $('.refresh-link.refresh-home').removeClass('refreshing');
         clicked.addClass('refreshing');
+     $('.refresh-link.refresh-home').removeClass('refreshing');
     });
 $(document).on('click touchstart','.resetme',function(){$('#inputKilograms,#inputPounds').val(' ');});
 
@@ -41,7 +41,7 @@ calcChoc();
 });
   $(document).on('click touchstart','.resetme',function() { 
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
-  //$('td span.chip').text(" ");
+  $('td span.chip').text(" ");
 });
 
       var inputName = $('input.drug').attr("name"),
@@ -80,6 +80,7 @@ cordova.plugins.printer.print( htmlContent, 'Document.html', function () {
  });
 
 myApp.onPageInit('calories', function (page) {
+ feedCups();
   $("#bcs").on("change",function() {
  feedCups();
   });
