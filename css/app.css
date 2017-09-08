@@ -31,7 +31,8 @@ height: auto
 
 .logo{background:none; text-shadow: 0 1px 2px rgba(0,0,0,0.2);}
 .footable-details.table, .footable.table{margin-bottom: 0px;}
-
+.img-fluid{height: auto;
+max-width: 100%}
 .refresh-link.refreshing .fa-refresh {
   -webkit-animation-name: rotate;
   -webkit-animation-duration: 1s;
