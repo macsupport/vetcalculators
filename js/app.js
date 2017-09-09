@@ -26,7 +26,6 @@ MLK2();
         clicked.addClass('refreshing');
      setTimeout(function(){
 $('.refresh-link.refresh-home').removeClass('refreshing');
-
      }, 1000);
 
     });
@@ -40,17 +39,20 @@ myApp.onPageInit('cri emergency anesthetic fluids chocolate lab iris calories ca
   calcChocTotal();
 calcChoc();  
 });
-  $(document).on('click touchstart','.resetme',function() { 
- $('#inputKilograms,#inputPounds,#ounce').val('');
-  //$('td span.chip').text(" ");
-});
+
 
       var inputName = $('input.drug').attr("name"),
         drugValue =   $('input[name="'+inputName+'"]');       
     $(document).on('keyup', drugValue, function () {  feedCups();  MLK(); calcChocTotal(); calcChoc();  setdrug();
 console.log(inputName)
     });
-    //$(document).on('keyup', this, function () {  MLK();  calcChocTotal(); calcChoc();  setdrug();});
+
+
+  $(document).on('click touchstart','.resetme',function() { 
+ $('#inputKilograms,#inputPounds,#ounce').val('');
+  //$('td span.chip').text(" ");
+  setdrug();
+});
     
 $$(document).on('click touchstart','.printme',function() {
 $( ".printme" ).each(function( index ) {
@@ -262,7 +264,7 @@ function weightConverter(source,valNum) {
    var inputKilogramsVal =  parseFloat($(inputKilograms).val()); 
       var inputPoundsVal =  parseFloat($(inputPounds).val()); 
   if (source=="inputPounds") {
-     inputKilograms.value=(valNum/2.2046226218).toFixed(1);  
+     inputKilograms.value=(valNum/2.2046226218).toFixed(2);  
   }
   if (source=="inputKilograms") { 
      inputPounds.value=(valNum*2.2046226218).toFixed(1); 
