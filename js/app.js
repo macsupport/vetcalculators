@@ -27,11 +27,11 @@ MLK2();
      setTimeout(function(){
 $('.refresh-link.refresh-home').removeClass('refreshing');
 
-     }, 1500);
+     }, 1000);
 
     });
 
-myApp.onPageInit('cri  emergency anesthetic fluids chocolate lab iris calories cat-canned cat-dry dog-dry dog-canned', function (page) {
+myApp.onPageInit('cri emergency anesthetic fluids chocolate lab iris calories cat-canned cat-dry dog-dry dog-canned', function (page) {
   $('table.table').footable();
   $(document).on('keyup','#inputKilograms',function() {
      feedCups(); 
@@ -41,8 +41,8 @@ myApp.onPageInit('cri  emergency anesthetic fluids chocolate lab iris calories c
 calcChoc();  
 });
   $(document).on('click touchstart','.resetme',function() { 
- $('#inputKilograms,#inputPounds,#ounce').val(' ');
-  $('td span.chip').text(" ");
+ $('#inputKilograms,#inputPounds,#ounce').val('');
+  //$('td span.chip').text(" ");
 });
 
       var inputName = $('input.drug').attr("name"),
@@ -165,6 +165,7 @@ myApp.onPageInit('anesthetic', function (page) {
 
 
 myApp.onPageInit('misc', function (page) {
+    MLK();
   $$('.resetme').on('click', function() {
   var storedData = myApp.formDeleteData('misc-form');
 });
@@ -278,17 +279,16 @@ function weightConverter(source,valNum) {
    var inputKilogramsVal =  parseFloat($(inputKilograms).val()); 
       var inputPoundsVal =  parseFloat($(inputPounds).val()); 
   if (source=="inputPounds") {
-     inputKilograms.value=(valNum/2.2046).toFixed(1); 
-      $("label[for='inputKilograms']").addClass('active');  
+     inputKilograms.value=(valNum/2.2046226218).toFixed(2);  
   }
   if (source=="inputKilograms") { 
-     inputPounds.value=(valNum*2.2046).toFixed(1); 
-     $("label[for='inputPounds']").addClass('active'); 
+     inputPounds.value=(valNum*2.2046226218).toFixed(1); 
   }
   MLK();
   calcChocTotal();
 calcChoc();  
-    setdrug();
+  setdrug();
+   feedCups();
 }
 
  
@@ -309,10 +309,10 @@ valNum = parseFloat(valNum);
   var inputMg = document.getElementById("mg");
   var inputUg = document.getElementById("ug");
   if (source=="mg") {
-    inputUg.value=((valNum*1000)).toFixed(1);
+    inputUg.value=((valNum*1000)).toFixed(2);
   }
   if (source=="ug") {
-    inputMg.value=((valNum/1000)).toFixed(1);
+    inputMg.value=((valNum/1000)).toFixed(2);
   }  
 }
   
