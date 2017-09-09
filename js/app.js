@@ -170,33 +170,6 @@ myApp.onPageInit('misc', function (page) {
   var storedData = myApp.formDeleteData('misc-form');
 });
  
-  $(document).on('keyup','#inputKilograms',function() {
-     feedCups(); 
-  MLK();
-  setdrug();
-  calcChocTotal();
-calcChoc();  
-});
-
-$(document).on('keyup','#inputPounds',function() {
-     feedCups(); 
-  MLK();
-  setdrug();
-  calcChocTotal();
-calcChoc();  
-});
-
-
-  $(document).on('click touchstart','.resetme',function() { 
- $('#inputKilograms,#inputPounds,#ounce').val(' ');
-  //$('td span.chip').text(" ");
-});
-
-      var inputName = $('input.drug').attr("name"),
-        drugValue =   $('input[name="'+inputName+'"]');       
-    $(document).on('keyup', drugValue, function () {  feedCups();  MLK(); calcChocTotal(); calcChoc();  setdrug();
-console.log(inputName)
-    });
   $(document).on('click touchstart','.printme',function() {
     //$('#drug').printThis({     
       //importCSS: true,          
@@ -289,10 +262,10 @@ function weightConverter(source,valNum) {
    var inputKilogramsVal =  parseFloat($(inputKilograms).val()); 
       var inputPoundsVal =  parseFloat($(inputPounds).val()); 
   if (source=="inputPounds") {
-     inputKilograms.value=(valNum/2.2046226218).toFixed(2);  
+     inputKilograms.value=(valNum/2.2046226218).toFixed(1);  
   }
   if (source=="inputKilograms") { 
-     inputPounds.value=(valNum*2.2046226218).toFixed(2); 
+     inputPounds.value=(valNum*2.2046226218).toFixed(1); 
   }
   MLK();
   calcChocTotal();
