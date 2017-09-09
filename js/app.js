@@ -177,6 +177,16 @@ myApp.onPageInit('misc', function (page) {
   calcChocTotal();
 calcChoc();  
 });
+
+$(document).on('keyup','#inputPounds',function() {
+     feedCups(); 
+  MLK();
+  setdrug();
+  calcChocTotal();
+calcChoc();  
+});
+
+
   $(document).on('click touchstart','.resetme',function() { 
  $('#inputKilograms,#inputPounds,#ounce').val(' ');
   //$('td span.chip').text(" ");
@@ -282,7 +292,7 @@ function weightConverter(source,valNum) {
      inputKilograms.value=(valNum/2.2046226218).toFixed(2);  
   }
   if (source=="inputKilograms") { 
-     inputPounds.value=(valNum*2.2046226218).toFixed(1); 
+     inputPounds.value=(valNum*2.2046226218).toFixed(2); 
   }
   MLK();
   calcChocTotal();
